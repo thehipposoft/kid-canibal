@@ -42,7 +42,7 @@ const Banner = ()=>{
         images.length
     ]);
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-        className: "flex flex-col justify-between w-full h-screen bg-black overflow-hidden",
+        className: "flex sticky top-0 flex-col justify-between w-full h-screen bg-black overflow-hidden",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "flex justify-end items-center w-full p-6 text-brand-white",
@@ -66,7 +66,7 @@ const Banner = ()=>{
                         src: "/assets/images/banner/banner-1.png",
                         alt: "Banner BG",
                         fill: true,
-                        className: "object-cover opacity-30 blur-[2px]",
+                        className: "object-cover opacity-30 blur-[1px]",
                         priority: true
                     }, void 0, false, {
                         fileName: "[project]/components/Banner/index.tsx",

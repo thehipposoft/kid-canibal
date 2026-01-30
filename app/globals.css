@@ -19,6 +19,18 @@
   --font-schabo: var(--font-schabo), sans-serif;
   --font-thunder: var(--font-thunder), sans-serif;
   --font-inter: var(--font-inter), sans-serif;
+
+  --animate-marquee: marquee 25s linear infinite;
+
+  @keyframes marquee {
+    0% {
+      transform: translateX(0);
+    }
+
+    100% {
+      transform: translateX(-50%);
+    }
+  }
 }
 
 @media (prefers-color-scheme: dark) {

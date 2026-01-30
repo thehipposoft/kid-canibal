@@ -62,7 +62,7 @@ const Banner = ()=>{
                         src: "/assets/images/banner/banner-1.png",
                         alt: "Banner BG",
                         fill: true,
-                        className: "object-cover opacity-30 blur-[2px]",
+                        className: "object-cover opacity-30 blur-[1px]",
                         priority: true
                     }, void 0, false, {
                         fileName: "[project]/components/Banner/index.tsx",

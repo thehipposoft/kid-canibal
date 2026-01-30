@@ -22,18 +22,16 @@ const Banner = () => {
   }, [images.length]);
 
   return (
-    <div className='flex flex-col justify-between w-full h-screen bg-black overflow-hidden'>
+    <div className='flex sticky top-0 flex-col justify-between w-full h-screen bg-black overflow-hidden'>
       {/* Header */}
-      <div className='flex justify-end items-center w-full p-6 text-brand-white'>
-        <h2 className="uppercase tracking-widest font-thunder">menu</h2>
-      </div>
+      <div className='p-6' />
 
       <div className='h-[80vh] relative flex justify-center items-center'>
         <Image 
           src="/assets/images/banner/banner-1.png" 
           alt="Banner BG" 
           fill 
-          className='object-cover opacity-30 blur-[2px]' // Blur sutil al fondo para dar profundidad
+          className='object-cover opacity-30 blur-[1px]' // Blur sutil al fondo para dar profundidad
           priority 
         />
         
