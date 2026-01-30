@@ -21,6 +21,11 @@ const thunderFont = localFont({
 export const metadata: Metadata = {
   title: "KIDCANIBAL",
   description: "- BRUTAL. BEAUTIFUL.",
+  openGraph: {
+    title: "KIDCANIBAL",
+    description: "- BRUTAL. BEAUTIFUL.",
+    images: ['/kid.png'],
+  },
 };
 
 export default function RootLayout({
