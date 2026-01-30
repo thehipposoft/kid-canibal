@@ -1,0 +1,25 @@
+/* [project]/app/thunderfont_1ac74ea1.module.css [app-client] (css) */
+@font-face {
+  font-family: thunderFont;
+  src: url("../media/Thunder_VF-s.p.13a6423d.ttf") format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: thunderFont Fallback;
+  src: local(Arial);
+  ascent-override: 104.26%;
+  descent-override: 28.96%;
+  line-gap-override: 0.0%;
+  size-adjust: 69.06%;
+}
+
+.thunderfont_1ac74ea1-module__GU9gqW__className {
+  font-family: thunderFont, thunderFont Fallback;
+}
+
+.thunderfont_1ac74ea1-module__GU9gqW__variable {
+  --font-thunder: "thunderFont", "thunderFont Fallback";
+}
+
+/*# sourceMappingURL=app_thunderfont_1ac74ea1_module_css_bad6b30c._.single.css.map*/

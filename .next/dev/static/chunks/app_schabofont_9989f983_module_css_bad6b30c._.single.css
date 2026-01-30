@@ -1,0 +1,25 @@
+/* [project]/app/schabofont_9989f983.module.css [app-client] (css) */
+@font-face {
+  font-family: schaboFont;
+  src: url("../media/SCHABO_XCondensed-s.p.cd1fc4b7.otf") format("opentype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: schaboFont Fallback;
+  src: local(Arial);
+  ascent-override: 186.03%;
+  descent-override: 46.51%;
+  line-gap-override: 46.51%;
+  size-adjust: 43.0%;
+}
+
+.schabofont_9989f983-module__nvKVba__className {
+  font-family: schaboFont, schaboFont Fallback;
+}
+
+.schabofont_9989f983-module__nvKVba__variable {
+  --font-schabo: "schaboFont", "schaboFont Fallback";
+}
+
+/*# sourceMappingURL=app_schabofont_9989f983_module_css_bad6b30c._.single.css.map*/

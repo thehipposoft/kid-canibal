@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/app/schabofont_1506acbc.module.css"],"sourcesContent":["@font-face {\n    \nfont-family: 'schaboFont';\n    src: url('@vercel/turbopack-next/internal/font/local/font?{%22path%22:%22../public/assets/fonts/SCHABO-XCondensed.otf%22,%22preload%22:true,%22has_size_adjust%22:true}') format('opentype');\n    font-display: swap;\n    \n}\n\n@font-face {\n    font-family: 'schaboFont Fallback';\n    src: local(\"Arial\");\n    ascent-override: 186.03%;\ndescent-override: 46.51%;\nline-gap-override: 46.51%;\nsize-adjust: 43.00%;\n\n}\n\n.className {\n    font-family: 'schaboFont', 'schaboFont Fallback';\n    \n}\n.variable {\n    --font-scabo: 'schaboFont', 'schaboFont Fallback';\n}\n\n"],"names":[],"mappings":"AAAA;;;;;;AAQA;;;;;;;;;AAUA;;;;AAIA"}}]
+}

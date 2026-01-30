@@ -1,0 +1,320 @@
+[00:00:01.496] Server  LOG     ✓ Ready in 1094ms
+[00:00:06.973] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:17.105] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:01:45.446] Server  LOG     ✓ Compiled in 112ms
+[00:01:46.281] Browser ERROR   ./app/globals.css
+Error evaluating Node.js code
+CssSyntaxError: /Users/juanmanuelborigen/Desktop/HippoSoft/kid-canibal/app/globals.css:13:3: Unknown word --font-sans
+    [at Input.error (turbopack:///[project]/node_modules/postcss/lib/input.js:135:16)]
+    [at Parser.unknownWord (turbopack:///[project]/node_modules/postcss/lib/parser.js:595:22)]
+    [at Parser.decl (turbopack:///[project]/node_modules/postcss/lib/parser.js:236:16)]
+    [at Parser.other (turbopack:///[project]/node_modules/postcss/lib/parser.js:401:18)]
+    [at Parser.parse (turbopack:///[project]/node_modules/postcss/lib/parser.js:472:16)]
+    [at parse (turbopack:///[project]/node_modules/postcss/lib/parse.js:11:12)]
+    [at LazyResult (turbopack:///[project]/node_modules/postcss/lib/lazy-result.js:165:16)]
+    [at Processor.process (turbopack:///[project]/node_modules/postcss/lib/processor.js:53:14)]
+    [at transform (turbopack:///[turbopack-node]/transforms/postcss.ts:70:51)]
+    [at run (turbopack:///[turbopack-node]/ipc/evaluate.ts:92:29)]
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css [Client Component Browser]
+    ./app/layout.tsx [Server Component]
+[00:01:51.283] Browser ERROR   ./app/globals.css
+Error evaluating Node.js code
+CssSyntaxError: /Users/juanmanuelborigen/Desktop/HippoSoft/kid-canibal/app/globals.css:13:3: Unknown word --font-sans
+    [at Input.error (turbopack:///[project]/node_modules/postcss/lib/input.js:135:16)]
+    [at Parser.unknownWord (turbopack:///[project]/node_modules/postcss/lib/parser.js:595:22)]
+    [at Parser.decl (turbopack:///[project]/node_modules/postcss/lib/parser.js:236:16)]
+    [at Parser.other (turbopack:///[project]/node_modules/postcss/lib/parser.js:401:18)]
+    [at Parser.parse (turbopack:///[project]/node_modules/postcss/lib/parser.js:472:16)]
+    [at parse (turbopack:///[project]/node_modules/postcss/lib/parse.js:11:12)]
+    [at LazyResult (turbopack:///[project]/node_modules/postcss/lib/lazy-result.js:165:16)]
+    [at Processor.process (turbopack:///[project]/node_modules/postcss/lib/processor.js:53:14)]
+    [at transform (turbopack:///[turbopack-node]/transforms/postcss.ts:70:51)]
+    [at run (turbopack:///[turbopack-node]/ipc/evaluate.ts:92:29)]
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css [Client Component Browser]
+    ./app/layout.tsx [Server Component]
+[00:01:59.183] Server  LOG     ✓ Compiled in 41ms
+[00:02:00.281] Browser ERROR   ./app/globals.css
+Error evaluating Node.js code
+CssSyntaxError: /Users/juanmanuelborigen/Desktop/HippoSoft/kid-canibal/app/globals.css:14:3: Unknown word --font-sans
+    [at Input.error (turbopack:///[project]/node_modules/postcss/lib/input.js:135:16)]
+    [at Parser.unknownWord (turbopack:///[project]/node_modules/postcss/lib/parser.js:595:22)]
+    [at Parser.decl (turbopack:///[project]/node_modules/postcss/lib/parser.js:236:16)]
+    [at Parser.other (turbopack:///[project]/node_modules/postcss/lib/parser.js:401:18)]
+    [at Parser.parse (turbopack:///[project]/node_modules/postcss/lib/parser.js:472:16)]
+    [at parse (turbopack:///[project]/node_modules/postcss/lib/parse.js:11:12)]
+    [at LazyResult (turbopack:///[project]/node_modules/postcss/lib/lazy-result.js:165:16)]
+    [at Processor.process (turbopack:///[project]/node_modules/postcss/lib/processor.js:53:14)]
+    [at transform (turbopack:///[turbopack-node]/transforms/postcss.ts:70:51)]
+    [at run (turbopack:///[turbopack-node]/ipc/evaluate.ts:92:29)]
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css [Client Component Browser]
+    ./app/layout.tsx [Server Component]
+[00:02:02.280] Browser ERROR   ./app/globals.css
+Error evaluating Node.js code
+CssSyntaxError: /Users/juanmanuelborigen/Desktop/HippoSoft/kid-canibal/app/globals.css:14:3: Unknown word --font-sans
+    [at Input.error (turbopack:///[project]/node_modules/postcss/lib/input.js:135:16)]
+    [at Parser.unknownWord (turbopack:///[project]/node_modules/postcss/lib/parser.js:595:22)]
+    [at Parser.decl (turbopack:///[project]/node_modules/postcss/lib/parser.js:236:16)]
+    [at Parser.other (turbopack:///[project]/node_modules/postcss/lib/parser.js:401:18)]
+    [at Parser.parse (turbopack:///[project]/node_modules/postcss/lib/parser.js:472:16)]
+    [at parse (turbopack:///[project]/node_modules/postcss/lib/parse.js:11:12)]
+    [at LazyResult (turbopack:///[project]/node_modules/postcss/lib/lazy-result.js:165:16)]
+    [at Processor.process (turbopack:///[project]/node_modules/postcss/lib/processor.js:53:14)]
+    [at transform (turbopack:///[turbopack-node]/transforms/postcss.ts:70:51)]
+    [at run (turbopack:///[turbopack-node]/ipc/evaluate.ts:92:29)]
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css [Client Component Browser]
+    ./app/layout.tsx [Server Component]
+[00:02:08.280] Browser ERROR   ./app/globals.css
+Error evaluating Node.js code
+CssSyntaxError: /Users/juanmanuelborigen/Desktop/HippoSoft/kid-canibal/app/globals.css:14:3: Unknown word --font-sans
+    [at Input.error (turbopack:///[project]/node_modules/postcss/lib/input.js:135:16)]
+    [at Parser.unknownWord (turbopack:///[project]/node_modules/postcss/lib/parser.js:595:22)]
+    [at Parser.decl (turbopack:///[project]/node_modules/postcss/lib/parser.js:236:16)]
+    [at Parser.other (turbopack:///[project]/node_modules/postcss/lib/parser.js:401:18)]
+    [at Parser.parse (turbopack:///[project]/node_modules/postcss/lib/parser.js:472:16)]
+    [at parse (turbopack:///[project]/node_modules/postcss/lib/parse.js:11:12)]
+    [at LazyResult (turbopack:///[project]/node_modules/postcss/lib/lazy-result.js:165:16)]
+    [at Processor.process (turbopack:///[project]/node_modules/postcss/lib/processor.js:53:14)]
+    [at transform (turbopack:///[turbopack-node]/transforms/postcss.ts:70:51)]
+    [at run (turbopack:///[turbopack-node]/ipc/evaluate.ts:92:29)]
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css [Client Component Browser]
+    ./app/layout.tsx [Server Component]
+[00:02:19.943] Server  LOG     ✓ Compiled in 36ms
+[00:02:21.431] Server  LOG     ✓ Compiled in 58ms
+[00:02:22.281] Browser ERROR   ./app/globals.css
+Error evaluating Node.js code
+CssSyntaxError: /Users/juanmanuelborigen/Desktop/HippoSoft/kid-canibal/app/globals.css:15:3: Unknown word --font-sans
+    [at Input.error (turbopack:///[project]/node_modules/postcss/lib/input.js:135:16)]
+    [at Parser.unknownWord (turbopack:///[project]/node_modules/postcss/lib/parser.js:595:22)]
+    [at Parser.decl (turbopack:///[project]/node_modules/postcss/lib/parser.js:236:16)]
+    [at Parser.other (turbopack:///[project]/node_modules/postcss/lib/parser.js:401:18)]
+    [at Parser.parse (turbopack:///[project]/node_modules/postcss/lib/parser.js:472:16)]
+    [at parse (turbopack:///[project]/node_modules/postcss/lib/parse.js:11:12)]
+    [at LazyResult (turbopack:///[project]/node_modules/postcss/lib/lazy-result.js:165:16)]
+    [at Processor.process (turbopack:///[project]/node_modules/postcss/lib/processor.js:53:14)]
+    [at transform (turbopack:///[turbopack-node]/transforms/postcss.ts:70:51)]
+    [at run (turbopack:///[turbopack-node]/ipc/evaluate.ts:92:29)]
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css [Client Component Browser]
+    ./app/layout.tsx [Server Component]
+[00:02:25.280] Browser ERROR   ./app/globals.css
+Error evaluating Node.js code
+CssSyntaxError: /Users/juanmanuelborigen/Desktop/HippoSoft/kid-canibal/app/globals.css:15:3: Unknown word --font-sans
+    [at Input.error (turbopack:///[project]/node_modules/postcss/lib/input.js:135:16)]
+    [at Parser.unknownWord (turbopack:///[project]/node_modules/postcss/lib/parser.js:595:22)]
+    [at Parser.decl (turbopack:///[project]/node_modules/postcss/lib/parser.js:236:16)]
+    [at Parser.other (turbopack:///[project]/node_modules/postcss/lib/parser.js:401:18)]
+    [at Parser.parse (turbopack:///[project]/node_modules/postcss/lib/parser.js:472:16)]
+    [at parse (turbopack:///[project]/node_modules/postcss/lib/parse.js:11:12)]
+    [at LazyResult (turbopack:///[project]/node_modules/postcss/lib/lazy-result.js:165:16)]
+    [at Processor.process (turbopack:///[project]/node_modules/postcss/lib/processor.js:53:14)]
+    [at transform (turbopack:///[turbopack-node]/transforms/postcss.ts:70:51)]
+    [at run (turbopack:///[turbopack-node]/ipc/evaluate.ts:92:29)]
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css [Client Component Browser]
+    ./app/layout.tsx [Server Component]
+[00:02:36.955] Server  LOG     ✓ Compiled in 36ms
+[00:02:37.281] Browser ERROR   ./app/globals.css
+Error evaluating Node.js code
+CssSyntaxError: /Users/juanmanuelborigen/Desktop/HippoSoft/kid-canibal/app/globals.css:16:3: Unknown word --font-sans
+    [at Input.error (turbopack:///[project]/node_modules/postcss/lib/input.js:135:16)]
+    [at Parser.unknownWord (turbopack:///[project]/node_modules/postcss/lib/parser.js:595:22)]
+    [at Parser.decl (turbopack:///[project]/node_modules/postcss/lib/parser.js:236:16)]
+    [at Parser.other (turbopack:///[project]/node_modules/postcss/lib/parser.js:401:18)]
+    [at Parser.parse (turbopack:///[project]/node_modules/postcss/lib/parser.js:472:16)]
+    [at parse (turbopack:///[project]/node_modules/postcss/lib/parse.js:11:12)]
+    [at LazyResult (turbopack:///[project]/node_modules/postcss/lib/lazy-result.js:165:16)]
+    [at Processor.process (turbopack:///[project]/node_modules/postcss/lib/processor.js:53:14)]
+    [at transform (turbopack:///[turbopack-node]/transforms/postcss.ts:70:51)]
+    [at run (turbopack:///[turbopack-node]/ipc/evaluate.ts:92:29)]
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css [Client Component Browser]
+    ./app/layout.tsx [Server Component]
+[00:02:41.286] Browser ERROR   ./app/globals.css
+Error evaluating Node.js code
+CssSyntaxError: /Users/juanmanuelborigen/Desktop/HippoSoft/kid-canibal/app/globals.css:16:3: Unknown word --font-sans
+    [at Input.error (turbopack:///[project]/node_modules/postcss/lib/input.js:135:16)]
+    [at Parser.unknownWord (turbopack:///[project]/node_modules/postcss/lib/parser.js:595:22)]
+    [at Parser.decl (turbopack:///[project]/node_modules/postcss/lib/parser.js:236:16)]
+    [at Parser.other (turbopack:///[project]/node_modules/postcss/lib/parser.js:401:18)]
+    [at Parser.parse (turbopack:///[project]/node_modules/postcss/lib/parser.js:472:16)]
+    [at parse (turbopack:///[project]/node_modules/postcss/lib/parse.js:11:12)]
+    [at LazyResult (turbopack:///[project]/node_modules/postcss/lib/lazy-result.js:165:16)]
+    [at Processor.process (turbopack:///[project]/node_modules/postcss/lib/processor.js:53:14)]
+    [at transform (turbopack:///[turbopack-node]/transforms/postcss.ts:70:51)]
+    [at run (turbopack:///[turbopack-node]/ipc/evaluate.ts:92:29)]
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css [Client Component Browser]
+    ./app/layout.tsx [Server Component]
+[00:02:52.742] Server  LOG     ✓ Compiled in 36ms
+[00:02:53.281] Browser ERROR   ./app/globals.css
+Error evaluating Node.js code
+CssSyntaxError: /Users/juanmanuelborigen/Desktop/HippoSoft/kid-canibal/app/globals.css:17:3: Unknown word --font-sans
+    [at Input.error (turbopack:///[project]/node_modules/postcss/lib/input.js:135:16)]
+    [at Parser.unknownWord (turbopack:///[project]/node_modules/postcss/lib/parser.js:595:22)]
+    [at Parser.decl (turbopack:///[project]/node_modules/postcss/lib/parser.js:236:16)]
+    [at Parser.other (turbopack:///[project]/node_modules/postcss/lib/parser.js:401:18)]
+    [at Parser.parse (turbopack:///[project]/node_modules/postcss/lib/parser.js:472:16)]
+    [at parse (turbopack:///[project]/node_modules/postcss/lib/parse.js:11:12)]
+    [at LazyResult (turbopack:///[project]/node_modules/postcss/lib/lazy-result.js:165:16)]
+    [at Processor.process (turbopack:///[project]/node_modules/postcss/lib/processor.js:53:14)]
+    [at transform (turbopack:///[turbopack-node]/transforms/postcss.ts:70:51)]
+    [at run (turbopack:///[turbopack-node]/ipc/evaluate.ts:92:29)]
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css [Client Component Browser]
+    ./app/layout.tsx [Server Component]
+[00:03:33.475] Server  LOG     ✓ Compiled in 60ms
+[00:10:14.296] Server  LOG     ✓ Compiled in 301ms
+[00:10:23.540] Server  LOG     ✓ Compiled in 15ms
+[00:10:23.556] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/assets/images/banner-1.png" "received" null
+[00:10:27.464] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/assets/images/banner-1.png" "received" null
+[00:10:27.513] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:10:39.624] Browser WARN    Image with src "/assets/images/banner/banner-1.png" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[00:11:54.635] Server  LOG     ✓ Compiled in 183ms
+[00:12:11.999] Server  LOG     ✓ Compiled in 54ms
+[00:12:56.194] Server  LOG     ✓ Compiled in 28ms
+[00:16:00.461] Server  LOG     ✓ Compiled in 118ms
+[00:16:21.538] Server  LOG     ✓ Compiled in 53ms
+[00:16:32.263] Server  LOG     ✓ Compiled in 37ms
+[00:16:47.451] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:16:47.555] Browser WARN    Image with src "/assets/images/banner/banner-1.png" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[00:17:12.254] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:17:12.356] Browser WARN    Image with src "/assets/images/banner/banner-1.png" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[00:23:56.180] Server  LOG     ✓ Compiled in 161ms
+[00:30:02.127] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:30:41.800] Server  LOG     ✓ Compiled in 77ms
+[00:30:47.529] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:30:47.636] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.tsx">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <RootLayout>
+                        <html lang="en">
+                          <body
+                            className="inter_fe8b9d92-module__LINzvG__variable schabofont_9989f983-module__nvKVba__var..."
+-                           cz-shortcut-listen="true"
+                          >
+                  ...
+
+[00:31:09.422] Server  LOG     ✓ Compiled in 61ms
+[00:31:10.555] Server  LOG     ✓ Compiled in 23ms
+[00:31:35.221] Server  LOG     ✓ Compiled in 30ms
+[00:31:36.568] Server  LOG     ✓ Compiled in 15ms
+[00:31:44.757] Server  LOG     ✓ Compiled in 37ms
+[00:31:46.766] Server  LOG     ✓ Compiled in 70ms
+[00:31:58.040] Server  LOG     ✓ Compiled in 27ms
+[00:32:05.726] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:36:08.330] Server  LOG     ✓ Compiled in 120ms
+[00:36:13.005] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:36:33.181] Server  LOG     ✓ Compiled in 25ms
+[00:46:28.703] Server  LOG     ✓ Compiled in 114ms
+[00:55:55.879] Server  LOG     ✓ Compiled in 281ms
+[00:56:11.034] Server  LOG     ✓ Compiled in 34ms
+[00:56:11.282] Browser ERROR   An empty string ("") was passed to the %s attribute. This may cause the browser to download the whole page again over the network. To fix this, either do not render the element at all or pass null to %s instead of an empty string. src src
+[00:56:11.282] Browser ERROR   Image is missing required "src" property: <img>
+[00:56:12.882] Server  LOG     ✓ Compiled in 22ms
+[00:56:13.189] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/" "received" null
+[00:56:25.914] Server  LOG     ✓ Compiled in 31ms
+[00:56:25.914] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/assets/images/" "received" null
+[00:56:31.351] Server  LOG     ✓ Compiled in 27ms
+[00:56:32.280] Browser WARN    Image with src "/assets/images/logo/logo.webp" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:56:46.555] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/assets/images/banner/" "received" null
+[00:56:46.557] Server  LOG     ✓ Compiled in 34ms
+[00:56:48.468] Server  LOG     ✓ Compiled in 13ms
+[00:56:49.284] Browser WARN    Image with src "/assets/images/banner/banner-1.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:56:49.707] Server  LOG     ✓ Compiled in 23ms
+[00:56:49.876] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/assets/images/banner/banner-4.png" "received" null
+[00:56:49.877] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/assets/images/banner/banner-3.png" "received" null
+[00:56:49.878] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/assets/images/banner/banner-2.png" "received" null
+[00:56:53.722] Server  LOG     ✓ Compiled in 37ms
+[00:56:54.280] Browser WARN    Image with src "/assets/images/banner/banner-text.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:57:03.886] Server  LOG     ✓ Compiled in 36ms
+[00:57:03.940] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/assets/images/banner/banner-t.png" "received" null
+[00:57:04.956] Server  LOG     ✓ Compiled in 14ms
+[00:57:04.956] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/assets/images/banner/banner-.png" "received" null
+[00:57:10.312] Server  LOG     ✓ Compiled in 31ms
+[00:57:10.364] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/assets/images/banner/kid4.png" "received" null
+[00:57:12.282] Browser WARN    Image with src "/assets/images/banner/kid3.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:57:20.844] Server  LOG     ✓ Compiled in 36ms
+[00:57:23.282] Browser WARN    Image with src "/assets/images/banner/kid2.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:57:24.758] Server  LOG     ✓ Compiled in 40ms
+[00:57:24.809] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/assets/images/banner/kid12.png" "received" null
+[00:57:25.833] Server  LOG     ✓ Compiled in 51ms
+[00:57:28.284] Browser WARN    Image with src "/assets/images/banner/kid1.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:58:07.663] Server  LOG     ✓ Compiled in 45ms
+[00:58:17.828] Server  LOG     ✓ Compiled in 27ms
+[00:58:29.878] Server  LOG     ✓ Compiled in 33ms
+[00:58:39.144] Server  LOG     ✓ Compiled in 33ms
+[00:58:56.378] Server  LOG     ✓ Compiled in 29ms
+[00:58:57.682] Server  LOG     ✓ Compiled in 14ms
+[00:59:02.258] Server  LOG     ✓ Compiled in 79ms
+[00:59:11.085] Server  LOG     ✓ Compiled in 50ms
+[00:59:18.522] Server  LOG     ✓ Compiled in 42ms
+[00:59:24.027] Server  LOG     ✓ Compiled in 67ms
+[00:59:33.161] Server  LOG     ✓ Compiled in 41ms
+[00:59:43.773] Server  LOG     ✓ Compiled in 37ms
+[00:59:56.258] Server  LOG     ✓ Compiled in 25ms
+[01:00:13.890] Server  LOG     ✓ Compiled in 26ms
+[01:00:24.356] Server  LOG     ✓ Compiled in 30ms
+[01:00:27.121] Server  LOG     ✓ Compiled in 22ms
+[01:00:28.306] Server  LOG     ✓ Compiled in 23ms
+[01:00:40.094] Server  LOG     ✓ Compiled in 120ms
+[01:00:55.480] Server  LOG     ✓ Compiled in 31ms
+[01:01:14.264] Server  LOG     ✓ Compiled in 28ms
+[01:01:17.939] Server  LOG     ✓ Compiled in 29ms
+[01:01:19.909] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:01:20.196] Browser WARN    Image with src "/assets/images/logo/logo.webp" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:01:20.196] Browser WARN    Image with src "/assets/images/banner/banner-text.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:01:20.196] Browser WARN    Image with src "/assets/images/banner/kid1.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:01:20.196] Browser WARN    Image with src "/assets/images/banner/kid2.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:01:20.196] Browser WARN    Image with src "/assets/images/banner/kid3.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
