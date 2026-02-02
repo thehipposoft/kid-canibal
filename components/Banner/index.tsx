@@ -1,28 +1,47 @@
-'use client';
+ 'use client';
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
 
 const Banner = () => {
-  // Array con las 5 imágenes para el loop
   const images = [
     '/assets/images/logo/logo.webp',
-    '/assets/images/banner/banner-text.png', // Aquí pondrías tus diferentes rutas: /image-1.png, /image-2.png, etc.
+    '/assets/images/banner/banner-text.png',
     '/assets/images/banner/kid1.png',
     '/assets/images/banner/kid2.png',
     '/assets/images/banner/kid3.png',
   ];
 
   const [index, setIndex] = useState(0);
+  const [isVisible, setIsVisible] = useState(true); // Controla la visibilidad global
 
   useEffect(() => {
+    // Intervalo para el cambio de imágenes
     const interval = setInterval(() => {
       setIndex((prev) => (prev + 1) % images.length);
     }, 1000);
-    return () => clearInterval(interval);
+
+    // Timer para ocultar el componente a los 6 segundos
+    const exitTimer = setTimeout(() => {
+      setIsVisible(false);
+    }, 6000);
+
+    return () => {
+      clearInterval(interval);
+      clearTimeout(exitTimer);
+    };
   }, [images.length]);
 
   return (
-    <div className='flex sticky top-0 flex-col justify-between w-full h-screen bg-black overflow-hidden'>
+    <div 
+      className={`
+        flex absolute top-0 flex-col justify-between w-full h-screen bg-black overflow-hidden z-50
+        transition-all duration-1000 ease-in-out
+        ${isVisible 
+          ? 'opacity-100 translate-y-0' 
+          : 'opacity-0 -translate-y-full pointer-events-none'
+        }
+      `}
+    >
       {/* Header */}
       <div className='p-6' />
 
@@ -31,7 +50,7 @@ const Banner = () => {
           src="/assets/images/banner/banner-1.png" 
           alt="Banner BG" 
           fill 
-          className='object-cover opacity-30 blur-[1px]' // Blur sutil al fondo para dar profundidad
+          className='object-cover opacity-30 blur-[1px]' 
           priority 
         />
         
@@ -40,10 +59,10 @@ const Banner = () => {
             <div
               key={i}
               className={`
-                absolute duration-500
+                absolute transition-all duration-500
                 ${i === index 
-                  ? 'opacity-100 blur-none scale-100' // Estado activo: nítido
-                  : 'opacity-0 blur-sm scale-95 pointer-events-none' // Estado oculto: desenfoque sutil
+                  ? 'opacity-100 blur-none scale-100' 
+                  : 'opacity-0 blur-sm scale-95 pointer-events-none'
                 }
               `}
             >
@@ -64,7 +83,7 @@ const Banner = () => {
       <div className='flex justify-between p-6 text-brand-white/60 text-sm uppercase font-light'>
         <p>© 2026 kidcanibal. Todos los derechos reservados</p>
         <div>
-          <span>INSTAGRAM / SPOTIFY</span>
+          <span>INSTAGRAM</span>
         </div>
       </div>
     </div>

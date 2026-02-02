@@ -14,7 +14,6 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$imag
 ;
 ;
 const Banner = ()=>{
-    // Array con las 5 imágenes para el loop
     const images = [
         '/assets/images/logo/logo.webp',
         '/assets/images/banner/banner-text.png',
@@ -23,30 +22,35 @@ const Banner = ()=>{
         '/assets/images/banner/kid3.png'
     ];
     const [index, setIndex] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(0);
+    const [isVisible, setIsVisible] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(true); // Controla la visibilidad global
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
+        // Intervalo para el cambio de imágenes
         const interval = setInterval(()=>{
             setIndex((prev)=>(prev + 1) % images.length);
         }, 1000);
-        return ()=>clearInterval(interval);
+        // Timer para ocultar el componente a los 6 segundos
+        const exitTimer = setTimeout(()=>{
+            setIsVisible(false);
+        }, 6000);
+        return ()=>{
+            clearInterval(interval);
+            clearTimeout(exitTimer);
+        };
     }, [
         images.length
     ]);
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-        className: "flex sticky top-0 flex-col justify-between w-full h-screen bg-black overflow-hidden",
+        className: `
+        flex absolute top-0 flex-col justify-between w-full h-screen bg-black overflow-hidden z-50
+        transition-all duration-1000 ease-in-out
+        ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-full pointer-events-none'}
+      `,
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "flex justify-end items-center w-full p-6 text-brand-white",
-                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
-                    className: "uppercase tracking-widest font-thunder",
-                    children: "menu"
-                }, void 0, false, {
-                    fileName: "[project]/components/Banner/index.tsx",
-                    lineNumber: 28,
-                    columnNumber: 9
-                }, ("TURBOPACK compile-time value", void 0))
+                className: "p-6"
             }, void 0, false, {
                 fileName: "[project]/components/Banner/index.tsx",
-                lineNumber: 27,
+                lineNumber: 46,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -60,17 +64,15 @@ const Banner = ()=>{
                         priority: true
                     }, void 0, false, {
                         fileName: "[project]/components/Banner/index.tsx",
-                        lineNumber: 32,
+                        lineNumber: 49,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "relative z-10 w-full h-full flex justify-center items-center",
                         children: images.map((src, i)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 className: `
-                absolute duration-500
-                ${i === index ? 'opacity-100 blur-none scale-100' // Estado activo: nítido
-                                 : 'opacity-0 blur-sm scale-95 pointer-events-none' // Estado oculto: desenfoque sutil
-                                }
+                absolute transition-all duration-500
+                ${i === index ? 'opacity-100 blur-none scale-100' : 'opacity-0 blur-sm scale-95 pointer-events-none'}
               `,
                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                     className: "relative w-[300px] h-[300px] lg:w-[800px] lg:h-[600px]",
@@ -81,28 +83,28 @@ const Banner = ()=>{
                                         className: "object-contain"
                                     }, void 0, false, {
                                         fileName: "[project]/components/Banner/index.tsx",
-                                        lineNumber: 53,
+                                        lineNumber: 70,
                                         columnNumber: 17
                                     }, ("TURBOPACK compile-time value", void 0))
                                 }, void 0, false, {
                                     fileName: "[project]/components/Banner/index.tsx",
-                                    lineNumber: 52,
+                                    lineNumber: 69,
                                     columnNumber: 15
                                 }, ("TURBOPACK compile-time value", void 0))
                             }, i, false, {
                                 fileName: "[project]/components/Banner/index.tsx",
-                                lineNumber: 42,
+                                lineNumber: 59,
                                 columnNumber: 13
                             }, ("TURBOPACK compile-time value", void 0)))
                     }, void 0, false, {
                         fileName: "[project]/components/Banner/index.tsx",
-                        lineNumber: 40,
+                        lineNumber: 57,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0))
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/Banner/index.tsx",
-                lineNumber: 31,
+                lineNumber: 48,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -112,32 +114,32 @@ const Banner = ()=>{
                         children: "© 2026 kidcanibal. Todos los derechos reservados"
                     }, void 0, false, {
                         fileName: "[project]/components/Banner/index.tsx",
-                        lineNumber: 67,
+                        lineNumber: 84,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                            children: "INSTAGRAM / SPOTIFY"
+                            children: "INSTAGRAM"
                         }, void 0, false, {
                             fileName: "[project]/components/Banner/index.tsx",
-                            lineNumber: 69,
+                            lineNumber: 86,
                             columnNumber: 11
                         }, ("TURBOPACK compile-time value", void 0))
                     }, void 0, false, {
                         fileName: "[project]/components/Banner/index.tsx",
-                        lineNumber: 68,
+                        lineNumber: 85,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0))
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/Banner/index.tsx",
-                lineNumber: 66,
+                lineNumber: 83,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0))
         ]
     }, void 0, true, {
         fileName: "[project]/components/Banner/index.tsx",
-        lineNumber: 25,
+        lineNumber: 35,
         columnNumber: 5
     }, ("TURBOPACK compile-time value", void 0));
 };

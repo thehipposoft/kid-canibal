@@ -3,6 +3,7 @@ import ScrollingBanner from "@/components/ScrollingBanner";
 import Image from "next/image";
 import Projects, { Project } from "@/components/Projects";
 import Menu from "@/components/Menu";
+import PhysicsMenu from "@/components/PhysicsMenu";
 
 const projects: Project[] = [
   {
@@ -54,7 +55,7 @@ export default function Home() {
       <Banner />
       <ScrollingBanner />
       <Projects projects={projects} />
-
+     {/*  <PhysicsMenu /> */}
     </main>
   );
 }

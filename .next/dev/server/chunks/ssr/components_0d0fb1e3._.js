@@ -14,7 +14,6 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$imag
 ;
 ;
 const Banner = ()=>{
-    // Array con las 5 imágenes para el loop
     const images = [
         '/assets/images/logo/logo.webp',
         '/assets/images/banner/banner-text.png',
@@ -23,22 +22,35 @@ const Banner = ()=>{
         '/assets/images/banner/kid3.png'
     ];
     const [index, setIndex] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(0);
+    const [isVisible, setIsVisible] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(true); // Controla la visibilidad global
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
+        // Intervalo para el cambio de imágenes
         const interval = setInterval(()=>{
             setIndex((prev)=>(prev + 1) % images.length);
         }, 1000);
-        return ()=>clearInterval(interval);
+        // Timer para ocultar el componente a los 6 segundos
+        const exitTimer = setTimeout(()=>{
+            setIsVisible(false);
+        }, 6000);
+        return ()=>{
+            clearInterval(interval);
+            clearTimeout(exitTimer);
+        };
     }, [
         images.length
     ]);
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-        className: "flex sticky top-0 flex-col justify-between w-full h-screen bg-black overflow-hidden",
+        className: `
+        flex absolute top-0 flex-col justify-between w-full h-screen bg-black overflow-hidden z-50
+        transition-all duration-1000 ease-in-out
+        ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-full pointer-events-none'}
+      `,
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "p-6"
             }, void 0, false, {
                 fileName: "[project]/components/Banner/index.tsx",
-                lineNumber: 27,
+                lineNumber: 46,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -52,17 +64,15 @@ const Banner = ()=>{
                         priority: true
                     }, void 0, false, {
                         fileName: "[project]/components/Banner/index.tsx",
-                        lineNumber: 30,
+                        lineNumber: 49,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "relative z-10 w-full h-full flex justify-center items-center",
                         children: images.map((src, i)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 className: `
-                absolute duration-500
-                ${i === index ? 'opacity-100 blur-none scale-100' // Estado activo: nítido
-                                 : 'opacity-0 blur-sm scale-95 pointer-events-none' // Estado oculto: desenfoque sutil
-                                }
+                absolute transition-all duration-500
+                ${i === index ? 'opacity-100 blur-none scale-100' : 'opacity-0 blur-sm scale-95 pointer-events-none'}
               `,
                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                     className: "relative w-[300px] h-[300px] lg:w-[800px] lg:h-[600px]",
@@ -73,28 +83,28 @@ const Banner = ()=>{
                                         className: "object-contain"
                                     }, void 0, false, {
                                         fileName: "[project]/components/Banner/index.tsx",
-                                        lineNumber: 51,
+                                        lineNumber: 70,
                                         columnNumber: 17
                                     }, ("TURBOPACK compile-time value", void 0))
                                 }, void 0, false, {
                                     fileName: "[project]/components/Banner/index.tsx",
-                                    lineNumber: 50,
+                                    lineNumber: 69,
                                     columnNumber: 15
                                 }, ("TURBOPACK compile-time value", void 0))
                             }, i, false, {
                                 fileName: "[project]/components/Banner/index.tsx",
-                                lineNumber: 40,
+                                lineNumber: 59,
                                 columnNumber: 13
                             }, ("TURBOPACK compile-time value", void 0)))
                     }, void 0, false, {
                         fileName: "[project]/components/Banner/index.tsx",
-                        lineNumber: 38,
+                        lineNumber: 57,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0))
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/Banner/index.tsx",
-                lineNumber: 29,
+                lineNumber: 48,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -104,32 +114,32 @@ const Banner = ()=>{
                         children: "© 2026 kidcanibal. Todos los derechos reservados"
                     }, void 0, false, {
                         fileName: "[project]/components/Banner/index.tsx",
-                        lineNumber: 65,
+                        lineNumber: 84,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                            children: "INSTAGRAM / SPOTIFY"
+                            children: "INSTAGRAM"
                         }, void 0, false, {
                             fileName: "[project]/components/Banner/index.tsx",
-                            lineNumber: 67,
+                            lineNumber: 86,
                             columnNumber: 11
                         }, ("TURBOPACK compile-time value", void 0))
                     }, void 0, false, {
                         fileName: "[project]/components/Banner/index.tsx",
-                        lineNumber: 66,
+                        lineNumber: 85,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0))
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/Banner/index.tsx",
-                lineNumber: 64,
+                lineNumber: 83,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0))
         ]
     }, void 0, true, {
         fileName: "[project]/components/Banner/index.tsx",
-        lineNumber: 25,
+        lineNumber: 35,
         columnNumber: 5
     }, ("TURBOPACK compile-time value", void 0));
 };
@@ -355,92 +365,346 @@ __turbopack_context__.s([
 ]);
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react-jsx-dev-runtime.js [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react.js [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/image.js [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$matter$2d$js$2f$build$2f$matter$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/matter-js/build/matter.js [app-ssr] (ecmascript)");
 'use client';
 ;
 ;
+;
+;
+const COLORS = [
+    '#0494B5',
+    '#FFC002',
+    '#EA0303'
+];
 const Menu = ({ hiddeOnDesktop })=>{
     const [openMenu, setOpenMenu] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(false);
-    const openMenuFunc = ()=>setOpenMenu(!openMenu);
+    const containerRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useRef"])(null);
+    const engineRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useRef"])(null);
+    const [elements, setElements] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])([]);
+    const [hoveredId, setHoveredId] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(null); // Estado para el hover
+    const physicsItems = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useMemo"])(()=>[
+            {
+                id: 'l1',
+                type: 'link',
+                text: 'Home',
+                width: 180,
+                height: 45,
+                color: COLORS[0]
+            },
+            {
+                id: 'l2',
+                type: 'link',
+                text: 'About',
+                width: 180,
+                height: 45,
+                color: COLORS[1]
+            },
+            {
+                id: 'l3',
+                type: 'link',
+                text: 'Archivo',
+                width: 180,
+                height: 45,
+                color: COLORS[2]
+            },
+            {
+                id: 'l4',
+                type: 'link',
+                text: 'Services',
+                width: 180,
+                height: 45,
+                color: COLORS[0]
+            },
+            {
+                id: 'l5',
+                type: 'link',
+                text: 'Contact',
+                width: 180,
+                height: 45,
+                color: COLORS[1]
+            },
+            {
+                id: 'l6',
+                type: 'link',
+                text: 'Directors',
+                width: 180,
+                height: 45,
+                color: COLORS[2]
+            },
+            {
+                id: 'l7',
+                type: 'link',
+                text: 'Photography',
+                width: 180,
+                height: 45,
+                color: COLORS[0]
+            },
+            {
+                id: 'img1',
+                type: 'image',
+                src: '/assets/images/kids/kidblack1.png',
+                alt: 'logo',
+                width: 50,
+                height: 50
+            },
+            {
+                id: 'img2',
+                type: 'image',
+                src: '/assets/images/kids/kidblack2.png',
+                alt: 'logo',
+                width: 50,
+                height: 50
+            },
+            {
+                id: 'img3',
+                type: 'image',
+                src: '/assets/images/kids/kidblack3.png',
+                alt: 'logo',
+                width: 50,
+                height: 50
+            }
+        ], []);
+    const setupMatter = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useCallback"])(()=>{
+        if (!containerRef.current || !openMenu) return;
+        const { Engine, Runner, Bodies, Composite, Mouse, MouseConstraint, Events, Body } = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$matter$2d$js$2f$build$2f$matter$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"];
+        const engine = Engine.create();
+        engineRef.current = engine;
+        engine.gravity.y = 0.5;
+        const rect = containerRef.current.getBoundingClientRect();
+        const width = rect.width;
+        const height = rect.height;
+        const wallThickness = 60;
+        const walls = [
+            Bodies.rectangle(width / 2, -wallThickness / 2, width, wallThickness, {
+                isStatic: true
+            }),
+            Bodies.rectangle(width / 2, height + wallThickness / 2, width, wallThickness, {
+                isStatic: true
+            }),
+            Bodies.rectangle(-wallThickness / 2, height / 2, wallThickness, height, {
+                isStatic: true
+            }),
+            Bodies.rectangle(width + wallThickness / 2, height / 2, wallThickness, height, {
+                isStatic: true
+            })
+        ];
+        const bodies = physicsItems.map((item)=>{
+            const x = Math.random() * (width - 40) + 20;
+            const y = Math.random() * (height / 2);
+            const body = Bodies.rectangle(x, y, item.width, item.height, {
+                chamfer: {
+                    radius: item.type === 'image' ? 15 : 22
+                },
+                restitution: 0.7,
+                frictionAir: 0.03,
+                label: item.id
+            });
+            Body.applyForce(body, body.position, {
+                x: (Math.random() - 0.5) * 0.01,
+                y: (Math.random() - 0.5) * 0.01
+            });
+            return body;
+        });
+        Composite.add(engine.world, [
+            ...walls,
+            ...bodies
+        ]);
+        const mouse = Mouse.create(containerRef.current);
+        const mouseConstraint = MouseConstraint.create(engine, {
+            mouse: mouse,
+            constraint: {
+                stiffness: 0.2,
+                render: {
+                    visible: false
+                }
+            }
+        });
+        Composite.add(engine.world, mouseConstraint);
+        Events.on(engine, 'afterUpdate', ()=>{
+            setElements(bodies.map((b)=>({
+                    id: b.label,
+                    x: b.position.x,
+                    y: b.position.y,
+                    rotation: b.angle
+                })));
+        });
+        const runner = Runner.create();
+        Runner.run(runner, engine);
+        return ()=>{
+            Runner.stop(runner);
+            Engine.clear(engine);
+        };
+    }, [
+        openMenu,
+        physicsItems
+    ]);
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
+        const cleanup = setupMatter();
+        return ()=>cleanup?.();
+    }, [
+        setupMatter
+    ]);
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-        className: `${hiddeOnDesktop ? 'lg:hidden block' : ''} fixed top-0 right-0 z-40`,
+        className: `${hiddeOnDesktop ? 'lg:hidden block' : ''} fixed flex items-center top-0 right-0 z-40`,
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                className: "fixed z-50 px-1 py-1 duration-500 cursor-pointer top-7 right-8 hover:bg-black/30 bg-green-blur backdrop-blur-md rounded-xl",
-                onClick: openMenuFunc,
+                className: "fixed z-50 px-1 py-1 duration-500 cursor-pointer top-7 right-10 rounded-xl outline-none",
+                onClick: ()=>setOpenMenu(!openMenu),
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
                     width: "35",
                     height: "35",
                     viewBox: "0 0 30 15",
                     fill: "none",
-                    xmlns: "http://www.w3.org/2000/svg",
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("rect", {
-                            className: `duration-500 transition-all origin-center ${openMenu ? 'rotate-45 translate-y-[6px] translate-x-[2px] fill-white' : 'fill-white/75'}`,
+                            className: `duration-500 transition-all origin-center ${openMenu ? 'rotate-45 translate-y-[6px] translate-x-[2px] fill-black' : 'fill-white'}`,
                             y: "0",
                             width: "25",
                             height: "2.25",
                             rx: "1.125"
                         }, void 0, false, {
                             fileName: "[project]/components/Menu/index.tsx",
-                            lineNumber: 23,
-                            columnNumber: 17
+                            lineNumber: 125,
+                            columnNumber: 11
                         }, ("TURBOPACK compile-time value", void 0)),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("rect", {
-                            className: `duration-500 fill-white/75 ${openMenu ? 'opacity-0' : 'opacity-100'}`,
+                            className: `duration-500 ${openMenu ? 'opacity-0' : 'opacity-100'} fill-white`,
                             y: "6.125",
                             width: "25",
                             height: "2.25",
                             rx: "1.125"
                         }, void 0, false, {
                             fileName: "[project]/components/Menu/index.tsx",
-                            lineNumber: 29,
-                            columnNumber: 17
+                            lineNumber: 126,
+                            columnNumber: 11
                         }, ("TURBOPACK compile-time value", void 0)),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("rect", {
-                            className: `duration-500 transition-all origin-center ${openMenu ? '-rotate-45 -translate-y-[6.5px] translate-x-[2px] fill-white' : 'fill-white/75'}`,
+                            className: `duration-500 transition-all origin-center ${openMenu ? '-rotate-45 -translate-y-[6.5px] translate-x-[2px] fill-black' : 'fill-white'}`,
                             y: "12.25",
                             width: "25",
                             height: "2.25",
                             rx: "1.125"
                         }, void 0, false, {
                             fileName: "[project]/components/Menu/index.tsx",
-                            lineNumber: 35,
-                            columnNumber: 17
+                            lineNumber: 127,
+                            columnNumber: 11
                         }, ("TURBOPACK compile-time value", void 0))
                     ]
                 }, void 0, true, {
                     fileName: "[project]/components/Menu/index.tsx",
-                    lineNumber: 22,
-                    columnNumber: 13
+                    lineNumber: 124,
+                    columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0))
             }, void 0, false, {
                 fileName: "[project]/components/Menu/index.tsx",
-                lineNumber: 18,
-                columnNumber: 9
+                lineNumber: 120,
+                columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0)),
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("nav", {
-                className: `
-            menu top-20 right-8 absolute bg-white lg:w-[350px] lg:h-[500px] flex flex-col justify-center px-12 py-16 z-40
-            transition-all duration-500 
-            ${openMenu ? 'opacity-100 right-0' : 'opacity-0 -right-full'}
-            md:rounded-xl 
-        `,
-                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
-                    className: "menu__items flex flex-col gap-6 md:gap-4"
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: "fixed z-50 w-10 h-10 top-7 left-10",
+                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
+                    src: '/kid.png',
+                    alt: "KidCanibal logo",
+                    fill: true,
+                    className: "object-contain"
                 }, void 0, false, {
                     fileName: "[project]/components/Menu/index.tsx",
-                    lineNumber: 49,
-                    columnNumber: 13
+                    lineNumber: 132,
+                    columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0))
             }, void 0, false, {
                 fileName: "[project]/components/Menu/index.tsx",
-                lineNumber: 43,
-                columnNumber: 9
+                lineNumber: 131,
+                columnNumber: 7
+            }, ("TURBOPACK compile-time value", void 0)),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("nav", {
+                ref: containerRef,
+                className: `
+          fixed top-0 right-0 bg-white w-full h-screen md:w-[350px] 2xl:w-[400px] md:h-[600px] md:top-6 md:right-6 
+          transition-all duration-700 ease-[cubic-bezier(0.23,1,0.32,1)] overflow-hidden
+          ${openMenu ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-full pointer-events-none'}
+          md:rounded-3xl shadow-2xl touch-none
+        `,
+                children: [
+                    openMenu && physicsItems.map((item)=>{
+                        const state = elements.find((el)=>el.id === item.id);
+                        if (!state) return null;
+                        const isHovered = hoveredId === item.id;
+                        return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            onMouseEnter: ()=>setHoveredId(item.id),
+                            onMouseLeave: ()=>setHoveredId(null),
+                            style: {
+                                position: 'absolute',
+                                left: 0,
+                                top: 0,
+                                width: item.width,
+                                height: item.height,
+                                transform: `translate3d(${state.x - item.width / 2}px, ${state.y - item.height / 2}px, 0) rotate(${state.rotation}rad)`,
+                                // Cambio dinámico de colores
+                                backgroundColor: isHovered ? '#FDF9F4' : item.color || 'transparent',
+                                border: item.type === 'link' ? `2px solid ${item.color}` : 'none',
+                                zIndex: 10
+                            },
+                            className: `
+                transition-colors duration-200
+                ${item.type === 'link' ? 'rounded-full flex items-center justify-center shadow-lg cursor-pointer' : 'cursor-grab'}
+              `,
+                            children: item.type === 'link' ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "w-full h-full flex items-center justify-center text-black font-bold font-thunder text-3xl uppercase px-4 select-none",
+                                children: item.text
+                            }, void 0, false, {
+                                fileName: "[project]/components/Menu/index.tsx",
+                                lineNumber: 173,
+                                columnNumber: 17
+                            }, ("TURBOPACK compile-time value", void 0)) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "relative w-full h-full p-1",
+                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
+                                    src: item.src,
+                                    alt: item.alt,
+                                    fill: true,
+                                    className: "object-contain pointer-events-none"
+                                }, void 0, false, {
+                                    fileName: "[project]/components/Menu/index.tsx",
+                                    lineNumber: 178,
+                                    columnNumber: 19
+                                }, ("TURBOPACK compile-time value", void 0))
+                            }, void 0, false, {
+                                fileName: "[project]/components/Menu/index.tsx",
+                                lineNumber: 177,
+                                columnNumber: 17
+                            }, ("TURBOPACK compile-time value", void 0))
+                        }, item.id, false, {
+                            fileName: "[project]/components/Menu/index.tsx",
+                            lineNumber: 151,
+                            columnNumber: 13
+                        }, ("TURBOPACK compile-time value", void 0));
+                    }),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "absolute inset-0 flex items-center justify-center pointer-events-none opacity-[0.03] select-none",
+                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                            className: "text-8xl font-black rotate-90",
+                            children: "MENU"
+                        }, void 0, false, {
+                            fileName: "[project]/components/Menu/index.tsx",
+                            lineNumber: 186,
+                            columnNumber: 11
+                        }, ("TURBOPACK compile-time value", void 0))
+                    }, void 0, false, {
+                        fileName: "[project]/components/Menu/index.tsx",
+                        lineNumber: 185,
+                        columnNumber: 9
+                    }, ("TURBOPACK compile-time value", void 0))
+                ]
+            }, void 0, true, {
+                fileName: "[project]/components/Menu/index.tsx",
+                lineNumber: 135,
+                columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0))
         ]
     }, void 0, true, {
         fileName: "[project]/components/Menu/index.tsx",
-        lineNumber: 17,
+        lineNumber: 119,
         columnNumber: 5
     }, ("TURBOPACK compile-time value", void 0));
 };

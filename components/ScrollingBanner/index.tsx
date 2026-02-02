@@ -25,7 +25,7 @@ const ScrollingBanner = () => {
             </div>
 
             {/* Plus Icon Top Right */}
-            <div className="absolute top-10 right-10 text-white text-2xl z-10">
+            <div className="absolute top-40 right-10 text-white text-2xl z-10">
                 +
             </div>
 
