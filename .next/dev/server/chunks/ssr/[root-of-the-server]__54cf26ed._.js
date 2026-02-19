@@ -137,6 +137,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$SmoothScroll$2
 ;
 ;
 ;
+;
 const metadata = {
     title: "KIDCANIBAL",
     description: "- BRUTAL. BEAUTIFUL.",
@@ -157,17 +158,17 @@ function RootLayout({ children }) {
                 children: children
             }, void 0, false, {
                 fileName: "[project]/app/layout.tsx",
-                lineNumber: 42,
+                lineNumber: 47,
                 columnNumber: 9
             }, this)
         }, void 0, false, {
             fileName: "[project]/app/layout.tsx",
-            lineNumber: 39,
+            lineNumber: 44,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/app/layout.tsx",
-        lineNumber: 38,
+        lineNumber: 43,
         columnNumber: 5
     }, this);
 }

@@ -19,6 +19,11 @@ const thunderFont = localFont({
   variable: "--font-thunder"
 })
 
+const providenceFont = localFont({
+  src: "../public/assets/fonts/ProvidenceSansBold.ttf",
+  variable: "--font-providence"
+})
+
 export const metadata: Metadata = {
   title: "KIDCANIBAL",
   description: "- BRUTAL. BEAUTIFUL.",
@@ -37,7 +42,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.variable} ${schaboFont.variable} ${thunderFont.variable} antialiased`}
+        className={`${inter.variable} ${schaboFont.variable} ${thunderFont.variable} ${providenceFont.variable} antialiased`}
       >
         <SmoothScroll>{children}</SmoothScroll>
       </body>

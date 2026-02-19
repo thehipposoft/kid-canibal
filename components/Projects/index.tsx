@@ -51,10 +51,10 @@ const ProjectCard = ({ project, index, total }: { project: Project; index: numbe
                 </div>
 
                 {/* Content */}
-                <div className="relative z-20 w-full h-full flex flex-col justify-end p-6 md:px-12 md:py-28 gap-6">
+                <div className="relative z-20 w-full h-full flex flex-col justify-end p-6 md:px-12 md:py-12 gap-6">
 
                     <div className="">
-                        <h2 className="text-white font-thunder font-bold text-[13vw] leading-[0.8] uppercase">
+                        <h2 className="text-white font-thunder font-bold text-[11vw] leading-[0.8] uppercase">
                             {project.title}
                         </h2>
                     </div>
@@ -62,7 +62,7 @@ const ProjectCard = ({ project, index, total }: { project: Project; index: numbe
                     <div className="w-full h-px bg-white/30" />
                     <div className="flex justify-between items-center">
                         <div className="flex flex-col gap-1">
-                            <span className="text-brand-blue font-bold tracking-widest">DIRECCIÓN</span>
+                            <span className="font-bold tracking-widest">DIRECCIÓN</span>
                             <span className="text-2xl font-inter font-light text-white/60">{project.director}</span>
                         </div>
                         <div className="flex items-center gap-4">

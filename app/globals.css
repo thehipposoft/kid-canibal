@@ -16,9 +16,10 @@
 
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-  --font-schabo: var(--font-schabo), sans-serif;
-  --font-thunder: var(--font-thunder), sans-serif;
-  --font-inter: var(--font-inter), sans-serif;
+  --font-schabo: var(--font-schabo);
+  --font-thunder: var(--font-thunder);
+  --font-inter: var(--font-inter);
+  --font-providence: var(--font-providence);
 
   --animate-marquee: marquee 25s linear infinite;
 
@@ -44,4 +45,10 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  /* Fix: Next.js localFont sets CSS vars with quoted names which break font-family.
+     Re-declare them unquoted so var(--font-providence) resolves correctly. */
+  --font-providence: providenceFont, providenceFont Fallback, sans-serif;
+  --font-schabo: schaboFont, schaboFont Fallback, sans-serif;
+  --font-thunder: thunderFont, thunderFont Fallback, sans-serif;
+  --font-inter: Inter, sans-serif;
 }

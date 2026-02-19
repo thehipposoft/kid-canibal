@@ -1,9 +1,8 @@
 import Banner from "@/components/Banner";
 import ScrollingBanner from "@/components/ScrollingBanner";
-import Image from "next/image";
 import Projects, { Project } from "@/components/Projects";
 import Menu from "@/components/Menu";
-import PhysicsMenu from "@/components/PhysicsMenu";
+import CornersMenu from "@/components/Menu/CornersMenu";
 
 const projects: Project[] = [
   {
@@ -51,11 +50,10 @@ const projects: Project[] = [
 export default function Home() {
   return (
     <main className="">
-      <Menu />
+      <CornersMenu />
       <Banner />
       <ScrollingBanner />
       <Projects projects={projects} />
-     {/*  <PhysicsMenu /> */}
     </main>
   );
 }

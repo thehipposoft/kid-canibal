@@ -228,12 +228,12 @@ const ProjectCard = ({ project, index, total })=>{
                     columnNumber: 17
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    className: "relative z-20 w-full h-full flex flex-col justify-end p-6 md:px-12 md:py-28 gap-6",
+                    className: "relative z-20 w-full h-full flex flex-col justify-end p-6 md:px-12 md:py-12 gap-6",
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                             className: "",
                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
-                                className: "text-white font-thunder font-bold text-[13vw] leading-[0.8] uppercase",
+                                className: "text-white font-thunder font-bold text-[11vw] leading-[0.8] uppercase",
                                 children: project.title
                             }, void 0, false, {
                                 fileName: "[project]/components/Projects/index.tsx",
@@ -259,7 +259,7 @@ const ProjectCard = ({ project, index, total })=>{
                                     className: "flex flex-col gap-1",
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                            className: "text-brand-blue font-bold tracking-widest",
+                                            className: "font-bold tracking-widest",
                                             children: "DIRECCIÓN"
                                         }, void 0, false, {
                                             fileName: "[project]/components/Projects/index.tsx",
