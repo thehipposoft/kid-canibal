@@ -3,6 +3,7 @@ import ScrollingBanner from "@/components/ScrollingBanner";
 import Projects, { Project } from "@/components/Projects";
 import Menu from "@/components/Menu";
 import CornersMenu from "@/components/Menu/CornersMenu";
+import VideoBanner from "@/components/VideoBanner";
 
 const projects: Project[] = [
   {
@@ -51,7 +52,7 @@ export default function Home() {
   return (
     <main className="">
       <CornersMenu />
-      <Banner />
+      <VideoBanner />
       <ScrollingBanner />
       <Projects projects={projects} />
     </main>

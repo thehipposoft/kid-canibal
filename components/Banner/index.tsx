@@ -4,8 +4,6 @@ import Image from 'next/image';
 
 const Banner = () => {
   const images = [
-    '/assets/images/logo/logo.webp',
-    '/assets/images/banner/banner-text.png',
     '/assets/images/banner/kid1.png',
     '/assets/images/banner/kid2.png',
     '/assets/images/banner/kid3.png',

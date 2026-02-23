@@ -17,8 +17,6 @@ var _s = __turbopack_context__.k.signature();
 const Banner = ()=>{
     _s();
     const images = [
-        '/assets/images/logo/logo.webp',
-        '/assets/images/banner/banner-text.png',
         '/assets/images/banner/kid1.png',
         '/assets/images/banner/kid2.png',
         '/assets/images/banner/kid3.png'
@@ -62,7 +60,7 @@ const Banner = ()=>{
                 className: "p-6"
             }, void 0, false, {
                 fileName: "[project]/components/Banner/index.tsx",
-                lineNumber: 46,
+                lineNumber: 44,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -76,7 +74,7 @@ const Banner = ()=>{
                         priority: true
                     }, void 0, false, {
                         fileName: "[project]/components/Banner/index.tsx",
-                        lineNumber: 49,
+                        lineNumber: 47,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -95,28 +93,28 @@ const Banner = ()=>{
                                         className: "object-contain"
                                     }, void 0, false, {
                                         fileName: "[project]/components/Banner/index.tsx",
-                                        lineNumber: 70,
+                                        lineNumber: 68,
                                         columnNumber: 17
                                     }, ("TURBOPACK compile-time value", void 0))
                                 }, void 0, false, {
                                     fileName: "[project]/components/Banner/index.tsx",
-                                    lineNumber: 69,
+                                    lineNumber: 67,
                                     columnNumber: 15
                                 }, ("TURBOPACK compile-time value", void 0))
                             }, i, false, {
                                 fileName: "[project]/components/Banner/index.tsx",
-                                lineNumber: 59,
+                                lineNumber: 57,
                                 columnNumber: 13
                             }, ("TURBOPACK compile-time value", void 0)))
                     }, void 0, false, {
                         fileName: "[project]/components/Banner/index.tsx",
-                        lineNumber: 57,
+                        lineNumber: 55,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0))
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/Banner/index.tsx",
-                lineNumber: 48,
+                lineNumber: 46,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -126,7 +124,7 @@ const Banner = ()=>{
                         children: "© 2026 kidcanibal. Todos los derechos reservados"
                     }, void 0, false, {
                         fileName: "[project]/components/Banner/index.tsx",
-                        lineNumber: 84,
+                        lineNumber: 82,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -134,24 +132,24 @@ const Banner = ()=>{
                             children: "INSTAGRAM"
                         }, void 0, false, {
                             fileName: "[project]/components/Banner/index.tsx",
-                            lineNumber: 86,
+                            lineNumber: 84,
                             columnNumber: 11
                         }, ("TURBOPACK compile-time value", void 0))
                     }, void 0, false, {
                         fileName: "[project]/components/Banner/index.tsx",
-                        lineNumber: 85,
+                        lineNumber: 83,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0))
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/Banner/index.tsx",
-                lineNumber: 83,
+                lineNumber: 81,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0))
         ]
     }, void 0, true, {
         fileName: "[project]/components/Banner/index.tsx",
-        lineNumber: 35,
+        lineNumber: 33,
         columnNumber: 5
     }, ("TURBOPACK compile-time value", void 0));
 };
