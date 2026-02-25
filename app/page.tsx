@@ -5,7 +5,7 @@ import Menu from "@/components/Menu";
 import CornersMenu from "@/components/Menu/CornersMenu";
 import VideoBanner from "@/components/VideoBanner";
 
-const projects: Project[] = [
+export const projects: Project[] = [
   {
     title: "PARK HYATT",
     director: "RUBENS BELLO",

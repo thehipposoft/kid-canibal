@@ -1,546 +1,29 @@
-[00:00:01.173] Server  LOG     ✓ Ready in 950ms
-[00:00:04.956] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
-[00:00:05.196] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:00:05.872] Browser WARN    Image with src "/assets/images/logo/logo.webp" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+[00:00:01.297] Server  LOG     ✓ Ready in 1062ms
+[00:00:53.237] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+[00:00:53.575] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:54.252] Browser WARN    Image with src "/assets/images/logo/logo.webp" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
 Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
-[00:00:08.821] Browser WARN    Image with src "/assets/images/logo/logo.webp" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:01:08.393] Server  LOG     ✓ Compiled in 379ms
-[00:01:10.709] Server  LOG     ✓ Compiled in 113ms
-[00:01:19.610] Server  LOG     ✓ Compiled in 36ms
-[00:01:29.415] Server  LOG     ✓ Compiled in 20ms
-[00:01:43.599] Server  LOG     ✓ Compiled in 32ms
-[00:01:45.072] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
-[00:01:45.281] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:01:48.910] Browser WARN    Image with src "/assets/images/logo/logo.webp" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:02:58.928] Server  LOG     ✓ Compiled in 73ms
-[00:03:03.635] Server  LOG     ✓ Compiled in 46ms
-[00:03:06.870] Server  LOG     ✓ Compiled in 33ms
-[00:03:35.920] Server  LOG     ✓ Compiled in 35ms
-[00:03:38.587] Server  LOG     ✓ Compiled in 15ms
-[00:03:43.599] Server  LOG     ✓ Compiled in 23ms
-[00:03:48.066] Server  LOG     ✓ Compiled in 22ms
-[00:03:55.628] Server  LOG     ✓ Compiled in 54ms
-[00:03:58.108] Server  LOG     ✓ Compiled in 28ms
-[00:04:01.608] Server  LOG     ✓ Compiled in 18ms
-[00:04:03.608] Server  LOG     ✓ Compiled in 39ms
-[00:05:16.646] Server  LOG     ✓ Compiled in 50ms
-[00:05:38.611] Server  LOG     ✓ Compiled in 24ms
-[00:07:14.329] Server  LOG     ✓ Compiled in 30ms
-[00:07:16.327] Server  LOG     ✓ Compiled in 22ms
-[00:07:17.638] Server  LOG     ✓ Compiled in 37ms
-[00:07:32.610] Server  LOG     ✓ Compiled in 32ms
-[00:07:57.477] Server  LOG     ✓ Compiled in 41ms
-[00:08:05.781] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
-[00:08:05.972] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:08:10.523] Browser WARN    Image with src "/assets/images/logo/logo.webp" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:08:17.887] Server  LOG     ✓ Compiled in 44ms
-[00:08:53.918] Server  LOG     ✓ Compiled in 31ms
-[00:08:56.585] Server  LOG     ✓ Compiled in 29ms
-[00:09:24.183] Server  LOG     ✓ Compiled in 35ms
-[00:10:20.162] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
-[00:10:35.072] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
-[00:10:37.653] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
-[00:10:51.661] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
-[00:10:56.638] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
-[00:11:08.663] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
-[00:11:12.451] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
-[00:11:25.242] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
-[00:11:27.631] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
-[00:11:30.222] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
-[00:13:49.663] Server  LOG     ✓ Compiled in 87ms
-[00:13:59.458] Server  LOG     ✓ Compiled in 28ms
-[00:14:01.575] Server  LOG     ✓ Compiled in 13ms
-[00:14:16.369] Server  LOG     ✓ Compiled in 31ms
-[00:14:19.591] Server  LOG     ✓ Compiled in 24ms
-[00:14:31.599] Server  LOG     ✓ Compiled in 28ms
-[00:15:03.579] Server  LOG     ✓ Compiled in 35ms
-[00:15:16.496] Server  LOG     ✓ Compiled in 32ms
-[00:15:16.589] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
-[00:15:18.718] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
-[00:15:23.825] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
-[00:15:24.846] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
-[00:15:27.651] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
-[00:15:41.856] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
-[00:15:46.555] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
-[00:15:51.169] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:15:56.505] Browser WARN    Image with src "/assets/images/logo/logo.webp" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:15:57.209] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
-[00:16:26.330] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
-[00:16:29.733] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
-[00:16:32.290] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
-[00:18:12.647] Server  LOG     ✓ Compiled in 25ms
-[00:28:57.553] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
-[00:29:01.549] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
-[00:29:22.561] Server  LOG     ✓ Compiled in 58ms
-[00:29:24.219] Server  LOG     ✓ Compiled in 17ms
-[00:29:47.306] Server  LOG     ✓ Compiled in 32ms
-[00:29:48.503] Server  LOG     ✓ Compiled in 10ms
-[00:29:52.602] Server  LOG     ✓ Compiled in 30ms
-[00:30:26.613] Server  LOG     ✓ Compiled in 29ms
-[00:30:49.134] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
-[00:30:51.407] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
-[00:30:53.625] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
-[00:32:07.603] Server  LOG     ✓ Compiled in 29ms
-[00:32:10.459] Server  LOG     ✓ Compiled in 31ms
-[00:32:11.507] Server  LOG     ✓ Compiled in 16ms
-[00:32:16.587] Server  LOG     ✓ Compiled in 27ms
-[00:32:53.801] Server  LOG     ✓ Compiled in 103ms
-[00:32:56.606] Server  LOG     ✓ Compiled in 38ms
-[00:33:22.601] Server  LOG     ✓ Compiled in 27ms
-[00:33:33.603] Server  LOG     ✓ Compiled in 36ms
-[00:33:48.612] Server  LOG     ✓ Compiled in 43ms
-[00:38:47.512] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
-[00:38:47.516] Server  LOG     ✓ Compiled in 400ms
-[00:51:26.710] Server  LOG     ✓ Compiled in 122ms
-[00:54:06.926] Server  LOG     ✓ Compiled in 69ms
-[01:04:12.135] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
-[01:04:14.016] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
-[01:04:50.853] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
-[01:04:52.629] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
-[01:04:57.650] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
-[01:05:06.661] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
-[01:05:32.883] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
-[01:05:34.633] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
-[01:05:37.639] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
-[01:06:13.400] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
-[01:06:46.699] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
-[01:06:56.667] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
-[01:07:08.662] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
-[01:07:42.766] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
-[01:07:43.104] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[01:07:43.797] Browser WARN    Image with src "/assets/images/logo/logo.webp" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
-Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
-[01:07:46.748] Browser WARN    Image with src "/assets/images/logo/logo.webp" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[01:08:11.499] Server  LOG     ✓ Compiled in 22ms
-[01:08:14.242] Server  LOG     ✓ Compiled in 11ms
-[01:08:16.198] Server  LOG     ✓ Compiled in 14ms
-[01:08:37.213] Server  LOG     ✓ Compiled in 27ms
-[01:08:40.673] Server  LOG     ✓ Compiled in 14ms
-[01:08:43.608] Server  LOG     ✓ Compiled in 12ms
-[01:08:46.556] Server  LOG     ✓ Compiled in 29ms
-[01:08:49.841] Server  LOG     ✓ Compiled in 19ms
-[01:08:52.661] Server  LOG     ✓ Compiled in 67ms
-[01:08:58.849] Server  LOG     ✓ Compiled in 36ms
-[01:09:05.088] Server  LOG     ✓ Compiled in 46ms
-[01:09:07.899] Server  LOG     ✓ Compiled in 14ms
-[01:09:10.444] Server  LOG     ✓ Compiled in 17ms
-[01:09:13.071] Server  LOG     ✓ Compiled in 22ms
-[01:09:17.430] Server  LOG     ✓ Compiled in 25ms
-[01:09:24.592] Server  LOG     ✓ Compiled in 21ms
-[01:09:28.261] Server  LOG     ✓ Compiled in 24ms
-[01:09:31.398] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
-[01:09:50.767] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
-[01:09:52.640] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
-[01:09:54.650] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
-[01:10:02.628] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
-[01:10:04.312] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
-[01:10:06.625] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
-[01:10:42.325] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
-[01:10:52.321] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
-[01:11:19.787] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
-[01:11:24.153] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[01:11:47.751] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
-[01:12:05.585] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
-[01:12:12.724] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
-[01:12:14.695] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
-[01:16:00.506] Browser ERROR   ./components/Menu/CornersMenu.tsx:5:1
+[00:00:57.221] Browser WARN    Image with src "/assets/images/logo/logo.webp" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:01:18.673] Server  LOG     ✓ Compiled in 56ms
+[00:01:27.718] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+[00:01:27.883] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:01:31.589] Browser WARN    Image with src "/assets/images/logo/logo.webp" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:01:37.617] Server  LOG     ✓ Compiled in 59ms
+[00:01:52.044] Server  LOG     ✓ Compiled in 37ms
+[00:02:55.686] Server  LOG     ✓ Compiled in 39ms
+[00:02:58.288] Server  LOG     ✓ Compiled in 16ms
+[00:03:07.058] Server  LOG     ✓ Compiled in 25ms
+[00:03:08.091] Server  LOG     ✓ Compiled in 14ms
+[00:03:15.246] Server  LOG     ✓ Compiled in 39ms
+[00:03:15.937] Browser ERROR   ./components/Menu/CornersMenu.tsx:13:13
 Parsing ecmascript source code failed
-  3 | import 
-  4 |
-> 5 | const CornersMenu = () => {
-    | ^^^^^
-  6 |   return (
-  7 |     <div className='fixed top-0 left-0 w-screen h-screen flex flex-col p-8 justify-between z-30 pointer-events-none'>
-  8 |             <Link href={"/work"} className='text-xl pointer-events-auto left-8 top-8 absolute uppercase font-inter hover:font-providence hover:line-through duration-500'>work</Link>
-
-Expected 'from', got 'const'
-
-Import trace:
-  Server Component:
-    ./components/Menu/CornersMenu.tsx
-    ./app/page.tsx
-[01:16:02.516] Browser ERROR   ./components/Menu/CornersMenu.tsx:5:1
-Parsing ecmascript source code failed
-  3 | import {}
-  4 |
-> 5 | const CornersMenu = () => {
-    | ^^^^^
-  6 |   return (
-  7 |     <div className='fixed top-0 left-0 w-screen h-screen flex flex-col p-8 justify-between z-30 pointer-events-none'>
-  8 |             <Link href={"/work"} className='text-xl pointer-events-auto left-8 top-8 absolute uppercase font-inter hover:font-providence hover:line-through duration-500'>work</Link>
-
-Expected 'from', got 'const'
-
-Import trace:
-  Server Component:
-    ./components/Menu/CornersMenu.tsx
-    ./app/page.tsx
-[01:16:06.507] Browser ERROR   ./components/Menu/CornersMenu.tsx:5:1
-Parsing ecmascript source code failed
-  3 | import { useRo }
-  4 |
-> 5 | const CornersMenu = () => {
-    | ^^^^^
-  6 |   return (
-  7 |     <div className='fixed top-0 left-0 w-screen h-screen flex flex-col p-8 justify-between z-30 pointer-events-none'>
-  8 |             <Link href={"/work"} className='text-xl pointer-events-auto left-8 top-8 absolute uppercase font-inter hover:font-providence hover:line-through duration-500'>work</Link>
-
-Expected 'from', got 'const'
-
-Import trace:
-  Server Component:
-    ./components/Menu/CornersMenu.tsx
-    ./app/page.tsx
-[01:16:07.505] Browser ERROR   ./components/Menu/CornersMenu.tsx:3:1
-Ecmascript file had an error
-  1 | import Link from 'next/link'
-  2 | import React from 'react'
-> 3 | import { useRouter } from 'next/router'
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  4 |
-  5 | const CornersMenu = () => {
-  6 |   return (
-
-You have a Server Component that imports next/router. Use next/navigation instead.
-Learn more: https://nextjs.org/docs/app/api-reference/functions/use-router
-
-Import trace:
-  Server Component:
-    ./components/Menu/CornersMenu.tsx
-    ./app/page.tsx
-[01:16:13.731] Server  LOG     ✓ Compiled in 367ms
-[01:16:14.505] Browser ERROR   ./components/Menu/CornersMenu.tsx:3:1
-Ecmascript file had an error
-  1 | import Link from 'next/link'
-  2 | import React from 'react'
-> 3 | import { useRouter } from 'next/router'
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  4 |
-  5 | const CornersMenu = () => {
-  6 |     const router = useRouter()
-
-You have a Server Component that imports next/router. Use next/navigation instead.
-Learn more: https://nextjs.org/docs/app/api-reference/functions/use-router
-
-Import trace:
-  Server Component:
-    ./components/Menu/CornersMenu.tsx
-    ./app/page.tsx
-[01:16:15.513] Browser ERROR   ./components/Menu/CornersMenu.tsx:3:1
-Ecmascript file had an error
-  1 | import Link from 'next/link'
-  2 | import React from 'react'
-> 3 | import { useRouter } from 'next/router'
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  4 |
-  5 | const CornersMenu = () => {
-  6 |     const router = useRouter()
-
-You have a Server Component that imports next/router. Use next/navigation instead.
-Learn more: https://nextjs.org/docs/app/api-reference/functions/use-router
-
-Import trace:
-  Server Component:
-    ./components/Menu/CornersMenu.tsx
-    ./app/page.tsx
-[01:16:28.512] Browser ERROR   ./components/Menu/CornersMenu.tsx:7:11
-Parsing ecmascript source code failed
-   5 | const CornersMenu = () => {
-   6 |     const router = useRouter()
->  7 |     const pathname 
-     |           ^^^^^^^^
-   8 |   return (
-   9 |     <div className='fixed top-0 left-0 w-screen h-screen flex flex-col p-8 justify-between z-30 pointer-events-none'>
-  10 |             <Link href={"/work"} className='text-xl pointer-events-auto left-8 top-8 absolute uppercase font-inter hover:font-providence hover:line-through duration-500'>work</Link>
-
-'const' declarations must be initialized
-
-Import trace:
-  Server Component:
-    ./components/Menu/CornersMenu.tsx
-    ./app/page.tsx
-[01:16:30.507] Browser ERROR   ./components/Menu/CornersMenu.tsx:8:3
-Parsing ecmascript source code failed
-   6 |     const router = useRouter()
-   7 |     const pathname = 
->  8 |   return (
-     |   ^^^^^^
-   9 |     <div className='fixed top-0 left-0 w-screen h-screen flex flex-col p-8 justify-between z-30 pointer-events-none'>
-  10 |             <Link href={"/work"} className='text-xl pointer-events-auto left-8 top-8 absolute uppercase font-inter hover:font-providence hover:line-through duration-500'>work</Link>
-  11 |             <Link href={"/about"} className='text-xl pointer-events-auto right-8 top-8 absolute uppercase font-inter hover:font-providence hover:line-through duration-500'>About</Link>
-
-Expression expected
-
-Import trace:
-  Server Component:
-    ./components/Menu/CornersMenu.tsx
-    ./app/page.tsx
-[01:16:34.510] Browser ERROR   ./components/Menu/CornersMenu.tsx:3:1
-Ecmascript file had an error
-  1 | import Link from 'next/link'
-  2 | import React from 'react'
-> 3 | import { useRouter } from 'next/router'
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  4 |
-  5 | const CornersMenu = () => {
-  6 |     const router = useRouter()
-
-You have a Server Component that imports next/router. Use next/navigation instead.
-Learn more: https://nextjs.org/docs/app/api-reference/functions/use-router
-
-Import trace:
-  Server Component:
-    ./components/Menu/CornersMenu.tsx
-    ./app/page.tsx
-[01:16:36.509] Browser ERROR   ./components/Menu/CornersMenu.tsx:3:1
-Ecmascript file had an error
-  1 | import Link from 'next/link'
-  2 | import React from 'react'
-> 3 | import { useRouter } from 'next/router'
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  4 | import { usePathname } from 'next/navigation'
-  5 |
-  6 | const CornersMenu = () => {
-
-You have a Server Component that imports next/router. Use next/navigation instead.
-Learn more: https://nextjs.org/docs/app/api-reference/functions/use-router
-
-Import trace:
-  Server Component:
-    ./components/Menu/CornersMenu.tsx
-    ./app/page.tsx
-[01:16:36.509] Browser ERROR   ./components/Menu/CornersMenu.tsx:4:10
-Ecmascript file had an error
-  2 | import React from 'react'
-  3 | import { useRouter } from 'next/router'
-> 4 | import { usePathname } from 'next/navigation'
-    |          ^^^^^^^^^^^
-  5 |
-  6 | const CornersMenu = () => {
-  7 |     const router = useRouter()
-
-You're importing a component that needs `usePathname`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
-
- Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
-
-Import trace:
-  Server Component:
-    ./components/Menu/CornersMenu.tsx
-    ./app/page.tsx
-[01:16:38.330] Server  LOG     ✓ Compiled in 97ms
-[01:16:38.505] Browser ERROR   ./components/Menu/CornersMenu.tsx:3:10
-Ecmascript file had an error
-  1 | import Link from 'next/link'
-  2 | import React from 'react'
-> 3 | import { usePathname } from 'next/navigation'
-    |          ^^^^^^^^^^^
-  4 |
-  5 | const CornersMenu = () => {
-  6 |     const pathname = usePathname
-
-You're importing a component that needs `usePathname`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
-
- Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
-
-Import trace:
-  Server Component:
-    ./components/Menu/CornersMenu.tsx
-    ./app/page.tsx
-[01:16:40.505] Browser ERROR   ./components/Menu/CornersMenu.tsx:3:10
-Ecmascript file had an error
-  1 | import Link from 'next/link'
-  2 | import React from 'react'
-> 3 | import { usePathname } from 'next/navigation'
-    |          ^^^^^^^^^^^
-  4 |
-  5 | const CornersMenu = () => {
-  6 |     const pathname = usePathname()
-
-You're importing a component that needs `usePathname`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
-
- Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
-
-Import trace:
-  Server Component:
-    ./components/Menu/CornersMenu.tsx
-    ./app/page.tsx
-[01:16:41.514] Browser ERROR   ./components/Menu/CornersMenu.tsx:3:10
-Ecmascript file had an error
-  1 | import Link from 'next/link'
-  2 | import React from 'react'
-> 3 | import { usePathname } from 'next/navigation'
-    |          ^^^^^^^^^^^
-  4 |
-  5 | const CornersMenu = () => {
-  6 |     const pathname = usePathname()
-
-You're importing a component that needs `usePathname`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
-
- Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
-
-Import trace:
-  Server Component:
-    ./components/Menu/CornersMenu.tsx
-    ./app/page.tsx
-[01:16:45.993] Browser ERROR   ./components/Menu/CornersMenu.tsx:3:10
-Ecmascript file had an error
-  1 | import Link from 'next/link'
-  2 | import React from 'react'
-> 3 | import { usePathname } from 'next/navigation'
-    |          ^^^^^^^^^^^
-  4 |
-  5 | const CornersMenu = () => {
-  6 |     const pathname = usePathname()
-
-You're importing a component that needs `usePathname`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
-
- Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
-
-Import trace:
-  Server Component:
-    ./components/Menu/CornersMenu.tsx
-    ./app/page.tsx
-[01:16:47.516] Server  ERROR   ⨯ ./components/Menu/CornersMenu.tsx:3:10
-Ecmascript file had an error
-  1 | import Link from 'next/link'
-  2 | import React from 'react'
-> 3 | import { usePathname } from 'next/navigation'
-    |          ^^^^^^^^^^^
-  4 |
-  5 | const CornersMenu = () => {
-  6 |     const pathname = usePathname()
-
-You're importing a component that needs `usePathname`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
-
- Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
-
-
-
-Import trace:
-  Server Component:
-    ./components/Menu/CornersMenu.tsx
-    ./app/about/page.tsx
-
-
-[01:16:47.638] Browser ERROR   ./components/Menu/CornersMenu.tsx:3:10
-Ecmascript file had an error
-  1 | import Link from 'next/link'
-  2 | import React from 'react'
-> 3 | import { usePathname } from 'next/navigation'
-    |          ^^^^^^^^^^^
-  4 |
-  5 | const CornersMenu = () => {
-  6 |     const pathname = usePathname()
-
-You're importing a component that needs `usePathname`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
-
- Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
-
-Import trace:
-  Server Component:
-    ./components/Menu/CornersMenu.tsx
-    ./app/page.tsx
-[01:16:47.944] Browser ERROR   uncaughtError: Error: ./components/Menu/CornersMenu.tsx:3:10
-Ecmascript file had an error
-  1 | import Link from 'next/link'
-  2 | import React from 'react'
-> 3 | import { usePathname } from 'next/navigation'
-    |          ^^^^^^^^^^^
-  4 |
-  5 | const CornersMenu = () => {
-  6 |     const pathname = usePathname()
-
-You're importing a component that needs `usePathname`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
-
- Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
-
-
-
-Import trace:
-  Server Component:
-    ./components/Menu/CornersMenu.tsx
-    ./app/page.tsx
-
-
-[01:16:48.115] Browser ERROR   ./components/Menu/CornersMenu.tsx:3:10
-Ecmascript file had an error
-  1 | import Link from 'next/link'
-  2 | import React from 'react'
-> 3 | import { usePathname } from 'next/navigation'
-    |          ^^^^^^^^^^^
-  4 |
-  5 | const CornersMenu = () => {
-  6 |     const pathname = usePathname()
-
-You're importing a component that needs `usePathname`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
-
- Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
-
-Import trace:
-  Server Component:
-    ./components/Menu/CornersMenu.tsx
-    ./app/page.tsx
-[01:16:48.115] Browser ERROR   ./components/Menu/CornersMenu.tsx:3:10
-Ecmascript file had an error
-  1 | import Link from 'next/link'
-  2 | import React from 'react'
-> 3 | import { usePathname } from 'next/navigation'
-    |          ^^^^^^^^^^^
-  4 |
-  5 | const CornersMenu = () => {
-  6 |     const pathname = usePathname()
-
-You're importing a component that needs `usePathname`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
-
- Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
-
-Import trace:
-  Server Component:
-    ./components/Menu/CornersMenu.tsx
-    ./app/about/page.tsx
-[01:16:48.115] Browser ERROR   ./components/Menu/CornersMenu.tsx:3:10
-Ecmascript file had an error
-  1 | import Link from 'next/link'
-  2 | import React from 'react'
-> 3 | import { usePathname } from 'next/navigation'
-    |          ^^^^^^^^^^^
-  4 |
-  5 | const CornersMenu = () => {
-  6 |     const pathname = usePathname()
-
-You're importing a component that needs `usePathname`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
-
- Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
-
-Import trace:
-  Server Component:
-    ./components/Menu/CornersMenu.tsx
-    ./app/page.tsx
-[01:16:53.246] Server  LOG     ✓ Compiled in 131ms
-[01:16:53.393] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
-[01:16:53.446] Server  LOG     /about
-[01:16:53.652] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[01:16:53.760] Browser LOG     /about
-[01:16:53.760] Browser LOG     /about
-[01:18:01.996] Server  LOG     ✓ Compiled in 78ms
-[01:18:02.525] Browser LOG     /about
-[01:18:02.525] Browser LOG     /about
-[01:18:03.721] Server  LOG     ✓ Compiled in 39ms
-[01:18:04.505] Browser LOG     /about
-[01:18:04.505] Browser LOG     /about
-[01:18:05.868] Server  LOG     ✓ Compiled in 17ms
-[01:18:06.507] Browser LOG     /about
-[01:18:06.507] Browser LOG     /about
-[01:18:08.435] Server  LOG     ✓ Compiled in 37ms
-[01:18:09.512] Browser ERROR   ./components/Menu/CornersMenu.tsx:11:48
-Parsing ecmascript source code failed
-   9 |   return (
-  10 |     <div className='fixed top-0 left-0 w-screen h-screen flex flex-col p-8 justify-between z-30 pointer-events-none'>
-> 11 |             <Link href={"/work"} className={`${} text-xl pointer-events-auto left-8 top-8 absolute uppercase font-inter hover:font-providence hover:line-through duration-500`}>work</Link>
-     |                                                ^
-  12 |             <Link href={"/about"} className='text-xl pointer-events-auto right-8 top-8 absolute uppercase font-inter hover:font-providence hover:line-through duration-500'>About</Link>
-  13 |             <Link href={"/photography"} className='text-xl pointer-events-auto right-8 bottom-8 absolute uppercase font-inter hover:font-providence hover:line-through duration-500'>photography</Link>
-  14 |             <Link href={"/contact"} className='text-xl pointer-events-auto left-8 bottom-8 absolute uppercase font-inter hover:font-providence hover:line-through duration-500'>contact</Link>
+  11 |             {
+  12 |               pathname === "/" ?
+> 13 |             }
+     |             ^
+  14 |             <Link href={"/about"} className={`${pathname === "/about" ? "font-providence line-through" : ""} text-xl pointer-events-auto right-8 top-8 absolute uppercase font-inter hover:font-providence hover:line-through duration-500`}>About</Link>
+  15 |             <Link href={"/photography"} className={`${pathname === "/photography" ? "font-providence line-through" : ""} text-xl pointer-events-auto right-8 bottom-8 absolute uppercase font-inter hover:font-providence hover:line-through duration-500`}>photography</Link>
+  16 |             <Link href={"/contact"} className={`${pathname === "/contact" ? "font-providence line-through" : ""} text-xl pointer-events-auto left-8 bottom-8 absolute uppercase font-inter hover:font-providence hover:line-through duration-500`}>contact</Link>
 
 Expected '</', got '}'
 
@@ -548,133 +31,855 @@ Import trace:
   Server Component:
     ./components/Menu/CornersMenu.tsx
     ./app/page.tsx
-[01:18:18.874] Server  LOG     ✓ Compiled in 40ms
-[01:18:19.020] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
-[01:18:19.520] Browser LOG     /about
-[01:18:19.520] Browser LOG     /about
-[01:18:19.520] Browser ERROR   uncaughtError: ReferenceError: pa is not defined
-[01:18:20.949] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
-[01:18:20.969] Server  LOG     ✓ Compiled in 52ms
-[01:18:21.108] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
-[01:18:21.161] Server  LOG     /about
-[01:18:21.504] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[01:18:22.517] Browser LOG     /about
-[01:18:22.517] Browser LOG     /about
-[01:18:25.861] Server  LOG     ✓ Compiled in 34ms
-[01:18:26.504] Browser LOG     /about
-[01:18:26.504] Browser LOG     /about
-[01:18:28.558] Server  LOG     ✓ Compiled in 36ms
-[01:18:29.516] Browser LOG     /about
-[01:18:29.516] Browser LOG     /about
-[01:18:30.950] Server  LOG     ✓ Compiled in 21ms
-[01:18:31.510] Browser LOG     /about
-[01:18:31.510] Browser LOG     /about
-[01:18:35.262] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
-[01:18:35.305] Server  LOG     /about
-[01:18:35.411] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[01:18:35.515] Browser LOG     /about
-[01:18:35.515] Browser LOG     /about
-[01:18:41.217] Server  LOG     ✓ Compiled in 26ms
-[01:18:41.504] Browser LOG     /about
-[01:18:41.504] Browser LOG     /about
-[01:18:44.601] Server  LOG     ✓ Compiled in 16ms
-[01:18:45.504] Browser LOG     /about
-[01:18:45.504] Browser LOG     /about
-[01:18:46.953] Server  LOG     ✓ Compiled in 12ms
-[01:18:47.504] Browser LOG     /about
-[01:18:47.504] Browser LOG     /about
-[01:19:11.611] Server  LOG     ✓ Compiled in 39ms
-[01:19:11.685] Browser LOG     /about
-[01:19:11.685] Browser LOG     /about
-[01:19:26.222] Server  LOG     ✓ Compiled in 24ms
-[01:19:26.513] Browser LOG     /about
-[01:19:26.513] Browser LOG     /about
-[01:19:31.712] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
-[01:19:31.759] Server  LOG     /
-[01:19:31.904] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[01:19:31.904] Browser LOG     /
-[01:19:31.904] Browser LOG     /
-[01:19:32.565] Browser WARN    Image with src "/assets/images/logo/logo.webp" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
-Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
-[01:19:35.533] Browser WARN    Image with src "/assets/images/logo/logo.webp" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[01:20:11.148] Server  LOG     /
-[01:20:11.255] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[01:20:11.255] Browser LOG     /
-[01:20:11.255] Browser LOG     /
-[01:20:11.914] Browser WARN    Image with src "/assets/images/logo/logo.webp" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
-Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
-[01:20:14.879] Browser WARN    Image with src "/assets/images/logo/logo.webp" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[01:24:24.505] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
-[01:24:24.630] Browser LOG     /about
-[01:24:24.630] Browser LOG     /about
-[01:25:17.071] Server  LOG     ✓ Compiled in 77ms
-[01:25:31.717] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
-[01:25:33.658] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
-[01:25:39.043] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
-[01:25:42.512] Browser ERROR   ./components/AboutPage.tsx:56:23
+[00:03:19.941] Browser ERROR   ./components/Menu/CornersMenu.tsx:13:13
 Parsing ecmascript source code failed
-  54 |                         className="w-full h-auto"
-  55 |                     />
-> 56 |                 </div>
-     |                       ^
-> 57 |
-     | ^
-> 58 |                 <div className="w-full md:w-1/2 flex justify-end">
-     | ^^^^^^^^^^^^^^^^^
-  59 |                     <p className="text-[10px] md:text-lg font-inter uppercase text-justify leading-tight tracking-wider max-w-md">
-  60 |                         NO REPRESENTAMOS UN ESTILO ESPECÍFICO, SINO UNA FORMA DE MIRAR Y DE HACER.
-  61 |                         PODEMOS TRABAJAR PARA MARCAS SOFISTICADAS, PERO NUNCA DESDE LO OBVIO.
+  11 |             {
+  12 |               pathname === "/" ? <></>
+> 13 |             }
+     |             ^
+  14 |             <Link href={"/about"} className={`${pathname === "/about" ? "font-providence line-through" : ""} text-xl pointer-events-auto right-8 top-8 absolute uppercase font-inter hover:font-providence hover:line-through duration-500`}>About</Link>
+  15 |             <Link href={"/photography"} className={`${pathname === "/photography" ? "font-providence line-through" : ""} text-xl pointer-events-auto right-8 bottom-8 absolute uppercase font-inter hover:font-providence hover:line-through duration-500`}>photography</Link>
+  16 |             <Link href={"/contact"} className={`${pathname === "/contact" ? "font-providence line-through" : ""} text-xl pointer-events-auto left-8 bottom-8 absolute uppercase font-inter hover:font-providence hover:line-through duration-500`}>contact</Link>
 
-Expected '</', got 'jsx text'
+Expected '</', got '}'
 
 Import trace:
   Server Component:
-    ./components/AboutPage.tsx
-    ./app/about/page.tsx
-[01:25:44.505] Browser ERROR   ./components/AboutPage.tsx:57:23
+    ./components/Menu/CornersMenu.tsx
+    ./app/page.tsx
+[00:03:31.934] Browser ERROR   ./components/Menu/CornersMenu.tsx:15:13
 Parsing ecmascript source code failed
-  55 |                         className="w-full h-auto"
-  56 |                     />
-> 57 |                 </div>
-     |                       ^
-> 58 |
-     | ^
-> 59 |                 <div className="w-full md:w-1/2 flex justify-end">
-     | ^^^^^^^^^^^^^^^^^
-  60 |                     <p className="text-[10px] md:text-lg font-inter uppercase text-justify leading-tight tracking-wider max-w-md">
-  61 |                         NO REPRESENTAMOS UN ESTILO ESPECÍFICO, SINO UNA FORMA DE MIRAR Y DE HACER.
-  62 |                         PODEMOS TRABAJAR PARA MARCAS SOFISTICADAS, PERO NUNCA DESDE LO OBVIO.
+  13 |               :
+  14 |               <div
+> 15 |             }
+     |             ^
+  16 |             <Link href={"/about"} className={`${pathname === "/about" ? "font-providence line-through" : ""} text-xl pointer-events-auto right-8 top-8 absolute uppercase font-inter hover:font-providence hover:line-through duration-500`}>About</Link>
+  17 |             <Link href={"/photography"} className={`${pathname === "/photography" ? "font-providence line-through" : ""} text-xl pointer-events-auto right-8 bottom-8 absolute uppercase font-inter hover:font-providence hover:line-through duration-500`}>photography</Link>
+  18 |             <Link href={"/contact"} className={`${pathname === "/contact" ? "font-providence line-through" : ""} text-xl pointer-events-auto left-8 bottom-8 absolute uppercase font-inter hover:font-providence hover:line-through duration-500`}>contact</Link>
 
-Expected '</', got 'jsx text'
+Expected '</', got '}'
 
 Import trace:
   Server Component:
-    ./components/AboutPage.tsx
-    ./app/about/page.tsx
-[01:25:47.308] Server  LOG     ✓ Compiled in 77ms
-[01:25:47.391] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
-[01:25:48.512] Browser ERROR   uncaughtError: Error: Failed prop type: The prop `href` expects a `string` or `object` in `<Link>`, but got `undefined` instead.
+    ./components/Menu/CornersMenu.tsx
+    ./app/page.tsx
+[00:03:31.990] Server  LOG     ✓ Compiled in 17ms
+[00:03:32.934] Browser ERROR   ./components/Menu/CornersMenu.tsx:15:13
+Parsing ecmascript source code failed
+  13 |               :
+  14 |               <div>
+> 15 |             }
+     |             ^
+  16 |             <Link href={"/about"} className={`${pathname === "/about" ? "font-providence line-through" : ""} text-xl pointer-events-auto right-8 top-8 absolute uppercase font-inter hover:font-providence hover:line-through duration-500`}>About</Link>
+  17 |             <Link href={"/photography"} className={`${pathname === "/photography" ? "font-providence line-through" : ""} text-xl pointer-events-auto right-8 bottom-8 absolute uppercase font-inter hover:font-providence hover:line-through duration-500`}>photography</Link>
+  18 |             <Link href={"/contact"} className={`${pathname === "/contact" ? "font-providence line-through" : ""} text-xl pointer-events-auto left-8 bottom-8 absolute uppercase font-inter hover:font-providence hover:line-through duration-500`}>contact</Link>
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+Import trace:
+  Server Component:
+    ./components/Menu/CornersMenu.tsx
+    ./app/page.tsx
+[00:03:33.585] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+[00:03:35.580] Server  LOG     ✓ Compiled in 84ms
+[00:04:05.650] Server  LOG     ✓ Compiled in 34ms
+[00:04:05.934] Browser ERROR   uncaughtError: TypeError: Failed to construct 'Image': Please use the 'new' operator, this DOM object constructor cannot be called as a function.
+[00:04:11.945] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:04:12.088] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+[00:04:12.090] Server  LOG     ✓ Compiled in 110ms
+[00:04:12.150] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:04:12.259] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:04:12.937] Browser WARN    Image with src "/assets/images/logo/logo.webp" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:04:14.422] Server  LOG     ✓ Compiled in 31ms
+[00:04:21.753] Server  LOG     ✓ Compiled in 40ms
+[00:04:21.939] Browser ERROR   ./components/Menu/CornersMenu.tsx:23:13
+Parsing ecmascript source code failed
+  21 |                   />
+  22 |               </div>
+> 23 |             }
+     |             ^
+  24 |             <Link href={"/about"} className={`${pathname === "/about" ? "font-providence line-through" : ""} text-xl pointer-events-auto right-8 top-8 absolute uppercase font-inter hover:font-providence hover:line-through duration-500`}>About</Link>
+  25 |             <Link href={"/photography"} className={`${pathname === "/photography" ? "font-providence line-through" : ""} text-xl pointer-events-auto right-8 bottom-8 absolute uppercase font-inter hover:font-providence hover:line-through duration-500`}>photography</Link>
+  26 |             <Link href={"/contact"} className={`${pathname === "/contact" ? "font-providence line-through" : ""} text-xl pointer-events-auto left-8 bottom-8 absolute uppercase font-inter hover:font-providence hover:line-through duration-500`}>contact</Link>
+
+Expected '</', got '}'
+
+Import trace:
+  Server Component:
+    ./components/Menu/CornersMenu.tsx
+    ./app/page.tsx
+[00:04:24.051] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+[00:04:24.935] Browser ERROR   uncaughtError: Error: Failed prop type: The prop `href` expects a `string` or `object` in `<Link>`, but got `undefined` instead.
 Open your browser's console to view the Component stack trace.
-[01:25:51.505] Browser ERROR   ./components/AboutPage.tsx:49:31
+[00:04:28.112] Server  LOG     ✓ Compiled in 51ms
+[00:04:28.945] Browser ERROR   ./components/Menu/CornersMenu.tsx:6:8
+Ecmascript file had an error
+  4 | import { usePathname } from 'next/navigation'
+  5 | import Image from 'next/image'
+> 6 | import Link from 'next/link'
+    |        ^^^^
+  7 |
+  8 | const CornersMenu = () => {
+  9 |   const pathname = usePathname()
+
+the name `Link` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./components/Menu/CornersMenu.tsx
+    ./app/page.tsx
+[00:04:30.448] Server  LOG     ✓ Compiled in 30ms
+[00:04:30.936] Browser ERROR   ./components/Menu/CornersMenu.tsx:16:29
 Parsing ecmascript source code failed
-  47 |             {/* Bottom Section - Logo & Description */}
-  48 |             <div className="flex flex-col md:flex-row justify-between items-end gap-8 pt-8 border-t border-white/10">
-> 49 |                 <Link href={} className="w-1/2 md:w-1/4">
-     |                               ^^^^^^^^^
-  50 |                     <Image
-  51 |                         src="/assets/images/logo/logo.webp"
-  52 |                         alt="KIDCANIBAL Logo"
+  14 |               pathname === "/" ? <></>
+  15 |               :
+> 16 |               <Link href={} className="absolute top-6 left-1/2 -translate-x-1/2 w-[120px] h-[40px] lg:w-[180px] lg:h-[55px]">
+     |                             ^^^^^^^^^
+  17 |                   <Image
+  18 |                       src="/assets/images/logo/logo.webp"
+  19 |                       alt="Kid Canibal logo"
 
 Expected '</', got 'ident'
 
 Import trace:
   Server Component:
-    ./components/AboutPage.tsx
+    ./components/Menu/CornersMenu.tsx
+    ./app/page.tsx
+[00:04:31.820] Server  LOG     ✓ Compiled in 39ms
+[00:04:31.932] Browser ERROR   ./components/Menu/CornersMenu.tsx:6:8
+Ecmascript file had an error
+  4 | import { usePathname } from 'next/navigation'
+  5 | import Image from 'next/image'
+> 6 | import Link from 'next/link'
+    |        ^^^^
+  7 |
+  8 | const CornersMenu = () => {
+  9 |   const pathname = usePathname()
+
+the name `Link` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./components/Menu/CornersMenu.tsx
+    ./app/page.tsx
+[00:04:33.834] Server  ERROR   ⨯ ./components/Menu/CornersMenu.tsx:6:8
+Ecmascript file had an error
+  4 | import { usePathname } from 'next/navigation'
+  5 | import Image from 'next/image'
+> 6 | import Link from 'next/link'
+    |        ^^^^
+  7 |
+  8 | const CornersMenu = () => {
+  9 |   const pathname = usePathname()
+
+the name `Link` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./components/Menu/CornersMenu.tsx
     ./app/about/page.tsx
-[01:25:51.722] Server  LOG     ✓ Compiled in 16ms
-[01:25:51.827] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
-[01:25:52.005] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[01:25:56.033] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
-[01:25:59.696] Browser WARN    Image with src "/assets/images/logo/logo.webp" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[01:41:53.107] Server  LOG     ✓ Compiled in 353ms
-[01:41:57.661] Server  LOG     ✓ Compiled in 67ms
+
+
+[00:04:33.959] Browser ERROR   ./components/Menu/CornersMenu.tsx:6:8
+Ecmascript file had an error
+  4 | import { usePathname } from 'next/navigation'
+  5 | import Image from 'next/image'
+> 6 | import Link from 'next/link'
+    |        ^^^^
+  7 |
+  8 | const CornersMenu = () => {
+  9 |   const pathname = usePathname()
+
+the name `Link` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./components/Menu/CornersMenu.tsx
+    ./app/page.tsx
+[00:04:34.248] Browser ERROR   uncaughtError: Error: ./components/Menu/CornersMenu.tsx:6:8
+Ecmascript file had an error
+  4 | import { usePathname } from 'next/navigation'
+  5 | import Image from 'next/image'
+> 6 | import Link from 'next/link'
+    |        ^^^^
+  7 |
+  8 | const CornersMenu = () => {
+  9 |   const pathname = usePathname()
+
+the name `Link` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./components/Menu/CornersMenu.tsx
+    ./app/page.tsx
+
+
+[00:04:34.399] Browser ERROR   ./components/Menu/CornersMenu.tsx:6:8
+Ecmascript file had an error
+  4 | import { usePathname } from 'next/navigation'
+  5 | import Image from 'next/image'
+> 6 | import Link from 'next/link'
+    |        ^^^^
+  7 |
+  8 | const CornersMenu = () => {
+  9 |   const pathname = usePathname()
+
+the name `Link` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./components/Menu/CornersMenu.tsx
+    ./app/page.tsx
+[00:04:34.399] Browser ERROR   ./components/Menu/CornersMenu.tsx:6:8
+Ecmascript file had an error
+  4 | import { usePathname } from 'next/navigation'
+  5 | import Image from 'next/image'
+> 6 | import Link from 'next/link'
+    |        ^^^^
+  7 |
+  8 | const CornersMenu = () => {
+  9 |   const pathname = usePathname()
+
+the name `Link` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./components/Menu/CornersMenu.tsx
+    ./app/about/page.tsx
+[00:04:34.399] Browser ERROR   ./components/Menu/CornersMenu.tsx:6:8
+Ecmascript file had an error
+  4 | import { usePathname } from 'next/navigation'
+  5 | import Image from 'next/image'
+> 6 | import Link from 'next/link'
+    |        ^^^^
+  7 |
+  8 | const CornersMenu = () => {
+  9 |   const pathname = usePathname()
+
+the name `Link` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./components/Menu/CornersMenu.tsx
+    ./app/page.tsx
+[00:04:35.836] Server  ERROR   ⨯ ./components/Menu/CornersMenu.tsx:6:8
+Ecmascript file had an error
+  4 | import { usePathname } from 'next/navigation'
+  5 | import Image from 'next/image'
+> 6 | import Link from 'next/link'
+    |        ^^^^
+  7 |
+  8 | const CornersMenu = () => {
+  9 |   const pathname = usePathname()
+
+the name `Link` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./components/Menu/CornersMenu.tsx
+    ./app/about/page.tsx
+
+
+[00:04:35.911] Browser ERROR   uncaughtError: Error: ./components/Menu/CornersMenu.tsx:6:8
+Ecmascript file had an error
+  4 | import { usePathname } from 'next/navigation'
+  5 | import Image from 'next/image'
+> 6 | import Link from 'next/link'
+    |        ^^^^
+  7 |
+  8 | const CornersMenu = () => {
+  9 |   const pathname = usePathname()
+
+the name `Link` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./components/Menu/CornersMenu.tsx
+    ./app/page.tsx
+
+
+[00:04:36.047] Browser ERROR   ./components/Menu/CornersMenu.tsx:6:8
+Ecmascript file had an error
+  4 | import { usePathname } from 'next/navigation'
+  5 | import Image from 'next/image'
+> 6 | import Link from 'next/link'
+    |        ^^^^
+  7 |
+  8 | const CornersMenu = () => {
+  9 |   const pathname = usePathname()
+
+the name `Link` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./components/Menu/CornersMenu.tsx
+    ./app/page.tsx
+[00:04:36.047] Browser ERROR   ./components/Menu/CornersMenu.tsx:6:8
+Ecmascript file had an error
+  4 | import { usePathname } from 'next/navigation'
+  5 | import Image from 'next/image'
+> 6 | import Link from 'next/link'
+    |        ^^^^
+  7 |
+  8 | const CornersMenu = () => {
+  9 |   const pathname = usePathname()
+
+the name `Link` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./components/Menu/CornersMenu.tsx
+    ./app/about/page.tsx
+[00:04:36.047] Browser ERROR   ./components/Menu/CornersMenu.tsx:6:8
+Ecmascript file had an error
+  4 | import { usePathname } from 'next/navigation'
+  5 | import Image from 'next/image'
+> 6 | import Link from 'next/link'
+    |        ^^^^
+  7 |
+  8 | const CornersMenu = () => {
+  9 |   const pathname = usePathname()
+
+the name `Link` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./components/Menu/CornersMenu.tsx
+    ./app/page.tsx
+[00:04:37.065] Server  ERROR   ⨯ ./components/Menu/CornersMenu.tsx:6:8
+Ecmascript file had an error
+  4 | import { usePathname } from 'next/navigation'
+  5 | import Image from 'next/image'
+> 6 | import Link from 'next/link'
+    |        ^^^^
+  7 |
+  8 | const CornersMenu = () => {
+  9 |   const pathname = usePathname()
+
+the name `Link` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./components/Menu/CornersMenu.tsx
+    ./app/about/page.tsx
+
+
+[00:04:37.129] Browser ERROR   uncaughtError: Error: ./components/Menu/CornersMenu.tsx:6:8
+Ecmascript file had an error
+  4 | import { usePathname } from 'next/navigation'
+  5 | import Image from 'next/image'
+> 6 | import Link from 'next/link'
+    |        ^^^^
+  7 |
+  8 | const CornersMenu = () => {
+  9 |   const pathname = usePathname()
+
+the name `Link` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./components/Menu/CornersMenu.tsx
+    ./app/page.tsx
+
+
+[00:04:37.265] Browser ERROR   ./components/Menu/CornersMenu.tsx:6:8
+Ecmascript file had an error
+  4 | import { usePathname } from 'next/navigation'
+  5 | import Image from 'next/image'
+> 6 | import Link from 'next/link'
+    |        ^^^^
+  7 |
+  8 | const CornersMenu = () => {
+  9 |   const pathname = usePathname()
+
+the name `Link` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./components/Menu/CornersMenu.tsx
+    ./app/page.tsx
+[00:04:37.265] Browser ERROR   ./components/Menu/CornersMenu.tsx:6:8
+Ecmascript file had an error
+  4 | import { usePathname } from 'next/navigation'
+  5 | import Image from 'next/image'
+> 6 | import Link from 'next/link'
+    |        ^^^^
+  7 |
+  8 | const CornersMenu = () => {
+  9 |   const pathname = usePathname()
+
+the name `Link` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./components/Menu/CornersMenu.tsx
+    ./app/about/page.tsx
+[00:04:37.265] Browser ERROR   ./components/Menu/CornersMenu.tsx:6:8
+Ecmascript file had an error
+  4 | import { usePathname } from 'next/navigation'
+  5 | import Image from 'next/image'
+> 6 | import Link from 'next/link'
+    |        ^^^^
+  7 |
+  8 | const CornersMenu = () => {
+  9 |   const pathname = usePathname()
+
+the name `Link` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./components/Menu/CornersMenu.tsx
+    ./app/page.tsx
+[00:04:43.594] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+[00:04:43.885] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:04:44.011] Browser WARN    Image with src "/assets/images/logo/logo.webp" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:05:08.338] Server  LOG     ✓ Compiled in 33ms
+[00:05:11.036] Server  LOG     ✓ Compiled in 25ms
+[00:05:21.137] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+[00:05:59.808] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+[00:12:48.404] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+[00:12:48.407] Server  LOG     ✓ Compiled in 262ms
+[00:12:48.414] Server  WARN    ⚠ Fast Refresh had to perform a full reload when ./node_modules/next/dist/client/image-component.js changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:12:48.813] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:12:49.534] Browser WARN    Image with src "/assets/images/logo/logo.webp" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[00:12:52.481] Browser WARN    Image with src "/assets/images/logo/logo.webp" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:15:47.795] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+[00:15:59.599] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+[00:16:01.704] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:16:01.822] Browser WARN    Image with src "/assets/images/logo/logo.webp" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[00:16:01.822] Browser WARN    Image with src "/assets/images/logo/logo.webp" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:16:07.237] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+[00:17:53.830] Server  LOG     ✓ Compiled in 206ms
+[00:17:53.860] Browser ERROR   uncaughtError: ReferenceError: usePathsname is not defined
+[00:17:56.423] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:17:56.453] Server  LOG     ✓ Compiled in 45ms
+[00:17:56.773] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:17:56.890] Browser WARN    Image with src "/assets/images/logo/logo.webp" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[00:17:56.890] Browser WARN    Image with src "/assets/images/logo/logo.webp" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:18:11.245] Server  LOG     ✓ Compiled in 55ms
+[00:18:19.760] Server  LOG     ✓ Compiled in 40ms
+[00:18:27.853] Server  LOG     ✓ Compiled in 24ms
+[00:18:30.275] Server  LOG     ✓ Compiled in 16ms
+[00:18:31.620] Server  LOG     ✓ Compiled in 26ms
+[00:18:35.726] Server  LOG     ✓ Compiled in 42ms
+[00:18:47.951] Server  LOG     ✓ Compiled in 48ms
+[00:18:50.136] Server  LOG     ✓ Compiled in 26ms
+[00:18:53.170] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+[00:19:13.144] Server  LOG     ✓ Compiled in 38ms
+[00:19:14.227] Server  LOG     ✓ Compiled in 18ms
+[00:19:16.874] Server  LOG     ✓ Compiled in 25ms
+[00:19:20.842] Server  LOG     ✓ Compiled in 14ms
+[00:19:22.656] Server  LOG     ✓ Compiled in 22ms
+[00:20:56.358] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+[00:22:01.310] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+[00:23:03.257] Server  LOG     ✓ Compiled in 82ms
+[00:23:07.199] Server  LOG     ✓ Compiled in 42ms
+[00:23:09.642] Server  LOG     ✓ Compiled in 29ms
+[00:23:09.757] Browser ERROR   ./components/Menu/CornersMenu.tsx:13:7
+Parsing ecmascript source code failed
+  11 |       {
+  12 |         pathname === "/" ? <></>
+> 13 |       }
+     |       ^
+  14 |             <Link href={"/work"} className={`${pathname === "/work" ? "font-providence line-through" : ""} text-xl pointer-events-auto left-8 top-8 absolute uppercase font-inter font-medium tracking-tighter hover:font-providence hover:line-through duration-500`}>work</Link>
+  15 |             {
+  16 |               pathname === "/" ? <></>
+
+Expected '</', got '}'
+
+Import trace:
+  Server Component:
+    ./components/Menu/CornersMenu.tsx
+    ./app/page.tsx
+[00:23:13.082] Browser ERROR   ./components/Menu/CornersMenu.tsx:13:7
+Parsing ecmascript source code failed
+  11 |       {
+  12 |         pathname === "/" ? <></> :
+> 13 |       }
+     |       ^
+  14 |             <Link href={"/work"} className={`${pathname === "/work" ? "font-providence line-through" : ""} text-xl pointer-events-auto left-8 top-8 absolute uppercase font-inter font-medium tracking-tighter hover:font-providence hover:line-through duration-500`}>work</Link>
+  15 |             {
+  16 |               pathname === "/" ? <></>
+
+Expected '</', got '}'
+
+Import trace:
+  Server Component:
+    ./components/Menu/CornersMenu.tsx
+    ./app/page.tsx
+[00:23:14.135] Browser ERROR   ./components/Menu/CornersMenu.tsx:14:7
+Parsing ecmascript source code failed
+  12 |         pathname === "/" ? <></> :
+  13 |         
+> 14 |       }
+     |       ^
+  15 |             <Link href={"/work"} className={`${pathname === "/work" ? "font-providence line-through" : ""} text-xl pointer-events-auto left-8 top-8 absolute uppercase font-inter font-medium tracking-tighter hover:font-providence hover:line-through duration-500`}>work</Link>
+  16 |             {
+  17 |               pathname === "/" ? <></>
+
+Expected '</', got '}'
+
+Import trace:
+  Server Component:
+    ./components/Menu/CornersMenu.tsx
+    ./app/page.tsx
+[00:23:16.154] Browser ERROR   ./components/Menu/CornersMenu.tsx:15:7
+Parsing ecmascript source code failed
+  13 |         <></> :
+  14 |
+> 15 |       }
+     |       ^
+  16 |             <Link href={"/work"} className={`${pathname === "/work" ? "font-providence line-through" : ""} text-xl pointer-events-auto left-8 top-8 absolute uppercase font-inter font-medium tracking-tighter hover:font-providence hover:line-through duration-500`}>work</Link>
+  17 |             {
+  18 |               pathname === "/" ? <></>
+
+Expected '</', got '}'
+
+Import trace:
+  Server Component:
+    ./components/Menu/CornersMenu.tsx
+    ./app/page.tsx
+[00:23:18.258] Browser ERROR   ./components/Menu/CornersMenu.tsx:16:7
+Parsing ecmascript source code failed
+  14 |         :
+  15 |
+> 16 |       }
+     |       ^
+  17 |             <Link href={"/work"} className={`${pathname === "/work" ? "font-providence line-through" : ""} text-xl pointer-events-auto left-8 top-8 absolute uppercase font-inter font-medium tracking-tighter hover:font-providence hover:line-through duration-500`}>work</Link>
+  18 |             {
+  19 |               pathname === "/" ? <></>
+
+Expected '</', got '}'
+
+Import trace:
+  Server Component:
+    ./components/Menu/CornersMenu.tsx
+    ./app/page.tsx
+[00:23:20.897] Browser ERROR   ./components/Menu/CornersMenu.tsx:16:7
+Parsing ecmascript source code failed
+  14 |         :
+  15 |
+> 16 |       }
+     |       ^
+  17 |             <Link href={"/work"} className={`${pathname === "/work" ? "font-providence line-through" : ""} text-xl pointer-events-auto left-8 top-8 absolute uppercase font-inter font-medium tracking-tighter hover:font-providence hover:line-through duration-500`}>work</Link>
+  18 |             {
+  19 |               pathname === "/" ? <></>
+
+Expected '</', got '}'
+
+Import trace:
+  Server Component:
+    ./components/Menu/CornersMenu.tsx
+    ./app/page.tsx
+[00:23:30.044] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+[00:23:31.778] Server  LOG     ✓ Compiled in 28ms
+[00:23:38.910] Server  LOG     ✓ Compiled in 27ms
+[00:23:42.622] Server  LOG     ✓ Compiled in 16ms
+[00:23:48.905] Server  LOG     ✓ Compiled in 14ms
+[00:23:50.662] Server  LOG     ✓ Compiled in 18ms
+[00:23:53.898] Server  LOG     ✓ Compiled in 24ms
+[00:24:01.223] Server  LOG     ✓ Compiled in 58ms
+[00:24:01.325] Browser ERROR   ./components/Menu/CornersMenu.tsx:30:11
+Parsing ecmascript source code failed
+  28 |             <Link href={"/photography"} className={`${pathname === "/photography" ? "font-providence line-through" : ""} text-xl pointer-events-auto right-8 bottom-8 absolute uppercase font-inter font-medium tracking-tighter hover:font-providence hover:line-through duration-500`}>photography</Link>
+  29 |             <Link href={"/contact"} className={`${pathname === "/contact" ? "font-providence line-through" : ""} text-xl pointer-events-auto left-8 bottom-8 absolute uppercase font-inter font-medium tracking-tighter hover:font-providence hover:line-through duration-500`}>contact</Link>
+> 30 |         </> 
+     |           ^
+  31 |         :
+  32 |         <>
+  33 |           <Link href={"/work"} className={`${pathname === "/work" ? "font-providence line-through" : ""} text-xl pointer-events-auto left-8 top-8 absolute uppercase font-inter font-medium tracking-tighter hover:font-providence hover:line-through duration-500`}>work</Link>
+
+Expression expected
+
+Import trace:
+  Server Component:
+    ./components/Menu/CornersMenu.tsx
+    ./app/page.tsx
+[00:24:05.434] Server  LOG     ✓ Compiled in 23ms
+[00:24:05.537] Browser ERROR   ./components/Menu/CornersMenu.tsx:50:7
+Parsing ecmascript source code failed
+  48 |             <Link href={"/contact"} className={`${pathname === "/contact" ? "font-providence line-through" : ""} text-xl pointer-events-auto left-8 bottom-8 absolute uppercase font-inter font-medium tracking-tighter hover:font-providence hover:line-through duration-500`}>contact</Link>
+  49 |         </>
+> 50 |       }
+     |       ^
+  51 |
+  52 |     </div>
+  53 |   )
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+Import trace:
+  Server Component:
+    ./components/Menu/CornersMenu.tsx
+    ./app/page.tsx
+[00:24:11.560] Server  ERROR   ⨯ ./components/Menu/CornersMenu.tsx:50:7
+Parsing ecmascript source code failed
+  48 |             <Link href={"/contact"} className={`${pathname === "/contact" ? "font-providence line-through" : ""} text-xl pointer-events-auto left-8 bottom-8 absolute uppercase font-inter font-medium tracking-tighter hover:font-providence hover:line-through duration-500`}>contact</Link>
+  49 |         </>
+> 50 |       }
+     |       ^
+  51 |
+  52 |     </div>
+  53 |   )
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+Import trace:
+  Server Component:
+    ./components/Menu/CornersMenu.tsx
+    ./app/contact/page.tsx
+
+
+[00:24:11.775] Browser ERROR   uncaughtError: Error: ./components/Menu/CornersMenu.tsx:50:7
+Parsing ecmascript source code failed
+  48 |             <Link href={"/contact"} className={`${pathname === "/contact" ? "font-providence line-through" : ""} text-xl pointer-events-auto left-8 bottom-8 absolute uppercase font-inter font-medium tracking-tighter hover:font-providence hover:line-through duration-500`}>contact</Link>
+  49 |         </>
+> 50 |       }
+     |       ^
+  51 |
+  52 |     </div>
+  53 |   )
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+Import trace:
+  Server Component:
+    ./components/Menu/CornersMenu.tsx
+    ./app/page.tsx
+
+
+[00:24:11.928] Browser ERROR   ./components/Menu/CornersMenu.tsx:50:7
+Parsing ecmascript source code failed
+  48 |             <Link href={"/contact"} className={`${pathname === "/contact" ? "font-providence line-through" : ""} text-xl pointer-events-auto left-8 bottom-8 absolute uppercase font-inter font-medium tracking-tighter hover:font-providence hover:line-through duration-500`}>contact</Link>
+  49 |         </>
+> 50 |       }
+     |       ^
+  51 |
+  52 |     </div>
+  53 |   )
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+Import trace:
+  Server Component:
+    ./components/Menu/CornersMenu.tsx
+    ./app/page.tsx
+[00:24:11.928] Browser ERROR   ./components/Menu/CornersMenu.tsx:50:7
+Parsing ecmascript source code failed
+  48 |             <Link href={"/contact"} className={`${pathname === "/contact" ? "font-providence line-through" : ""} text-xl pointer-events-auto left-8 bottom-8 absolute uppercase font-inter font-medium tracking-tighter hover:font-providence hover:line-through duration-500`}>contact</Link>
+  49 |         </>
+> 50 |       }
+     |       ^
+  51 |
+  52 |     </div>
+  53 |   )
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+Import trace:
+  Server Component:
+    ./components/Menu/CornersMenu.tsx
+    ./app/about/page.tsx
+[00:24:11.928] Browser ERROR   ./components/Menu/CornersMenu.tsx:50:7
+Parsing ecmascript source code failed
+  48 |             <Link href={"/contact"} className={`${pathname === "/contact" ? "font-providence line-through" : ""} text-xl pointer-events-auto left-8 bottom-8 absolute uppercase font-inter font-medium tracking-tighter hover:font-providence hover:line-through duration-500`}>contact</Link>
+  49 |         </>
+> 50 |       }
+     |       ^
+  51 |
+  52 |     </div>
+  53 |   )
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+Import trace:
+  Server Component:
+    ./components/Menu/CornersMenu.tsx
+    ./app/contact/page.tsx
+[00:24:11.928] Browser ERROR   ./components/Menu/CornersMenu.tsx:50:7
+Parsing ecmascript source code failed
+  48 |             <Link href={"/contact"} className={`${pathname === "/contact" ? "font-providence line-through" : ""} text-xl pointer-events-auto left-8 bottom-8 absolute uppercase font-inter font-medium tracking-tighter hover:font-providence hover:line-through duration-500`}>contact</Link>
+  49 |         </>
+> 50 |       }
+     |       ^
+  51 |
+  52 |     </div>
+  53 |   )
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+Import trace:
+  Server Component:
+    ./components/Menu/CornersMenu.tsx
+    ./app/page.tsx
+[00:24:15.751] Browser ERROR   ./components/Menu/CornersMenu.tsx:54:1
+Parsing ecmascript source code failed
+  52 |     </div>
+  53 |   )
+> 54 | }
+     | ^
+  55 |
+  56 | export default CornersMenu
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+Import trace:
+  Server Component:
+    ./components/Menu/CornersMenu.tsx
+    ./app/page.tsx
+[00:24:16.684] Server  LOG     ✓ Compiled in 40ms
+[00:24:16.782] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+[00:24:16.973] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:24:17.099] Browser WARN    Image with src "/assets/images/logo/logo.webp" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[00:24:17.099] Browser WARN    Image with src "/assets/images/logo/logo.webp" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:24:51.710] Server  LOG     ✓ Compiled in 38ms
+[00:24:51.814] Browser ERROR   ./components/Menu/CornersMenu.tsx:23:13
+Parsing ecmascript source code failed
+  21 |                   />
+  22 |               </Link>
+> 23 |             }
+     |             ^
+  24 |             <Link href={"/about"} className={`${pathname === "/about" ? "font-providence line-through" : ""} text-xl pointer-events-auto right-8 top-8 absolute uppercase font-inter font-medium tracking-tighter hover:font-providence hover:line-through duration-500`}>About</Link>
+  25 |             <Link href={"/photography"} className={`${pathname === "/photography" ? "font-providence line-through" : ""} text-xl pointer-events-auto right-8 bottom-8 absolute uppercase font-inter font-medium tracking-tighter hover:font-providence hover:line-through duration-500`}>photography</Link>
+  26 |             <Link href={"/contact"} className={`${pathname === "/contact" ? "font-providence line-through" : ""} text-xl pointer-events-auto left-8 bottom-8 absolute uppercase font-inter font-medium tracking-tighter hover:font-providence hover:line-through duration-500`}>contact</Link>
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+Import trace:
+  Server Component:
+    ./components/Menu/CornersMenu.tsx
+    ./app/page.tsx
+[00:24:53.140] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+[00:24:54.805] Server  LOG     ✓ Compiled in 16ms
+[00:25:13.584] Server  LOG     ✓ Compiled in 34ms
+[00:25:20.915] Server  LOG     ✓ Compiled in 35ms
+[00:25:29.808] Server  LOG     ✓ Compiled in 32ms
+[00:25:32.155] Server  LOG     ✓ Compiled in 15ms
+[00:25:34.367] Server  LOG     ✓ Compiled in 34ms
+[00:25:36.889] Server  LOG     ✓ Compiled in 16ms
+[00:25:48.948] Server  LOG     ✓ Compiled in 32ms
+[00:26:02.042] Server  LOG     ✓ Compiled in 37ms
+[00:26:03.787] Server  LOG     ✓ Compiled in 34ms
+[00:26:09.621] Server  LOG     ✓ Compiled in 35ms
+[00:26:13.589] Server  LOG     ✓ Compiled in 25ms
+[00:26:15.548] Server  LOG     ✓ Compiled in 15ms
+[00:26:32.584] Server  LOG     ✓ Compiled in 27ms
+[00:26:37.559] Server  LOG     ✓ Compiled in 28ms
+[00:26:40.404] Server  LOG     ✓ Compiled in 28ms
+[00:26:43.624] Server  LOG     ✓ Compiled in 113ms
+[00:26:44.974] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+[00:26:45.155] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:26:45.289] Browser WARN    Image with src "/assets/images/logo/logo.webp" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[00:26:45.289] Browser WARN    Image with src "/assets/images/logo/logo.webp" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:27:09.528] Server  LOG     ✓ Compiled in 31ms
+[00:27:13.039] Server  LOG     ✓ Compiled in 24ms
+[00:27:21.820] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+[00:28:01.248] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:28:01.376] Browser WARN    Image with src "/assets/images/logo/logo.webp" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[00:28:01.376] Browser WARN    Image with src "/assets/images/logo/logo.webp" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:28:12.055] Server  LOG     ✓ Compiled in 31ms
+[00:28:16.935] Server  LOG     ✓ Compiled in 16ms
+[00:28:20.847] Server  LOG     ✓ Compiled in 18ms
+[00:28:23.203] Server  LOG     ✓ Compiled in 14ms
+[00:28:43.437] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+[00:28:49.097] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+[00:28:51.134] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:28:52.569] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:28:52.686] Browser WARN    Image with src "/assets/images/logo/logo.webp" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:28:53.755] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+[00:30:05.511] Server  LOG     ✓ Compiled in 43ms
+[00:31:31.176] Server  LOG     ✓ Compiled in 43ms
+[00:31:36.404] Server  LOG     ✓ Compiled in 33ms
+[00:31:40.303] Server  LOG     ✓ Compiled in 16ms
+[00:31:43.738] Server  LOG     ✓ Compiled in 23ms
+[00:34:03.618] Server  LOG     ✓ Compiled in 35ms
+[00:34:07.930] Server  LOG     ✓ Compiled in 29ms
+[00:34:49.680] Server  LOG     ✓ Compiled in 76ms
+[00:34:52.188] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+[00:34:52.361] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:35:24.139] Server  LOG     ✓ Compiled in 89ms
+[00:35:25.899] Server  LOG     ✓ Compiled in 11ms
+[00:35:32.240] Server  LOG     ✓ Compiled in 24ms
+[00:35:36.343] Server  LOG     ✓ Compiled in 35ms
+[00:35:46.459] Server  LOG     ✓ Compiled in 33ms
+[00:35:46.567] Browser ERROR   ./components/Menu/CornersMenu.tsx:24:25
+Parsing ecmascript source code failed
+  22 |                   className="object-contain"
+  23 |               />
+> 24 |           </Link> */} */}
+     |                         ^
+  25 |           <Link href={"/photography"} className={`text-center text-xl pointer-events-auto uppercase font-inter font-medium tracking-tighter hover:font-providence hover:line-through duration-500`}>photography</Link>
+  26 |           <Link href={"/contact"} className={`text-right text-xl pointer-events-auto  uppercase font-inter font-medium tracking-tighter hover:font-providence hover:line-through duration-500`}>contact</Link>
+  27 |         </div> 
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+Import trace:
+  Server Component:
+    ./components/Menu/CornersMenu.tsx
+    ./app/page.tsx
+[00:35:47.959] Server  LOG     ✓ Compiled in 12ms
+[00:35:48.129] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+[00:35:51.300] Server  LOG     ✓ Compiled in 26ms
+[00:35:51.421] Browser WARN    Image with src "/assets/images/logo/logo.webp" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:35:52.649] Server  LOG     ✓ Compiled in 34ms
+[00:35:58.413] Server  LOG     ✓ Compiled in 41ms
+[00:36:05.522] Server  LOG     ✓ Compiled in 35ms
+[00:36:22.255] Server  LOG     ✓ Compiled in 48ms
+[00:37:05.008] Server  LOG     ✓ Compiled in 42ms
+[00:37:16.815] Server  LOG     ✓ Compiled in 48ms
+[00:37:16.940] Browser ERROR   ./components/Menu/CornersMenu.tsx:22:19
+Parsing ecmascript source code failed
+  20 |                   width={180}
+  21 |                   height={}
+> 22 |                   className="object-contain"
+     |                   ^^^^^^^^^
+  23 |               />
+  24 |           </Link>
+  25 |           <Link href={"/photography"} className={`text-center text-xl pointer-events-auto uppercase font-inter font-medium tracking-tighter hover:font-providence hover:line-through duration-500`}>photography</Link>
+
+Expected '</', got 'ident'
+
+Import trace:
+  Server Component:
+    ./components/Menu/CornersMenu.tsx
+    ./app/page.tsx
+[00:37:18.142] Server  LOG     ✓ Compiled in 15ms
+[00:37:18.249] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+[00:37:18.594] Browser WARN    Image with src "/assets/images/logo/logo.webp" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:37:22.550] Server  LOG     ✓ Compiled in 34ms
+[00:37:37.456] Server  LOG     ✓ Compiled in 57ms
+[00:37:52.843] Server  LOG     ✓ Compiled in 32ms
+[00:37:54.197] Server  LOG     ✓ Compiled in 30ms
+[00:38:08.621] Server  LOG     ✓ Compiled in 31ms
+[00:38:20.514] Server  LOG     ✓ Compiled in 29ms
+[00:38:29.339] Server  LOG     ✓ Compiled in 35ms
+[00:38:55.814] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+[00:40:52.049] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+[00:41:46.666] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+[00:41:56.363] Server  LOG     ✓ Compiled in 195ms
+[00:41:58.409] Browser ERROR   ./app/contact/page.tsx:9:32
+Parsing ecmascript source code failed
+   7 |     <main className=' min-h-screen'>
+   8 |         <CornersMenu />
+>  9 |         <Projects projects={} />
+     |                                ^
+  10 |     </main>
+  11 |   )
+  12 | }
+
+Expression expected
+[00:42:04.673] Server  LOG     ✓ Compiled in 27ms
+[00:42:08.683] Server  LOG     ✓ Compiled in 93ms
+[00:42:12.425] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+[00:42:59.344] Server  LOG     ✓ Compiled in 34ms
+[00:43:01.583] Server  LOG     ✓ Compiled in 14ms
+[00:43:06.070] Server  LOG     ✓ Compiled in 45ms
+[00:43:16.883] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+[00:43:35.465] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase

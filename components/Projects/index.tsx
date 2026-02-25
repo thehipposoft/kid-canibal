@@ -60,7 +60,7 @@ const ProjectCard = ({ project, index, total }: { project: Project; index: numbe
                     </div>
 
                     <div className="w-full h-px bg-white/30" />
-                    <div className="flex justify-center items-center gap-8">
+                    <div className="flex justify-center items-center gap-8 md:py-2">
                         <div className="flex flex-col">
                             <span className="text-sm font-bold tracking-widest">DIRECCIÓN</span>
                             <span className="text-2xl font-inter font-light text-white/70">{project.director}</span>

@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 const AboutPageContent = () => {
     return (
-        <div className="min-h-screen bg-black text-white p-6 md:px-8 md:py-20 flex flex-col">
+        <div className="min-h-screen bg-black text-white p-6 md:px-8 md:py-24 flex flex-col">
             {/* Top Section - Image */}
             <div className="relative w-full h-[40vh] md:h-[40vh] overflow-hidden mb-8 md:mb-12">
                 <Image
