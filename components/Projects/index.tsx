@@ -51,30 +51,28 @@ const ProjectCard = ({ project, index, total }: { project: Project; index: numbe
                 </div>
 
                 {/* Content */}
-                <div className="relative z-20 w-full h-full flex flex-col justify-end p-6 md:px-12 md:py-12 gap-6">
+                <div className="relative z-20 w-full h-full flex flex-col justify-end p-6 md:px-12 md:py-4 gap-4">
 
                     <div className="">
-                        <h2 className="text-white font-thunder font-bold text-[11vw] leading-[0.8] uppercase">
+                        <h2 className="text-white font-schabo text-[13vw] leading-[0.6] uppercase">
                             {project.title}
                         </h2>
                     </div>
 
                     <div className="w-full h-px bg-white/30" />
-                    <div className="flex justify-between items-center">
-                        <div className="flex flex-col gap-1">
-                            <span className="font-bold tracking-widest">DIRECCIÓN</span>
-                            <span className="text-2xl font-inter font-light text-white/60">{project.director}</span>
+                    <div className="flex justify-center items-center gap-8">
+                        <div className="flex flex-col">
+                            <span className="text-sm font-bold tracking-widest">DIRECCIÓN</span>
+                            <span className="text-2xl font-inter font-light text-white/70">{project.director}</span>
+                            <span className="text-white/50">EST. {project.year}</span>
                         </div>
                         <div className="flex items-center gap-4">
-                            <div className="flex gap-4">
-                                <span className="text-white/40">EST. {project.year}</span>
-                            </div>
                             <Link
                                 href={project.link}
-                                className="group flex items-center gap-2 text-white font-inter text-xs md:text-sm tracking-widest uppercase opacity-80 hover:opacity-100 transition-opacity"
+                                className="group flex items-center gap-2 text-white font-inter text-xs md:text-sm tracking-widest uppercase opacity-80 hover:opacity-100 hover:underline transition-opacity "
                             >
                                 VER PROYECTO
-                                <div className="w-8 h-8 rounded-full border border-white/30 flex items-center justify-center group-hover:bg-white group-hover:text-black transition-colors">
+                                <div className="w-8 h-8 rounded-full border border-white/30 flex items-center justify-center group-hover:bg-white group-hover:text-black transition-colors duration-500">
                                     <ArrowUpRight size={14} />
                                 </div>
                             </Link>
