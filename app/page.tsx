@@ -53,7 +53,6 @@ export default function Home() {
     <main className="">
       <CornersMenu />
       <VideoBanner />
-      <ScrollingBanner />
       <Projects projects={projects} />
     </main>
   );
