@@ -1,15 +1,12 @@
 import React from 'react'
 import CornersMenu from '@/components/Menu/CornersMenu'
-import Projects from '@/components/Projects'
-import { projects } from '../page'
+import ContactPage from '@/components/ContactPage'
 
-function ContactPage() {
+export default function Contact() {
   return (
-    <main className=' min-h-screen'>
+    <main className='min-h-screen'>
         <CornersMenu />
-        <Projects projects={projects} />
+        <ContactPage />
     </main>
   )
 }
-
-export default ContactPage

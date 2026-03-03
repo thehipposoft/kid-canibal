@@ -22,7 +22,7 @@ interface ProjectsProps {
 const ProjectCard = ({ project, index, total }: { project: Project; index: number; total: number }) => {
     return (
         <div
-            className="sticky top-0 w-full h-screen flex items-center justify-center overflow-hidden"
+            className="sticky top-0 w-full h-screen flex items-center justify-center overflow-hidden video-container"
             style={{ zIndex: index + 1 }}
         >
             <div className="relative w-full h-full">
@@ -60,7 +60,7 @@ const ProjectCard = ({ project, index, total }: { project: Project; index: numbe
                     </div>
 
                     <div className="w-full h-px bg-white/30" />
-                    <div className="flex justify-center items-center gap-8 md:py-2">
+                    <div className="flex justify-center items-center gap-20 md:py-2">
                         <div className="flex flex-col">
                             <span className="text-sm font-bold tracking-widest">DIRECCIÓN</span>
                             <span className="text-2xl font-inter font-light text-white/70">{project.director}</span>

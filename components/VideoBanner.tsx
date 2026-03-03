@@ -73,7 +73,7 @@ function Slide1() {
         <div className="absolute inset-0 flex items-center justify-center">
             <SmallLogo />
             <p
-                className="font-thunder font-bold text-white text-center leading-none uppercase text-[15vw]"
+                className="font-thunder font-bold text-white text-center leading-none uppercase text-[16vw]"
             >
                 BRUTAL. BEAUTIFUL.
             </p>
@@ -136,7 +136,7 @@ export default function BannerVideo() {
     const PrevSlide = prev !== null ? SLIDES[prev] : null;
 
     return (
-        <div className="relative w-full overflow-hidden rounded-xl aspect-video bg-black shadow-2xl">
+        <div className="relative h-screen w-full overflow-hidden rounded-xl aspect-video bg-black shadow-2xl">
             {/* Background video */}
             <video
                 src={videoUrl}

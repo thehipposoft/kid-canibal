@@ -52,3 +52,16 @@ body {
   --font-thunder: thunderFont, thunderFont Fallback, sans-serif;
   --font-inter: Inter, sans-serif;
 }
+
+/*Custom Cursor*/
+* {
+  cursor: none !important;
+}
+
+.cursor-transition {
+  transition:
+    width           0.2s cubic-bezier(0.23, 1, 0.32, 1),
+    height          0.2s cubic-bezier(0.23, 1, 0.32, 1),
+    border-radius   0.2s cubic-bezier(0.23, 1, 0.32, 1),
+    background-color 0.15s ease;
+}
