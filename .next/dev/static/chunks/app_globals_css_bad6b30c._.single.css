@@ -514,16 +514,8 @@
     aspect-ratio: var(--aspect-video);
   }
 
-  .h-3 {
-    height: calc(var(--spacing) * 3);
-  }
-
   .h-4 {
     height: calc(var(--spacing) * 4);
-  }
-
-  .h-5 {
-    height: calc(var(--spacing) * 5);
   }
 
   .h-8 {
@@ -548,6 +540,10 @@
 
   .h-\[40vh\] {
     height: 40vh;
+  }
+
+  .h-\[42vh\] {
+    height: 42vh;
   }
 
   .h-\[45vh\] {
@@ -594,20 +590,12 @@
     width: 50%;
   }
 
-  .w-3 {
-    width: calc(var(--spacing) * 3);
-  }
-
   .w-3xl {
     width: var(--container-3xl);
   }
 
   .w-4 {
     width: calc(var(--spacing) * 4);
-  }
-
-  .w-5 {
-    width: calc(var(--spacing) * 5);
   }
 
   .w-8 {
@@ -1094,10 +1082,6 @@
     font-size: 10vw;
   }
 
-  .text-\[11px\] {
-    font-size: 11px;
-  }
-
   .text-\[13vw\] {
     font-size: 13vw;
   }
@@ -1168,11 +1152,6 @@
   .tracking-\[0\.4em\] {
     --tw-tracking: .4em;
     letter-spacing: .4em;
-  }
-
-  .tracking-\[0\.12em\] {
-    --tw-tracking: .12em;
-    letter-spacing: .12em;
   }
 
   .tracking-tighter {
@@ -1335,11 +1314,6 @@
     transition-property: opacity;
     transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
     transition-duration: var(--tw-duration, var(--default-transition-duration));
-  }
-
-  .duration-150 {
-    --tw-duration: .15s;
-    transition-duration: .15s;
   }
 
   .duration-200 {
