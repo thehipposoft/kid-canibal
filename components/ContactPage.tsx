@@ -7,9 +7,8 @@ const ContactPage = () => {
     <div className='flex flex-col'>
       <div className='h-screen flex flex-col justify-end items-center p-8 gap-8'>
         <div className='flex flex-col gap-2'>
-          <Image src="/kid.png" alt='Kid Canibal' width={70} height={70} className='object-contain hidden' />
           <h1 className='font-schabo text-[30vh] leading-[25vh] uppercase tracking-widest hidden'>kidcanibal</h1>
-          <div className="relative w-[80vw] h-[42vh]">
+          <div className="relative w-[80vw] h-[40vh]">
               <Image
                   src="/assets/images/logo/logo.webp"
                   alt="Kid Canibal logo"

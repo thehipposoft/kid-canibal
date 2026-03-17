@@ -36,7 +36,7 @@ const AboutPageContent = ()=>{
                     src: "/assets/images/projects/projects-5.jpg",
                     alt: "Surfing background",
                     fill: true,
-                    className: "object-cover object-bottom",
+                    className: "object-cover object-bottom rounded-2xl",
                     priority: true
                 }, void 0, false, {
                     fileName: "[project]/components/AboutPage.tsx",

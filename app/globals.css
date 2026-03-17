@@ -65,3 +65,14 @@ body {
     border-radius   0.2s cubic-bezier(0.23, 1, 0.32, 1),
     background-color 0.15s ease;
 }
+
+/* This sets the canvas color behind the transitioning "screenshots" */
+::view-transition-group(root) {
+  background-color: #000;
+}
+
+/* Ensure the new page has its own background color so it isn't see-through */
+::view-transition-new(root) {
+  background-color: #000; /* or your page's background color */
+  mix-blend-mode: normal; /* prevents weird color blending */
+}

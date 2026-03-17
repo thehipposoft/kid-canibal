@@ -4,5 +4,7 @@
   "/about/page": "/about",
   "/contact/page": "/contact",
   "/favicon.ico/route": "/favicon.ico",
-  "/page": "/"
+  "/page": "/",
+  "/projects/[slug]/page": "/projects/[slug]",
+  "/projects/page": "/projects"
 }

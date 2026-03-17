@@ -84,22 +84,39 @@ function Slide1() {
 function Slide2() {
     return (
         <div className="absolute inset-0 flex items-end justify-start py-12 sm:p-10 lg:px-8 lg:py-32">
-            <SmallLogo />
-            <div className="w-screen uppercase leading-[0.9] font-thunder font-bold">
-                <div className="flex justify-between w-full text-[8vw]">
+            <div className="hidden md:block md:absolute top-6 left-1/2 -translate-x-1/2 w-[120px] h-[40px] lg:w-[180px] lg:h-[55px]">
+                <Image
+                    src="/assets/images/logo/logo.webp"
+                    alt="Kid Canibal logo"
+                    fill
+                    className="object-contain"
+                />
+            </div>
+            <div className="flex absolute top-6 left-4 lg:hidden justify-between">
+                <div className="w-[180px] h-[60px]">
+                    <Image
+                        src="/assets/images/logo/logo.webp"
+                        alt="Kid Canibal logo"
+                        fill
+                        className="object-contain"
+                    />
+                </div>
+            </div>
+            <div className="w-screen uppercase leading-[0.9] font-thunder font-bold px-5 md:px-0">
+                <div className="flex justify-between w-full flex-wrap lg:text-[8vw] text-[17vw]">
                     <span>We</span>
                     <span>throw</span>
                     <span>ourselves</span>
                     <span>into</span>
                     <span>chaos</span>
                 </div>
-                <div className="flex justify-between w-full text-[8vw]">
+                <div className="flex justify-between w-full flex-wrap lg:text-[8vw] text-[17vw]">
                     <span>and</span>
                     <span>turn</span>
                     <span>the</span>
                     <span>unpredictable</span>
                 </div>
-                <div className="flex justify-between w-full text-[8vw]">
+                <div className="flex justify-between w-full flex-wrap lg:text-[8vw] text-[17vw]">
                     <span>into</span>
                     <span>unique</span>
                     <span>pieces</span>

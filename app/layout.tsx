@@ -4,6 +4,8 @@ import "./globals.css";
 import localFont from "next/font/local"
 import SmoothScroll from "@/components/SmoothScroll";
 import CustomCursor from "@/components/CustomCursor";
+import { ViewTransitions } from "next-view-transitions";
+import MobileMenu from "@/components/MobileMenu";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -45,10 +47,13 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${schaboFont.variable} ${thunderFont.variable} ${providenceFont.variable} antialiased`}
       >
-        <CustomCursor />
-        <SmoothScroll>
-          {children}
-        </SmoothScroll>
+        <ViewTransitions>
+          <CustomCursor />
+          <MobileMenu />
+          <SmoothScroll>
+            {children}
+          </SmoothScroll>
+        </ViewTransitions>
       </body>
     </html>
   );
