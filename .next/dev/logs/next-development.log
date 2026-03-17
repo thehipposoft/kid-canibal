@@ -1,201 +1,212 @@
-[00:00:02.714] Server  LOG     ✓ Ready in 2.5s
-[00:00:14.373] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
-[00:00:14.700] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:00:14.845] Browser ERROR   In HTML, %s cannot be a descendant of <%s>.
-This will cause a hydration error.%s <a> a 
-
-  ...
-    <LoadingBoundary name="/" loading={null}>
-      <HTTPAccessFallbackBoundary notFound={<SegmentViewNode>} forbidden={undefined} unauthorized={undefined}>
-        <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<SegmentViewNode>} forbidden={undefined} ...>
-          <RedirectBoundary>
-            <RedirectErrorBoundary router={{...}}>
-              <InnerLayoutRouter url="/" tree={[...]} params={{}} cacheNode={{rsc:<Fragment>, ...}} segmentPath={[...]} ...>
-                <SegmentViewNode type="page" pagePath="page.tsx">
-                  <SegmentTrieNode>
-                  <Home>
-                    <main className="">
-                      <CornersMenu>
-                      <BannerVideo>
-                      <Projects projects={[...]}>
-                        <section className="relative w...">
-                          <ProjectCard project={{slug:"park...", ...}} index={0} total={5}>
-                            <LinkComponent href="/projects/..." className="sticky poi..." style={{zIndex:1}}>
->                             <a
->                               className="sticky pointer-events-none lg:pointer-events-auto top-0 w-full h-screen fle..."
->                               style={{zIndex:1}}
->                               ref={function}
->                               onClick={function onClick}
->                               onMouseEnter={function onMouseEnter}
->                               onTouchStart={function onTouchStart}
->                               href="/projects/park-hyatt"
->                             >
-                                ...
-                                  <div className="flex items...">
-                                    <LinkComponent href="/projects/..." className={"group lg..."}>
->                                     <a
->                                       className={"group lg:hidden flex items-center gap-2 text-white font-inter tex..."}
->                                       ref={function}
->                                       onClick={function onClick}
->                                       onMouseEnter={function onMouseEnter}
->                                       onTouchStart={function onTouchStart}
->                                       href="/projects/park-hyatt"
->                                     >
-                          ...
-                ...
-              ...
-
-[00:00:14.845] Browser ERROR   <%s> cannot contain a nested %s.
-See this log for the ancestor stack trace. a <a>
-[00:00:14.845] Browser ERROR   uncaughtError: Error: Hydration failed because the server rendered HTML didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
-
-- A server/client branch `if (typeof window !== 'undefined')`.
-- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
-- Date formatting in a user's locale which doesn't match the server.
-- External changing data without sending a snapshot of it along with the HTML.
-- Invalid HTML tag nesting.
-
-It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
-
-https://react.dev/link/hydration-mismatch
-
-  ...
-    <HTTPAccessFallbackBoundary notFound={<SegmentViewNode>} forbidden={undefined} unauthorized={undefined}>
-      <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<SegmentViewNode>} forbidden={undefined} ...>
-        <RedirectBoundary>
-          <RedirectErrorBoundary router={{...}}>
-            <InnerLayoutRouter url="/" tree={[...]} params={{}} cacheNode={{rsc:<Fragment>, ...}} segmentPath={[...]} ...>
-              <SegmentViewNode type="page" pagePath="page.tsx">
-                <SegmentTrieNode>
-                <Home>
-                  <main className="">
-                    <CornersMenu>
-                    <BannerVideo>
-                    <Projects projects={[...]}>
-                      <section className="relative w...">
-                        <ProjectCard project={{slug:"park...", ...}} index={0} total={5}>
-                          <LinkComponent href="/projects/..." className="sticky poi..." style={{zIndex:1}}>
-                            <a className="sticky poi..." style={{zIndex:1}} ref={function} onClick={function onClick} ...>
-+                             <div className="relative w-full h-full">
-                        ...
-              ...
-            ...
-
-[00:00:15.446] Browser WARN    Image with src "/assets/images/logo/logo.webp" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
-Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
-[00:00:18.365] Browser WARN    Image with src "/assets/images/logo/logo.webp" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:01:08.176] Server  LOG     ✓ Compiled in 849ms
-[00:01:08.323] Browser ERROR   ./components/Projects/index.tsx:88:7
-Ecmascript file had an error
-  86 | };
-  87 |
-> 88 | const ProjectCard = ({ project, index, total }: { project: Project; index: number; total: number }) => {
-     |       ^^^^^^^^^^^
-  89 |     return (
-  90 |         <Link
-  91 |             href={project.link}
-
-the name `ProjectCard` is defined multiple times
+[00:00:04.909] Server  LOG     ✓ Ready in 4.6s
+[00:00:07.096] Server  ERROR   ⨯ ./app/globals.css
+Error evaluating Node.js code
+CssSyntaxError: /Users/juanmanuelborigen/Desktop/HippoSoft/kid-canibal/app/globals.css:3:1: Unclosed block
+    [at Input.error (turbopack:///[project]/node_modules/postcss/lib/input.js:135:16)]
+    [at Parser.unclosedBlock (turbopack:///[project]/node_modules/postcss/lib/parser.js:575:22)]
+    [at Parser.endFile (turbopack:///[project]/node_modules/postcss/lib/parser.js:335:35)]
+    [at Parser.parse (turbopack:///[project]/node_modules/postcss/lib/parser.js:476:10)]
+    [at parse (turbopack:///[project]/node_modules/postcss/lib/parse.js:11:12)]
+    [at LazyResult (turbopack:///[project]/node_modules/postcss/lib/lazy-result.js:165:16)]
+    [at Processor.process (turbopack:///[project]/node_modules/postcss/lib/processor.js:53:14)]
+    [at transform (turbopack:///[turbopack-node]/transforms/postcss.ts:70:51)]
+    [at run (turbopack:///[turbopack-node]/ipc/evaluate.ts:92:29)]
+    [at run (turbopack:///[turbopack-node]/ipc/evaluate.ts:115:11)]
 
 Import trace:
-  Server Component:
-    ./components/Projects/index.tsx
-    ./app/page.tsx
-[00:01:12.801] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
-[00:01:16.599] Server  LOG     ✓ Compiled in 39ms
-[00:01:18.221] Server  LOG     ✓ Compiled in 168ms
-[00:01:19.340] Browser ERROR   ./components/Projects/index.tsx:150:11
-Parsing ecmascript source code failed
-  148 |                 </div>
-  149 |             </div>
-> 150 |         </Link>
-      |           ^^^^
-  151 |     );
-  152 | };
-  153 |
+  Client Component Browser:
+    ./app/globals.css [Client Component Browser]
+    ./app/layout.tsx [Server Component]
 
-Expected corresponding JSX closing tag for <div>
 
-Import trace:
-  Server Component:
-    ./components/Projects/index.tsx
-    ./app/page.tsx
-[00:01:22.159] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
-[00:01:35.670] Server  LOG     ✓ Compiled in 56ms
-[00:01:42.839] Server  LOG     ✓ Compiled in 53ms
-[00:01:52.643] Server  LOG     ✓ Compiled in 377ms
-[00:01:56.478] Server  LOG     ✓ Compiled in 442ms
-[00:01:58.240] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
-[00:02:02.890] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:02:02.893] Browser WARN    Image with src "/assets/images/logo/logo.webp" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
-Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
-[00:02:05.069] Browser WARN    Image with src "/assets/images/logo/logo.webp" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:02:15.198] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:02:18.797] Browser WARN    Image with src "/assets/images/logo/logo.webp" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
-Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
-[00:02:19.889] Browser WARN    Image with src "/assets/images/logo/logo.webp" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:03:12.891] Server  LOG     ✓ Compiled in 181ms
-[00:03:13.730] Server  LOG     ✓ Compiled in 38ms
-[00:03:40.818] Server  LOG     ✓ Compiled in 39ms
-[00:03:42.909] Server  LOG     ✓ Compiled in 86ms
-[00:03:45.326] Server  LOG     ✓ Compiled in 28ms
-[00:03:47.871] Server  LOG     ✓ Compiled in 54ms
-[00:03:50.492] Server  LOG     ✓ Compiled in 57ms
-[00:03:53.785] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
-[00:03:58.223] Browser WARN    Image with src "/assets/images/logo/logo.webp" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:04:24.293] Server  LOG     ✓ Compiled in 122ms
-[00:04:27.258] Server  LOG     ✓ Compiled in 217ms
-[00:04:28.338] Browser ERROR   ./components/Projects/index.tsx:165:1
-Parsing ecmascript source code failed
-  163 |         </section>
-  164 |     );
-> 165 | }
-      | ^
-  166 |
-
-Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+[00:00:09.200] Browser ERROR   uncaughtError: Error: ./app/globals.css
+Error evaluating Node.js code
+CssSyntaxError: /Users/juanmanuelborigen/Desktop/HippoSoft/kid-canibal/app/globals.css:3:1: Unclosed block
+    [at Input.error (turbopack:///[project]/node_modules/postcss/lib/input.js:135:16)]
+    [at Parser.unclosedBlock (turbopack:///[project]/node_modules/postcss/lib/parser.js:575:22)]
+    [at Parser.endFile (turbopack:///[project]/node_modules/postcss/lib/parser.js:335:35)]
+    [at Parser.parse (turbopack:///[project]/node_modules/postcss/lib/parser.js:476:10)]
+    [at parse (turbopack:///[project]/node_modules/postcss/lib/parse.js:11:12)]
+    [at LazyResult (turbopack:///[project]/node_modules/postcss/lib/lazy-result.js:165:16)]
+    [at Processor.process (turbopack:///[project]/node_modules/postcss/lib/processor.js:53:14)]
+    [at transform (turbopack:///[turbopack-node]/transforms/postcss.ts:70:51)]
+    [at run (turbopack:///[turbopack-node]/ipc/evaluate.ts:92:29)]
+    [at run (turbopack:///[turbopack-node]/ipc/evaluate.ts:115:11)]
 
 Import trace:
-  Server Component:
-    ./components/Projects/index.tsx
-    ./app/page.tsx
-[00:04:32.205] Server  LOG     ✓ Compiled in 66ms
-[00:04:32.428] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
-[00:05:09.383] Server  LOG     ✓ Compiled in 276ms
-[00:05:19.514] Server  LOG     ✓ Compiled in 95ms
-[00:05:51.947] Server  LOG     ✓ Compiled in 255ms
-[00:05:57.298] Server  LOG     ✓ Compiled in 30ms
-[00:06:14.869] Server  LOG     ✓ Compiled in 49ms
-[00:06:15.887] Server  LOG     ✓ Compiled in 39ms
-[00:06:18.487] Server  LOG     ✓ Compiled in 28ms
-[00:06:20.317] Server  LOG     ✓ Compiled in 60ms
-[00:07:11.278] Server  LOG     ✓ Compiled in 559ms
-[00:07:26.501] Server  LOG     ✓ Compiled in 506ms
-[00:07:30.424] Server  LOG     ✓ Compiled in 65ms
-[00:07:37.472] Server  LOG     ✓ Compiled in 166ms
-[00:09:46.420] Server  LOG     ✓ Compiled in 506ms
-[00:09:47.324] Browser ERROR   uncaughtError: ReferenceError: SmalxlLogo is not defined
-[00:09:48.244] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
-[00:09:48.266] Server  LOG     ✓ Compiled in 284ms
-[00:09:49.562] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
-[00:09:58.323] Browser WARN    Image with src "/assets/images/logo/logo.webp" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:10:02.323] Browser ERROR   uncaughtError: ReferenceError: SmallLoxgo is not defined
-[00:10:09.447] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
-[00:10:09.461] Server  LOG     ✓ Compiled in 124ms
-[00:10:09.599] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
-[00:10:24.554] Server  LOG     ✓ Compiled in 92ms
-[00:10:27.534] Server  LOG     ✓ Compiled in 24ms
-[00:10:40.513] Server  LOG     ✓ Compiled in 76ms
-[00:10:53.052] Server  LOG     ✓ Compiled in 39ms
-[00:10:57.454] Server  LOG     ✓ Compiled in 51ms
-[00:10:59.282] Server  LOG     ✓ Compiled in 19ms
-[00:11:01.735] Server  LOG     ✓ Compiled in 205ms
-[00:11:03.462] Server  LOG     ✓ Compiled in 36ms
-[00:11:09.303] Server  LOG     ✓ Compiled in 34ms
-[00:11:10.131] Browser WARN    Image with src "/assets/images/logo/logo.webp" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:11:10.131] Browser WARN    Image with src "/assets/images/logo/logo.webp" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
-[00:11:13.447] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
-[00:11:15.900] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+  Client Component Browser:
+    ./app/globals.css [Client Component Browser]
+    ./app/layout.tsx [Server Component]
+
+
+[00:00:09.938] Browser ERROR   ./app/globals.css
+Error evaluating Node.js code
+CssSyntaxError: /Users/juanmanuelborigen/Desktop/HippoSoft/kid-canibal/app/globals.css:3:1: Unclosed block
+    [at Input.error (turbopack:///[project]/node_modules/postcss/lib/input.js:135:16)]
+    [at Parser.unclosedBlock (turbopack:///[project]/node_modules/postcss/lib/parser.js:575:22)]
+    [at Parser.endFile (turbopack:///[project]/node_modules/postcss/lib/parser.js:335:35)]
+    [at Parser.parse (turbopack:///[project]/node_modules/postcss/lib/parser.js:476:10)]
+    [at parse (turbopack:///[project]/node_modules/postcss/lib/parse.js:11:12)]
+    [at LazyResult (turbopack:///[project]/node_modules/postcss/lib/lazy-result.js:165:16)]
+    [at Processor.process (turbopack:///[project]/node_modules/postcss/lib/processor.js:53:14)]
+    [at transform (turbopack:///[turbopack-node]/transforms/postcss.ts:70:51)]
+    [at run (turbopack:///[turbopack-node]/ipc/evaluate.ts:92:29)]
+    [at run (turbopack:///[turbopack-node]/ipc/evaluate.ts:115:11)]
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css [Client Component Browser]
+    ./app/layout.tsx [Server Component]
+[00:00:09.938] Browser ERROR   ./app/globals.css
+Error evaluating Node.js code
+CssSyntaxError: /Users/juanmanuelborigen/Desktop/HippoSoft/kid-canibal/app/globals.css:3:1: Unclosed block
+    [at Input.error (turbopack:///[project]/node_modules/postcss/lib/input.js:135:16)]
+    [at Parser.unclosedBlock (turbopack:///[project]/node_modules/postcss/lib/parser.js:575:22)]
+    [at Parser.endFile (turbopack:///[project]/node_modules/postcss/lib/parser.js:335:35)]
+    [at Parser.parse (turbopack:///[project]/node_modules/postcss/lib/parser.js:476:10)]
+    [at parse (turbopack:///[project]/node_modules/postcss/lib/parse.js:11:12)]
+    [at LazyResult (turbopack:///[project]/node_modules/postcss/lib/lazy-result.js:165:16)]
+    [at Processor.process (turbopack:///[project]/node_modules/postcss/lib/processor.js:53:14)]
+    [at transform (turbopack:///[turbopack-node]/transforms/postcss.ts:70:51)]
+    [at run (turbopack:///[turbopack-node]/ipc/evaluate.ts:92:29)]
+    [at run (turbopack:///[turbopack-node]/ipc/evaluate.ts:115:11)]
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css [Client Component Browser]
+    ./app/layout.tsx [Server Component]
+[00:00:24.452] Server  ERROR   ⨯ ./app/globals.css
+Error evaluating Node.js code
+CssSyntaxError: /Users/juanmanuelborigen/Desktop/HippoSoft/kid-canibal/app/globals.css:3:1: Unclosed block
+    [at Input.error (turbopack:///[project]/node_modules/postcss/lib/input.js:135:16)]
+    [at Parser.unclosedBlock (turbopack:///[project]/node_modules/postcss/lib/parser.js:575:22)]
+    [at Parser.endFile (turbopack:///[project]/node_modules/postcss/lib/parser.js:335:35)]
+    [at Parser.parse (turbopack:///[project]/node_modules/postcss/lib/parser.js:476:10)]
+    [at parse (turbopack:///[project]/node_modules/postcss/lib/parse.js:11:12)]
+    [at LazyResult (turbopack:///[project]/node_modules/postcss/lib/lazy-result.js:165:16)]
+    [at Processor.process (turbopack:///[project]/node_modules/postcss/lib/processor.js:53:14)]
+    [at transform (turbopack:///[turbopack-node]/transforms/postcss.ts:70:51)]
+    [at run (turbopack:///[turbopack-node]/ipc/evaluate.ts:92:29)]
+    [at run (turbopack:///[turbopack-node]/ipc/evaluate.ts:115:11)]
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css [Client Component Browser]
+    ./app/layout.tsx [Server Component]
+
+
+[00:00:24.603] Browser ERROR   ./app/globals.css
+Error evaluating Node.js code
+CssSyntaxError: /Users/juanmanuelborigen/Desktop/HippoSoft/kid-canibal/app/globals.css:3:1: Unclosed block
+    [at Input.error (turbopack:///[project]/node_modules/postcss/lib/input.js:135:16)]
+    [at Parser.unclosedBlock (turbopack:///[project]/node_modules/postcss/lib/parser.js:575:22)]
+    [at Parser.endFile (turbopack:///[project]/node_modules/postcss/lib/parser.js:335:35)]
+    [at Parser.parse (turbopack:///[project]/node_modules/postcss/lib/parser.js:476:10)]
+    [at parse (turbopack:///[project]/node_modules/postcss/lib/parse.js:11:12)]
+    [at LazyResult (turbopack:///[project]/node_modules/postcss/lib/lazy-result.js:165:16)]
+    [at Processor.process (turbopack:///[project]/node_modules/postcss/lib/processor.js:53:14)]
+    [at transform (turbopack:///[turbopack-node]/transforms/postcss.ts:70:51)]
+    [at run (turbopack:///[turbopack-node]/ipc/evaluate.ts:92:29)]
+    [at run (turbopack:///[turbopack-node]/ipc/evaluate.ts:115:11)]
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css [Client Component Browser]
+    ./app/layout.tsx [Server Component]
+[00:00:24.957] Browser ERROR   uncaughtError: Error: ./app/globals.css
+Error evaluating Node.js code
+CssSyntaxError: /Users/juanmanuelborigen/Desktop/HippoSoft/kid-canibal/app/globals.css:3:1: Unclosed block
+    [at Input.error (turbopack:///[project]/node_modules/postcss/lib/input.js:135:16)]
+    [at Parser.unclosedBlock (turbopack:///[project]/node_modules/postcss/lib/parser.js:575:22)]
+    [at Parser.endFile (turbopack:///[project]/node_modules/postcss/lib/parser.js:335:35)]
+    [at Parser.parse (turbopack:///[project]/node_modules/postcss/lib/parser.js:476:10)]
+    [at parse (turbopack:///[project]/node_modules/postcss/lib/parse.js:11:12)]
+    [at LazyResult (turbopack:///[project]/node_modules/postcss/lib/lazy-result.js:165:16)]
+    [at Processor.process (turbopack:///[project]/node_modules/postcss/lib/processor.js:53:14)]
+    [at transform (turbopack:///[turbopack-node]/transforms/postcss.ts:70:51)]
+    [at run (turbopack:///[turbopack-node]/ipc/evaluate.ts:92:29)]
+    [at run (turbopack:///[turbopack-node]/ipc/evaluate.ts:115:11)]
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css [Client Component Browser]
+    ./app/layout.tsx [Server Component]
+
+
+[00:00:25.077] Browser ERROR   ./app/globals.css
+Error evaluating Node.js code
+CssSyntaxError: /Users/juanmanuelborigen/Desktop/HippoSoft/kid-canibal/app/globals.css:3:1: Unclosed block
+    [at Input.error (turbopack:///[project]/node_modules/postcss/lib/input.js:135:16)]
+    [at Parser.unclosedBlock (turbopack:///[project]/node_modules/postcss/lib/parser.js:575:22)]
+    [at Parser.endFile (turbopack:///[project]/node_modules/postcss/lib/parser.js:335:35)]
+    [at Parser.parse (turbopack:///[project]/node_modules/postcss/lib/parser.js:476:10)]
+    [at parse (turbopack:///[project]/node_modules/postcss/lib/parse.js:11:12)]
+    [at LazyResult (turbopack:///[project]/node_modules/postcss/lib/lazy-result.js:165:16)]
+    [at Processor.process (turbopack:///[project]/node_modules/postcss/lib/processor.js:53:14)]
+    [at transform (turbopack:///[turbopack-node]/transforms/postcss.ts:70:51)]
+    [at run (turbopack:///[turbopack-node]/ipc/evaluate.ts:92:29)]
+    [at run (turbopack:///[turbopack-node]/ipc/evaluate.ts:115:11)]
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css [Client Component Browser]
+    ./app/layout.tsx [Server Component]
+[00:00:25.358] Browser ERROR   ./app/globals.css
+Error evaluating Node.js code
+CssSyntaxError: /Users/juanmanuelborigen/Desktop/HippoSoft/kid-canibal/app/globals.css:3:1: Unclosed block
+    [at Input.error (turbopack:///[project]/node_modules/postcss/lib/input.js:135:16)]
+    [at Parser.unclosedBlock (turbopack:///[project]/node_modules/postcss/lib/parser.js:575:22)]
+    [at Parser.endFile (turbopack:///[project]/node_modules/postcss/lib/parser.js:335:35)]
+    [at Parser.parse (turbopack:///[project]/node_modules/postcss/lib/parser.js:476:10)]
+    [at parse (turbopack:///[project]/node_modules/postcss/lib/parse.js:11:12)]
+    [at LazyResult (turbopack:///[project]/node_modules/postcss/lib/lazy-result.js:165:16)]
+    [at Processor.process (turbopack:///[project]/node_modules/postcss/lib/processor.js:53:14)]
+    [at transform (turbopack:///[turbopack-node]/transforms/postcss.ts:70:51)]
+    [at run (turbopack:///[turbopack-node]/ipc/evaluate.ts:92:29)]
+    [at run (turbopack:///[turbopack-node]/ipc/evaluate.ts:115:11)]
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css [Client Component Browser]
+    ./app/layout.tsx [Server Component]
+[00:00:40.939] Browser ERROR   ./app/globals.css
+Error evaluating Node.js code
+CssSyntaxError: /Users/juanmanuelborigen/Desktop/HippoSoft/kid-canibal/app/globals.css:3:1: Unclosed block
+    [at Input.error (turbopack:///[project]/node_modules/postcss/lib/input.js:135:16)]
+    [at Parser.unclosedBlock (turbopack:///[project]/node_modules/postcss/lib/parser.js:575:22)]
+    [at Parser.endFile (turbopack:///[project]/node_modules/postcss/lib/parser.js:335:35)]
+    [at Parser.parse (turbopack:///[project]/node_modules/postcss/lib/parser.js:476:10)]
+    [at parse (turbopack:///[project]/node_modules/postcss/lib/parse.js:11:12)]
+    [at LazyResult (turbopack:///[project]/node_modules/postcss/lib/lazy-result.js:165:16)]
+    [at Processor.process (turbopack:///[project]/node_modules/postcss/lib/processor.js:53:14)]
+    [at transform (turbopack:///[turbopack-node]/transforms/postcss.ts:70:51)]
+    [at run (turbopack:///[turbopack-node]/ipc/evaluate.ts:92:29)]
+    [at run (turbopack:///[turbopack-node]/ipc/evaluate.ts:115:11)]
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css [Client Component Browser]
+    ./app/layout.tsx [Server Component]
+[00:00:50.708] Server  LOG     ✓ Compiled in 668ms
+[00:00:51.146] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+[00:00:52.042] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:56.938] Browser WARN    Image with src "/assets/images/logo/logo.webp" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:00:57.349] Server  LOG     ✓ Compiled in 73ms
+[00:01:00.938] Browser WARN    Image with src "/assets/images/logo/logo.webp" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[00:01:07.119] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:01:10.052] Browser WARN    Image with src "/assets/images/logo/logo.webp" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[00:01:10.863] Browser WARN    Image with src "/assets/images/logo/logo.webp" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:01:14.368] Browser WARN    Image with src "/assets/images/logo/logo.webp" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[00:01:18.977] Browser WARN    Image with src "/kid.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:01:18.977] Browser WARN    Image with src "/assets/images/kids/kidblack1.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:01:30.576] Server  LOG     ✓ Compiled in 115ms
+[00:01:42.582] Server  LOG     ✓ Compiled in 230ms
+[00:01:44.695] Server  LOG     ✓ Compiled in 91ms
+[00:01:56.133] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:01:56.266] Browser WARN    Image with src "/assets/images/logo/logo.webp" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[00:01:56.266] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
 
 - A server/client branch `if (typeof window !== 'undefined')`.
 - Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
@@ -213,7 +224,7 @@ It can also happen if the client has a browser extension installed which messes 
         <ReplaySsrOnlyErrors>
         <DevRootHTTPAccessFallbackBoundary>
           <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
-            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+            <HTTPAccessFallbackErrorBoundary pathname="/contact" notFound={<NotAllowedRootHTTPFallbackError>} ...>
               <RedirectBoundary>
                 <RedirectErrorBoundary router={{...}}>
                   <Head>
@@ -221,6 +232,7 @@ It can also happen if the client has a browser extension installed which messes 
                     <SegmentViewNode type="layout" pagePath="layout.tsx">
                       <SegmentTrieNode>
                       <link>
+                      <script>
                       <script>
                       <script>
                       <RootLayout>
@@ -231,920 +243,9 @@ It can also happen if the client has a browser extension installed which messes 
                           >
                   ...
 
-[00:11:19.423] Browser WARN    Image with src "/assets/images/logo/logo.webp" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:11:19.424] Browser WARN    Image with src "/assets/images/logo/logo.webp" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
-[00:11:34.075] Server  LOG     ✓ Compiled in 88ms
-[00:11:45.136] Server  LOG     ✓ Compiled in 39ms
-[00:11:48.302] Server  LOG     ✓ Compiled in 46ms
-[00:12:04.194] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
-[00:12:09.022] Browser WARN    Image with src "/assets/images/logo/logo.webp" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:12:09.023] Browser WARN    Image with src "/assets/images/logo/logo.webp" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
-[00:12:51.768] Server  LOG     ✓ Compiled in 105ms
-[00:13:16.366] Server  LOG     ✓ Compiled in 99ms
-[00:13:17.885] Server  LOG     ✓ Compiled in 32ms
-[00:13:23.509] Server  LOG     ✓ Compiled in 186ms
-[00:13:26.051] Server  LOG     ✓ Compiled in 45ms
-[00:13:42.377] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
-[00:13:43.159] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:13:43.930] Browser WARN    Image with src "/assets/images/logo/logo.webp" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+[00:01:56.266] Browser WARN    Image with src "/kid.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:01:56.266] Browser WARN    Image with src "/assets/images/kids/kidblack1.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:02:00.852] Browser WARN    Image with src "/assets/images/logo/logo.webp" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:02:03.421] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:02:04.205] Browser WARN    Image with src "/assets/images/logo/logo.webp" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
 Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
-[00:13:46.853] Browser WARN    Image with src "/assets/images/logo/logo.webp" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:14:11.671] Server  LOG     ✓ Compiled in 387ms
-[00:14:16.403] Server  LOG     ✓ Compiled in 58ms
-[00:14:16.558] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
-[00:14:20.015] Server  LOG     ✓ Compiled in 33ms
-[00:14:27.873] Browser ERROR   ./components/VideoBanner.tsx:96:25
-Parsing ecmascript source code failed
-  94 |                 </div>
-  95 |             </div>
-> 96 |             <SmallLogo />
-     |                         ^
-  97 |             <div className="w-screen uppercase leading-[0.9] font-thunder font-bold px-5 md:px-0">
-  98 |                 <div className="flex justify-between w-full flex-wrap lg:text-[8vw] text-[17vw]">
-  99 |                     <span>We</span>
-
-Expression expected
-
-Import trace:
-  Server Component:
-    ./components/VideoBanner.tsx
-    ./app/page.tsx
-[00:14:27.875] Browser ERROR   ./components/VideoBanner.tsx:117:10
-Parsing ecmascript source code failed
-  115 |                 </div>
-  116 |             </div>
-> 117 |         </div>
-      |          ^^^^^
-  118 |     );
-  119 | }
-  120 |
-
-Unterminated regexp literal
-
-Import trace:
-  Server Component:
-    ./components/VideoBanner.tsx
-    ./app/page.tsx
-[00:14:27.875] Browser ERROR   ./components/VideoBanner.tsx:96:25
-Parsing ecmascript source code failed
-  94 |             </div>
-  95 |             </div>
-> 96 |             <SmallLogo />
-     |                         ^
-  97 |             <div className="w-screen uppercase leading-[0.9] font-thunder font-bold px-5 md:px-0">
-  98 |                 <div className="flex justify-between w-full flex-wrap lg:text-[8vw] text-[17vw]">
-  99 |                     <span>We</span>
-
-Expression expected
-
-Import trace:
-  Server Component:
-    ./components/VideoBanner.tsx
-    ./app/page.tsx
-[00:14:27.875] Browser ERROR   ./components/VideoBanner.tsx:117:10
-Parsing ecmascript source code failed
-  115 |                 </div>
-  116 |             </div>
-> 117 |         </div>
-      |          ^^^^^
-  118 |     );
-  119 | }
-  120 |
-
-Unterminated regexp literal
-
-Import trace:
-  Server Component:
-    ./components/VideoBanner.tsx
-    ./app/page.tsx
-[00:14:27.875] Browser WARN    Image with src "/assets/images/logo/logo.webp" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
-[00:14:36.046] Server  LOG     ✓ Compiled in 153ms
-[00:14:38.030] Server  LOG     ✓ Compiled in 98ms
-[00:14:40.194] Server  LOG     ✓ Compiled in 47ms
-[00:14:44.117] Server  LOG     ✓ Compiled in 48ms
-[00:14:46.012] Server  LOG     ✓ Compiled in 33ms
-[00:14:50.049] Server  LOG     ✓ Compiled in 43ms
-[00:14:53.745] Server  LOG     ✓ Compiled in 34ms
-[00:14:56.632] Server  LOG     ✓ Compiled in 35ms
-[00:15:06.157] Server  LOG     ✓ Compiled in 40ms
-[00:15:08.593] Server  LOG     ✓ Compiled in 48ms
-[00:15:09.640] Server  LOG     ✓ Compiled in 33ms
-[00:15:12.865] Server  LOG     ✓ Compiled in 41ms
-[00:15:19.035] Server  LOG     ✓ Compiled in 51ms
-[00:15:22.793] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
-[00:15:33.229] Browser WARN    Image with src "/assets/images/logo/logo.webp" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:15:36.748] Browser WARN    Image with src "/assets/images/logo/logo.webp" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
-[00:16:42.126] Server  LOG     ✓ Compiled in 150ms
-[00:16:44.644] Server  LOG     ✓ Compiled in 288ms
-[00:17:00.035] Server  LOG     ✓ Compiled in 230ms
-[00:17:09.721] Server  LOG     ✓ Compiled in 111ms
-[00:17:10.940] Server  LOG     ✓ Compiled in 38ms
-[00:17:14.286] Server  LOG     ✓ Compiled in 508ms
-[00:17:22.379] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
-[00:17:24.049] Browser WARN    Image with src "/assets/images/logo/logo.webp" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
-Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
-[00:17:26.974] Browser WARN    Image with src "/assets/images/logo/logo.webp" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:17:30.482] Browser WARN    Image with src "/assets/images/logo/logo.webp" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
-[00:18:18.298] Server  LOG     ✓ Compiled in 101ms
-[00:18:20.277] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
-[00:18:26.569] Browser WARN    Image with src "/assets/images/logo/logo.webp" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
-Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
-[00:18:28.909] Browser WARN    Image with src "/assets/images/logo/logo.webp" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:18:32.421] Browser WARN    Image with src "/assets/images/logo/logo.webp" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
-[00:18:48.324] Browser WARN    Image with src "/assets/images/logo/logo.webp" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:18:52.328] Browser WARN    Image with src "/assets/images/logo/logo.webp" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
-[00:19:44.076] Server  LOG     ✓ Compiled in 95ms
-[00:19:54.668] Server  LOG     ✓ Compiled in 32ms
-[00:19:56.071] Server  LOG     ✓ Compiled in 96ms
-[00:20:03.306] Server  LOG     ✓ Compiled in 84ms
-[00:20:07.083] Server  LOG     ✓ Compiled in 199ms
-[00:20:19.501] Server  LOG     ✓ Compiled in 34ms
-[00:20:22.265] Server  LOG     ✓ Compiled in 32ms
-[00:20:43.926] Server  LOG     ✓ Compiled in 26ms
-[00:21:07.805] Server  LOG     ✓ Compiled in 29ms
-[00:21:24.617] Server  LOG     ✓ Compiled in 85ms
-[00:21:58.544] Server  LOG     ✓ Compiled in 135ms
-[00:22:10.777] Server  LOG     ✓ Compiled in 50ms
-[00:22:15.120] Server  LOG     ✓ Compiled in 26ms
-[00:22:18.510] Server  LOG     ✓ Compiled in 56ms
-[00:22:23.597] Server  LOG     ✓ Compiled in 46ms
-[00:22:31.289] Server  LOG     ✓ Compiled in 41ms
-[00:22:38.307] Server  LOG     ✓ Compiled in 69ms
-[00:22:57.594] Server  LOG     ✓ Compiled in 32ms
-[00:23:36.772] Server  LOG     ✓ Compiled in 31ms
-[00:23:39.158] Server  LOG     ✓ Compiled in 45ms
-[00:23:41.402] Server  LOG     ✓ Compiled in 24ms
-[00:28:21.208] Server  LOG     ✓ Compiled in 389ms
-[00:28:38.260] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
-[00:28:38.346] Server  LOG     ✓ Compiled in 0ms
-[00:28:50.338] Browser WARN    Image with src "/assets/images/logo/logo.webp" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:28:54.325] Browser WARN    Image with src "/assets/images/logo/logo.webp" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
-[00:28:56.003] Server  LOG     ✓ Compiled in 413ms
-[00:30:26.112] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
-[00:30:42.166] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
-[00:30:55.241] Browser WARN    Image with src "/assets/images/logo/logo.webp" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:30:58.758] Browser WARN    Image with src "/assets/images/logo/logo.webp" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
-[00:31:35.238] Server  LOG     ✓ Compiled in 117ms
-[00:31:47.050] Server  LOG     ✓ Compiled in 57ms
-[00:31:48.818] Server  LOG     ✓ Compiled in 331ms
-[00:31:49.335] Browser ERROR   Received `%s` for a non-boolean attribute `%s`.
-
-If you want to write it to the DOM, pass a string instead: %s="%s" or %s={value.toString()}. true cl cl true cl
-[00:31:50.322] Server  LOG     ✓ Compiled in 43ms
-[00:31:51.388] Server  LOG     ✓ Compiled in 31ms
-[00:31:57.842] Server  LOG     ✓ Compiled in 338ms
-[00:31:59.129] Server  LOG     ✓ Compiled in 53ms
-[00:32:02.071] Server  LOG     ✓ Compiled in 28ms
-[00:32:08.280] Server  LOG     ✓ Compiled in 36ms
-[00:32:19.336] Server  LOG     ✓ Compiled in 41ms
-[00:32:21.831] Server  LOG     ✓ Compiled in 32ms
-[00:33:00.449] Server  LOG     ✓ Compiled in 55ms
-[00:33:35.483] Server  LOG     ✓ Compiled in 66ms
-[00:33:59.110] Server  LOG     ✓ Compiled in 445ms
-[00:34:27.001] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
-[00:34:27.467] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:34:28.178] Browser WARN    Image with src "/assets/images/logo/logo.webp" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
-Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
-[00:34:31.141] Browser WARN    Image with src "/assets/images/logo/logo.webp" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:34:34.651] Browser WARN    Image with src "/assets/images/logo/logo.webp" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
-[00:34:58.834] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
-[00:35:05.696] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
-[00:35:21.199] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
-[00:35:48.918] Server  LOG     ✓ Compiled in 144ms
-[00:35:51.364] Server  LOG     ✓ Compiled in 42ms
-[00:35:53.169] Server  LOG     ✓ Compiled in 29ms
-[00:36:07.922] Server  LOG     ✓ Compiled in 64ms
-[00:36:08.322] Browser ERROR   ./components/Projects/AllProjects.tsx:90:11
-Parsing ecmascript source code failed
-  88 |                 </svg>
-  89 |             </div>
-> 90 |         </Link>
-     |           ^^^^
-  91 |     );
-  92 | }
-  93 |
-
-Expected corresponding JSX closing tag for <LinAnimk>
-
-Import trace:
-  Server Component:
-    ./components/Projects/AllProjects.tsx
-    ./app/projects/page.tsx
-[00:36:12.447] Server  LOG     ✓ Compiled in 45ms
-[00:36:13.328] Browser ERROR   ./components/Projects/AllProjects.tsx:90:11
-Parsing ecmascript source code failed
-  88 |                 </svg>
-  89 |             </div>
-> 90 |         </Link>
-     |           ^^^^
-  91 |     );
-  92 | }
-  93 |
-
-Expected corresponding JSX closing tag for <AnimatedLink>
-
-Import trace:
-  Server Component:
-    ./components/Projects/AllProjects.tsx
-    ./app/projects/page.tsx
-[00:36:16.323] Browser ERROR   ./components/Projects/AllProjects.tsx:91:11
-Parsing ecmascript source code failed
-  89 |                 </svg>
-  90 |             </div>
-> 91 |         </Link>
-     |           ^^^^
-  92 |     );
-  93 | }
-  94 |
-
-Expected corresponding JSX closing tag for <AnimatedLink>
-
-Import trace:
-  Server Component:
-    ./components/Projects/AllProjects.tsx
-    ./app/projects/page.tsx
-[00:36:54.054] Server  LOG     ✓ Compiled in 79ms
-[00:36:54.322] Browser ERROR   ./components/Projects/AllProjects.tsx:91:11
-Parsing ecmascript source code failed
-  89 |                 </svg>
-  90 |             </div>
-> 91 |         </Link>
-     |           ^^^^
-  92 |     );
-  93 | }
-  94 |
-
-Expected corresponding JSX closing tag for <AnimatedLink>
-
-Import trace:
-  Server Component:
-    ./components/Projects/AllProjects.tsx
-    ./app/projects/page.tsx
-[00:36:59.322] Browser ERROR   ./components/Projects/AllProjects.tsx:91:11
-Parsing ecmascript source code failed
-  89 |                 </svg>
-  90 |             </div>
-> 91 |         </Link>
-     |           ^^^^
-  92 |     );
-  93 | }
-  94 |
-
-Expected corresponding JSX closing tag for <AnimatedLink>
-
-Import trace:
-  Server Component:
-    ./components/Projects/AllProjects.tsx
-    ./app/projects/page.tsx
-[00:37:01.520] Server  LOG     ✓ Compiled in 61ms
-[00:37:02.322] Browser ERROR   ./components/Projects/AllProjects.tsx:91:11
-Parsing ecmascript source code failed
-  89 |                 </svg>
-  90 |             </div>
-> 91 |         </Link>
-     |           ^^^^
-  92 |     );
-  93 | }
-  94 |
-
-Expected corresponding JSX closing tag for <AnimatedLink>
-
-Import trace:
-  Server Component:
-    ./components/Projects/AllProjects.tsx
-    ./app/projects/page.tsx
-[00:37:08.715] Server  LOG     ✓ Compiled in 35ms
-[00:37:09.323] Browser ERROR   ./components/Projects/AllProjects.tsx:91:11
-Parsing ecmascript source code failed
-  89 |                 </svg>
-  90 |             </div>
-> 91 |         </Link>
-     |           ^^^^
-  92 |     );
-  93 | }
-  94 |
-
-Expected corresponding JSX closing tag for <AnimatedLink>
-
-Import trace:
-  Server Component:
-    ./components/Projects/AllProjects.tsx
-    ./app/projects/page.tsx
-[00:37:11.934] Server  LOG     ✓ Compiled in 32ms
-[00:37:12.323] Browser ERROR   ./components/Projects/AllProjects.tsx:91:11
-Parsing ecmascript source code failed
-  89 |                 </svg>
-  90 |             </div>
-> 91 |         </Link>
-     |           ^^^^
-  92 |     );
-  93 | }
-  94 |
-
-Expected corresponding JSX closing tag for <AnimatedLink>
-
-Import trace:
-  Server Component:
-    ./components/Projects/AllProjects.tsx
-    ./app/projects/page.tsx
-[00:37:18.326] Browser ERROR   ./components/Projects/AllProjects.tsx:90:11
-Parsing ecmascript source code failed
-  88 |                 </svg>
-  89 |             </div>
-> 90 |         </Link>
-     |           ^^^^
-  91 |     );
-  92 | }
-  93 |
-
-Expected corresponding JSX closing tag for <AnimatedLink>
-
-Import trace:
-  Server Component:
-    ./components/Projects/AllProjects.tsx
-    ./app/projects/page.tsx
-[00:37:26.069] Server  LOG     ✓ Compiled in 698ms
-[00:37:26.325] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
-[00:37:27.563] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
-[00:37:31.278] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
-[00:38:30.007] Server  LOG     ✓ Compiled in 321ms
-[00:38:30.323] Browser ERROR   ./app/projects/[slug]/page.tsx:24:13
-Parsing ecmascript source code failed
-  22 |         <main className="relative w-full h-screen overflow-hidden bg-black">
-  23 |             <
-> 24 |             {/* Media Background */}
-     |             ^
-  25 |             <div className="absolute inset-0 z-0">
-  26 |                 {project.mediaType === "video" ? (
-  27 |                     <video
-
-Expected '</', got '{'
-[00:38:33.323] Browser ERROR   ./app/projects/[slug]/page.tsx:24:36
-Parsing ecmascript source code failed
-  22 |         <main className="relative w-full h-screen overflow-hidden bg-black">
-  23 |             <Cor
-> 24 |             {/* Media Background */}
-     |                                    ^
-  25 |             <div className="absolute inset-0 z-0">
-  26 |                 {project.mediaType === "video" ? (
-  27 |                     <video
-
-Expected '</', got '}'
-[00:38:39.198] Server  LOG     ✓ Compiled in 81ms
-[00:38:39.666] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:39:09.914] Server  LOG     ✓ Compiled in 34ms
-[00:39:12.411] Server  LOG     ✓ Compiled in 24ms
-[00:39:13.322] Browser ERROR   ./app/projects/[slug]/page.tsx:23:15
-Parsing ecmascript source code failed
-  21 |     return (
-  22 |         <></>
-> 23 |         <main className="relative w-full h-screen overflow-hidden bg-black">
-     |               ^^^^^^^^^
-  24 |             {/* Media Background */}
-  25 |             <div className="absolute inset-0 z-0">
-  26 |                 {project.mediaType === "video" ? (
-
-Expected ',', got 'ident'
-
-Import traces:
-  Client Component Browser:
-    ./app/projects/[slug]/page.tsx [Client Component Browser]
-    ./app/projects/[slug]/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./app/projects/[slug]/page.tsx [Client Component SSR]
-    ./app/projects/[slug]/page.tsx [Server Component]
-[00:39:15.131] Server  LOG     ✓ Compiled in 31ms
-[00:39:15.322] Browser ERROR   ./app/projects/[slug]/page.tsx:78:1
-Parsing ecmascript source code failed
-  76 |         </main>
-  77 |     );
-> 78 | }
-     | ^
-  79 |
-
-Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
-
-Import traces:
-  Client Component Browser:
-    ./app/projects/[slug]/page.tsx [Client Component Browser]
-    ./app/projects/[slug]/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./app/projects/[slug]/page.tsx [Client Component SSR]
-    ./app/projects/[slug]/page.tsx [Server Component]
-[00:39:19.283] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
-[00:39:21.462] Server  LOG     ✓ Compiled in 64ms
-[00:39:22.322] Browser ERROR   ./app/projects/[slug]/page.tsx:77:11
-Parsing ecmascript source code failed
-  75 |             </div>
-  76 |         </main>
-> 77 |         </main>
-     |           ^^^^
-  78 |     );
-  79 | }
-  80 |
-
-Expected '>', got 'ident'
-
-Import traces:
-  Client Component Browser:
-    ./app/projects/[slug]/page.tsx [Client Component Browser]
-    ./app/projects/[slug]/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./app/projects/[slug]/page.tsx [Client Component SSR]
-    ./app/projects/[slug]/page.tsx [Server Component]
-[00:39:23.941] Server  LOG     ✓ Compiled in 55ms
-[00:39:24.323] Browser ERROR   ./app/projects/[slug]/page.tsx:76:15
-Parsing ecmascript source code failed
-  74 |                 </div>
-  75 |             </div>
-> 76 |         </div>
-     |               ^
-> 77 |         </main>
-     | ^^^^^^^^^
-  78 |     );
-  79 | }
-  80 |
-
-Expected '</', got 'jsx text'
-
-Import traces:
-  Client Component Browser:
-    ./app/projects/[slug]/page.tsx [Client Component Browser]
-    ./app/projects/[slug]/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./app/projects/[slug]/page.tsx [Client Component SSR]
-    ./app/projects/[slug]/page.tsx [Server Component]
-[00:39:26.965] Server  LOG     ✓ Compiled in 52ms
-[00:39:27.323] Browser ERROR   ./app/projects/[slug]/page.tsx:77:11
-Parsing ecmascript source code failed
-  75 |             </div>
-  76 |         </div>
-> 77 |         </main>
-     |           ^^^^
-  78 |     );
-  79 | }
-  80 |
-
-Expected '>', got 'ident'
-
-Import traces:
-  Client Component Browser:
-    ./app/projects/[slug]/page.tsx [Client Component Browser]
-    ./app/projects/[slug]/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./app/projects/[slug]/page.tsx [Client Component SSR]
-    ./app/projects/[slug]/page.tsx [Server Component]
-[00:39:31.133] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
-[00:39:38.318] Server  LOG     ✓ Compiled in 34ms
-[00:39:48.429] Server  LOG     ✓ Compiled in 26ms
-[00:39:49.482] Server  LOG     ✓ Compiled in 28ms
-[00:39:50.323] Browser ERROR   ./app/projects/[slug]/page.tsx:24:13
-Parsing ecmascript source code failed
-  22 |         <main>
-  23 |             <
-> 24 |             <div className="relative w-full h-screen overflow-hidden bg-black">
-     |             ^
-  25 |                 {/* Media Background */}
-  26 |                 <div className="absolute inset-0 z-0">
-  27 |                     {project.mediaType === "video" ? (
-
-Expression expected
-
-Import traces:
-  Client Component Browser:
-    ./app/projects/[slug]/page.tsx [Client Component Browser]
-    ./app/projects/[slug]/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./app/projects/[slug]/page.tsx [Client Component SSR]
-    ./app/projects/[slug]/page.tsx [Server Component]
-[00:40:19.324] Browser ERROR   ./app/projects/[slug]/page.tsx:24:13
-Parsing ecmascript source code failed
-  22 |         <main>
-  23 |             <Menu
-> 24 |             <div className="relative w-full h-screen overflow-hidden bg-black">
-     |             ^
-  25 |                 {/* Media Background */}
-  26 |                 <div className="absolute inset-0 z-0">
-  27 |                     {project.mediaType === "video" ? (
-
-Expression expected
-
-Import traces:
-  Client Component Browser:
-    ./app/projects/[slug]/page.tsx [Client Component Browser]
-    ./app/projects/[slug]/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./app/projects/[slug]/page.tsx [Client Component SSR]
-    ./app/projects/[slug]/page.tsx [Server Component]
-[00:40:30.459] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
-[00:40:50.606] Server  LOG     ✓ Compiled in 130ms
-[00:41:17.880] Server  LOG     ✓ Compiled in 168ms
-[00:41:29.813] Server  LOG     ✓ Compiled in 35ms
-[00:41:34.418] Server  LOG     ✓ Compiled in 30ms
-[00:41:40.852] Server  LOG     ✓ Compiled in 43ms
-[00:41:47.051] Server  LOG     ✓ Compiled in 97ms
-[00:41:54.274] Server  LOG     ✓ Compiled in 58ms
-[00:41:57.963] Server  LOG     ✓ Compiled in 29ms
-[00:42:04.441] Server  LOG     ✓ Compiled in 35ms
-[00:42:16.290] Server  LOG     ✓ Compiled in 36ms
-[00:42:18.433] Server  LOG     ✓ Compiled in 38ms
-[00:42:57.805] Server  LOG     ✓ Compiled in 176ms
-[00:42:59.831] Server  LOG     ✓ Compiled in 32ms
-[00:43:42.159] Server  LOG     ✓ Compiled in 36ms
-[00:43:52.471] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
-[00:43:52.792] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:44:36.971] Server  LOG     ✓ Compiled in 183ms
-[00:44:40.523] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
-[00:44:40.821] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:45:31.179] Server  LOG     ✓ Compiled in 442ms
-[00:45:39.452] Browser WARN    Image with src "/assets/images/logo/logo.webp" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:46:56.821] Server  LOG     ✓ Compiled in 542ms
-[00:46:59.391] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
-[00:47:00.313] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:47:10.657] Server  LOG     ✓ Compiled in 185ms
-[00:47:15.188] Server  LOG     ✓ Compiled in 210ms
-[00:47:21.323] Server  LOG     ✓ Compiled in 43ms
-[00:47:25.592] Server  LOG     ✓ Compiled in 88ms
-[00:47:29.996] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
-[00:47:30.364] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:48:00.542] Server  LOG     ✓ Compiled in 105ms
-[00:48:01.005] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
-[00:48:01.263] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:48:08.955] Server  LOG     ✓ Compiled in 31ms
-[00:48:28.456] Server  LOG     ✓ Compiled in 34ms
-[00:48:50.586] Server  LOG     ✓ Compiled in 44ms
-[00:49:04.333] Server  LOG     ✓ Compiled in 74ms
-[00:49:07.750] Server  LOG     ✓ Compiled in 52ms
-[00:49:42.536] Server  LOG     ✓ Compiled in 100ms
-[00:50:08.574] Server  LOG     ✓ Compiled in 101ms
-[00:50:18.763] Server  LOG     ✓ Compiled in 72ms
-[00:50:21.171] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
-[00:50:21.533] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:50:54.780] Server  LOG     ✓ Compiled in 104ms
-[00:51:26.030] Server  LOG     ✓ Compiled in 88ms
-[00:51:30.767] Server  LOG     ✓ Compiled in 65ms
-[00:51:56.393] Server  LOG     ✓ Compiled in 112ms
-[00:52:17.670] Server  LOG     ✓ Compiled in 33ms
-[00:52:35.384] Server  LOG     ✓ Compiled in 34ms
-[00:52:37.644] Server  LOG     ✓ Compiled in 28ms
-[00:53:16.390] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
-[00:53:16.698] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:53:21.686] Server  LOG     ✓ Compiled in 76ms
-[00:53:23.623] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
-[00:53:24.017] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:54:07.247] Server  LOG     ✓ Compiled in 82ms
-[00:54:39.775] Server  LOG     ✓ Compiled in 101ms
-[00:54:42.205] Server  LOG     ✓ Compiled in 77ms
-[00:54:50.812] Server  LOG     ✓ Compiled in 65ms
-[00:55:04.608] Server  LOG     ✓ Compiled in 31ms
-[00:55:14.529] Server  LOG     ✓ Compiled in 25ms
-[00:56:01.442] Server  LOG     ✓ Compiled in 111ms
-[00:56:05.081] Server  LOG     ✓ Compiled in 452ms
-[00:56:10.190] Server  LOG     ✓ Compiled in 70ms
-[00:56:12.645] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
-[00:56:12.964] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:56:18.036] Server  LOG     ✓ Compiled in 218ms
-[00:56:57.707] Server  LOG     ✓ Compiled in 38ms
-[00:58:15.761] Server  LOG     ✓ Compiled in 480ms
-[00:58:23.010] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
-[00:58:23.369] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:58:25.953] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
-[00:58:29.896] Browser WARN    Image with src "/assets/images/logo/logo.webp" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:58:33.406] Browser WARN    Image with src "/assets/images/logo/logo.webp" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
-[00:59:56.111] Server  LOG     ✓ Compiled in 210ms
-[00:59:58.035] Server  LOG     ✓ Compiled in 59ms
-[01:00:06.912] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
-[01:00:07.480] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[01:00:11.241] Browser WARN    Image with src "/assets/images/logo/logo.webp" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[01:00:16.324] Browser WARN    Image with src "/assets/images/logo/logo.webp" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
-[01:00:22.779] Server  LOG     ✓ Compiled in 600ms
-[01:00:29.141] Server  LOG     ✓ Compiled in 49ms
-[01:00:39.742] Server  LOG     ✓ Compiled in 38ms
-[01:00:42.517] Server  LOG     ✓ Compiled in 181ms
-[01:00:47.564] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
-[01:00:48.198] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[01:00:51.913] Browser WARN    Image with src "/assets/images/logo/logo.webp" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[01:00:55.461] Browser WARN    Image with src "/assets/images/logo/logo.webp" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
-[01:01:04.217] Server  LOG     ✓ Compiled in 113ms
-[01:01:10.345] Server  LOG     ✓ Compiled in 36ms
-[01:01:11.579] Server  LOG     ✓ Compiled in 37ms
-[01:01:14.384] Server  LOG     ✓ Compiled in 47ms
-[01:01:19.819] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
-[01:01:21.767] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[01:01:22.463] Browser WARN    Image with src "/assets/images/logo/logo.webp" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
-Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
-[01:01:25.382] Browser WARN    Image with src "/assets/images/logo/logo.webp" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[01:01:28.889] Browser WARN    Image with src "/assets/images/logo/logo.webp" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
-[01:01:36.925] Server  LOG     ✓ Compiled in 557ms
-[01:01:53.166] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
-[01:01:58.926] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
-[01:09:11.441] Server  LOG     ✓ Compiled in 427ms
-[01:09:11.807] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
-[01:09:11.812] Server  LOG     ✓ Compiled in 1ms
-[01:09:12.953] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
-[01:09:12.955] Server  LOG     ✓ Compiled in 42ms
-[01:09:21.947] Server  LOG     ✓ Compiled in 118ms
-[01:09:22.323] Browser ERROR   ./components/Projects/constants.ts:12:14
-Parsing ecmascript source code failed
-  10 |     teaserSrc: "https://hippo-zone.b-cdn.net/Website/Park_Hyatt_Toronto_Friends_16-9-V2TEASER.mp4",
-  11 |     fullVideoSrc:
-> 12 |     mediaType: "video"
-     |              ^
-  13 |   },
-  14 |   {
-  15 |     slug: "belmond-copacabana-palace",
-
-Expected ',', got ':'
-
-Import trace:
-  Server Component:
-    ./components/Projects/constants.ts
-    ./app/page.tsx
-[01:09:24.104] Server  LOG     ✓ Compiled in 77ms
-[01:09:24.322] Browser ERROR   ./components/Projects/constants.ts:11:19
-Parsing ecmascript source code failed
-   9 |     link: "/projects/park-hyatt",
-  10 |     teaserSrc: "https://hippo-zone.b-cdn.net/Website/Park_Hyatt_Toronto_Friends_16-9-V2TEASER.mp4",
-> 11 |     fullVideoSrc: ,
-     |                   ^
-  12 |     mediaType: "video"
-  13 |   },
-  14 |   {
-
-Expression expected
-
-Import trace:
-  Server Component:
-    ./components/Projects/constants.ts
-    ./app/page.tsx
-[01:09:26.058] Server  LOG     ✓ Compiled in 36ms
-[01:09:26.167] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
-[01:09:51.584] Server  LOG     ✓ Compiled in 103ms
-[01:09:51.701] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
-[01:10:18.166] Server  LOG     ✓ Compiled in 26ms
-[01:11:05.910] Server  LOG     ✓ Compiled in 107ms
-[01:11:08.248] Server  LOG     ✓ Compiled in 38ms
-[01:11:16.252] Server  LOG     ✓ Compiled in 30ms
-[01:11:17.532] Server  LOG     ✓ Compiled in 17ms
-[01:11:18.643] Server  LOG     ✓ Compiled in 67ms
-[01:11:36.870] Server  LOG     ✓ Compiled in 63ms
-[01:11:37.329] Browser ERROR   ./components/Projects/constants.ts:40:5
-Parsing ecmascript source code failed
-  38 |     mediaSrc: "https://hippo-zone.b-cdn.net/Website/vanessa_bruno___new_york_city_v1%20(2160p).TEASER.mp4",
-  39 |     fullVideoSrc
-> 40 |     mediaType: "video"
-     |     ^^^^^^^^^
-  41 |   },
-  42 |   {
-  43 |     slug: "conde-nast-traveller",
-
-Unexpected token `ident`. Expected ... , *,  (, [, :, , ?, =, an identifier, public, protected, private, readonly, <.
-
-Import trace:
-  Server Component:
-    ./components/Projects/constants.ts
-    ./app/page.tsx
-[01:11:38.799] Server  LOG     ✓ Compiled in 78ms
-[01:11:39.324] Browser ERROR   ./components/Projects/constants.ts:40:5
-Parsing ecmascript source code failed
-  38 |     mediaSrc: "https://hippo-zone.b-cdn.net/Website/vanessa_bruno___new_york_city_v1%20(2160p).TEASER.mp4",
-  39 |     fullVideoSrc: "https://hippo-zone.b-cdn.net/Website/vanessa_bruno___new_york_city_v1%20(2160p).mp4"
-> 40 |     mediaType: "video"
-     |     ^^^^^^^^^
-  41 |   },
-  42 |   {
-  43 |     slug: "conde-nast-traveller",
-
-Expected ',', got 'ident'
-
-Import trace:
-  Server Component:
-    ./components/Projects/constants.ts
-    ./app/page.tsx
-[01:11:40.140] Server  LOG     ✓ Compiled in 22ms
-[01:11:40.272] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
-[01:11:46.675] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
-[01:11:46.678] Server  LOG     ✓ Compiled in 47ms
-[01:11:50.278] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
-[01:11:50.280] Server  LOG     ✓ Compiled in 34ms
-[01:11:51.575] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
-[01:11:51.577] Server  LOG     ✓ Compiled in 20ms
-[01:12:05.125] Server  LOG     ✓ Compiled in 53ms
-[01:12:05.327] Browser ERROR   ./components/Projects/constants.ts:22:5
-Parsing ecmascript source code failed
-  20 |     teaserSrc: "https://hippo-zone.b-cdn.net/Website/belmond_copacabana_palace_v3%20(1080p)TEASER.mp4.mp4",
-  21 |     fullVideoSrc: ""
-> 22 |     mediaType: "video"
-     |     ^^^^^^^^^
-  23 |   },
-  24 |   {
-  25 |     slug: "four-seasons-tamarindo",
-
-Expected ',', got 'ident'
-
-Import trace:
-  Server Component:
-    ./components/Projects/constants.ts
-    ./app/page.tsx
-[01:12:06.322] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
-[01:12:08.165] Server  LOG     ✓ Compiled in 37ms
-[01:12:08.263] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
-[01:12:09.859] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
-[01:12:09.861] Server  LOG     ✓ Compiled in 35ms
-[01:12:25.856] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
-[01:12:25.860] Server  LOG     ✓ Compiled in 35ms
-[01:12:36.948] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
-[01:12:36.950] Server  LOG     ✓ Compiled in 38ms
-[01:12:55.909] Server  LOG     ✓ Compiled in 45ms
-[01:12:56.325] Browser ERROR   ./components/Projects/constants.ts:31:19
-Parsing ecmascript source code failed
-  29 |     link: "/projects/four-seasons-tamarindo",
-  30 |     teaserSrc: "https://hippo-zone.b-cdn.net/Website/four_seasons_tamarindo_v1%20(2160p).mp4.mp4",
-> 31 |     fullVideoSrc: "https://hippo-zone.b-cdn.net/Website/four_seasons_tamarindo_v1%20(2160p).mp4
-     |                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  32 |     https://hippo-zone.b-cdn.net/Website/four_seasons_tamarindo_v1%20(2160p).mp4.mp4",
-  33 |     mediaType: "video"
-  34 |   },
-
-Unterminated string constant
-
-Import trace:
-  Server Component:
-    ./components/Projects/constants.ts
-    ./app/page.tsx
-[01:13:06.327] Browser ERROR   ./components/Projects/constants.ts:32:5
-Parsing ecmascript source code failed
-  30 |     teaserSrc: "https://hippo-zone.b-cdn.net/Website/four_seasons_tamarindo_v1%20(2160p).mp4.mp4",
-  31 |     fullVideoSrc: "https://hippo-zone.b-cdn.net/Website/four_seasons_tamarindo_v1%20(2160p).mp4
-> 32 |     ",
-     |     ^^
-  33 |     mediaType: "video"
-  34 |   },
-  35 |   {
-
-Unterminated string constant
-
-Import trace:
-  Server Component:
-    ./components/Projects/constants.ts
-    ./app/page.tsx
-[01:13:07.411] Server  LOG     ✓ Compiled in 35ms
-[01:13:11.444] Server  LOG     ✓ Compiled in 50ms
-[01:13:12.324] Browser ERROR   ./components/Projects/constants.ts:30:14
-Parsing ecmascript source code failed
-  28 |     year: "2022",
-  29 |     link: "/projects/four-seasons-tamarindo",https://hippo-zone.b-cdn.net/Website/four_seasons_tamarindo_v1%20(2160p).mp4.mp4
-> 30 |     teaserSrc: "https://hippo-zone.b-cdn.net/Website/four_seasons_tamarindo_v1%20(2160p).mp4.mp4",
-     |              ^
-  31 |     fullVideoSrc: "https://hippo-zone.b-cdn.net/Website/four_seasons_tamarindo_v1%20(2160p).mp4",
-  32 |     mediaType: "video"
-  33 |   },
-
-Expected ',', got ':'
-
-Import trace:
-  Server Component:
-    ./components/Projects/constants.ts
-    ./app/page.tsx
-[01:13:13.802] Server  LOG     ✓ Compiled in 14ms
-[01:14:08.246] Server  LOG     ✓ Compiled in 118ms
-[01:14:08.392] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
-[01:14:24.694] Server  LOG     ✓ Compiled in 52ms
-[01:14:32.096] Server  LOG     ✓ Compiled in 40ms
-[01:14:35.450] Server  LOG     ✓ Compiled in 31ms
-[01:14:41.301] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
-[01:14:41.651] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[01:17:25.456] Server  LOG     ✓ Compiled in 303ms
-[01:17:26.426] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
-[01:17:35.528] Server  LOG     ✓ Compiled in 46ms
-[01:17:37.455] Server  LOG     ✓ Compiled in 40ms
-[01:17:39.541] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
-[01:17:43.661] Server  LOG     ✓ Compiled in 56ms
-[01:17:51.615] Server  LOG     ✓ Compiled in 112ms
-[01:17:55.322] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
-[01:18:14.827] Server  LOG     ✓ Compiled in 54ms
-[01:18:17.148] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
-[01:18:33.796] Server  LOG     ✓ Compiled in 98ms
-[01:18:42.077] Server  LOG     ✓ Compiled in 42ms
-[01:18:53.456] Server  LOG     ✓ Compiled in 42ms
-[01:19:06.402] Server  LOG     ✓ Compiled in 38ms
-[01:19:15.504] Server  LOG     ✓ Compiled in 79ms
-[01:19:32.214] Server  LOG     ✓ Compiled in 73ms
-[01:19:53.574] Server  LOG     ✓ Compiled in 107ms
-[01:20:06.662] Server  LOG     ✓ Compiled in 91ms
-[01:20:09.948] Server  LOG     ✓ Compiled in 34ms
-[01:20:12.677] Server  LOG     ✓ Compiled in 37ms
-[01:20:20.139] Server  LOG     ✓ Compiled in 40ms
-[01:20:29.374] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
-[01:20:32.364] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
-[01:20:40.490] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
-[01:20:44.193] Browser WARN    Image with src "/assets/images/logo/logo.webp" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[01:20:47.709] Browser WARN    Image with src "/assets/images/logo/logo.webp" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
-[01:22:50.474] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
-[01:22:50.921] Browser WARN    Image with src "/kid.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
-[01:22:50.921] Browser WARN    Image with src "/assets/images/kids/kidblack1.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
-[01:23:54.126] Server  LOG     ✓ Compiled in 102ms
-[01:23:54.325] Browser ERROR   ./components/Projects/index.tsx:75:11
-Parsing ecmascript source code failed
-  73 |                 </div>
-  74 |             </div>
-> 75 |         </Link>
-     |           ^^^^
-  76 |     );
-  77 | };
-  78 |
-
-Expected corresponding JSX closing tag for <AnimatedLink>
-
-Import trace:
-  Server Component:
-    ./components/Projects/index.tsx
-    ./app/page.tsx
-[01:23:58.227] Server  LOG     ✓ Compiled in 94ms
-[01:24:18.412] Server  LOG     ✓ Compiled in 44ms
-[01:24:20.434] Server  LOG     ✓ Compiled in 101ms
-[01:24:21.327] Browser ERROR   ./components/AnimatedLink.tsx:14:1
-Parsing ecmascript source code failed
-  12 |   onMouseLeave?: () => void;
-  13 |   style:
-> 14 | };
-     | ^
-  15 |
-  16 | const pageAnimation = () => {
-  17 |   // 1. Outgoing page: Slide up and fade
-
-Unexpected token `}`. Expected an identifier, void, yield, null, await, break, a string literal, a numeric literal, true, false, `, -, import, this, typeof, {, [, (
-
-Import traces:
-  #1 [Client Component Browser]:
-    ./components/AnimatedLink.tsx [Client Component Browser]
-    ./components/Menu/CornersMenu.tsx [Client Component Browser]
-    ./components/Menu/CornersMenu.tsx [Server Component]
-    ./app/page.tsx [Server Component]
-
-  #2 [Client Component Browser]:
-    ./components/AnimatedLink.tsx [Client Component Browser]
-    ./components/MobileMenu.tsx [Client Component Browser]
-    ./components/MobileMenu.tsx [Server Component]
-    ./app/layout.tsx [Server Component]
-
-  #3 [Client Component SSR]:
-    ./components/AnimatedLink.tsx [Client Component SSR]
-    ./components/Menu/CornersMenu.tsx [Client Component SSR]
-    ./components/Menu/CornersMenu.tsx [Server Component]
-    ./app/page.tsx [Server Component]
-
-  #4 [Client Component SSR]:
-    ./components/AnimatedLink.tsx [Client Component SSR]
-    ./components/MobileMenu.tsx [Client Component SSR]
-    ./components/MobileMenu.tsx [Server Component]
-    ./app/layout.tsx [Server Component]
-[01:24:22.327] Browser ERROR   ./components/AnimatedLink.tsx:14:1
-Parsing ecmascript source code failed
-  12 |   onMouseLeave?: () => void;
-  13 |   style: 
-> 14 | };
-     | ^
-  15 |
-  16 | const pageAnimation = () => {
-  17 |   // 1. Outgoing page: Slide up and fade
-
-Unexpected token `}`. Expected an identifier, void, yield, null, await, break, a string literal, a numeric literal, true, false, `, -, import, this, typeof, {, [, (
-
-Import traces:
-  #1 [Client Component Browser]:
-    ./components/AnimatedLink.tsx [Client Component Browser]
-    ./components/Menu/CornersMenu.tsx [Client Component Browser]
-    ./components/Menu/CornersMenu.tsx [Server Component]
-    ./app/page.tsx [Server Component]
-
-  #2 [Client Component Browser]:
-    ./components/AnimatedLink.tsx [Client Component Browser]
-    ./components/MobileMenu.tsx [Client Component Browser]
-    ./components/MobileMenu.tsx [Server Component]
-    ./app/layout.tsx [Server Component]
-
-  #3 [Client Component SSR]:
-    ./components/AnimatedLink.tsx [Client Component SSR]
-    ./components/Menu/CornersMenu.tsx [Client Component SSR]
-    ./components/Menu/CornersMenu.tsx [Server Component]
-    ./app/page.tsx [Server Component]
-
-  #4 [Client Component SSR]:
-    ./components/AnimatedLink.tsx [Client Component SSR]
-    ./components/MobileMenu.tsx [Client Component SSR]
-    ./components/MobileMenu.tsx [Server Component]
-    ./app/layout.tsx [Server Component]
-[01:24:25.518] Server  LOG     ✓ Compiled in 55ms
-[01:24:52.488] Server  LOG     ✓ Compiled in 63ms
-[01:24:52.894] Server  WARN    ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
-[01:26:49.110] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[01:26:53.134] Browser WARN    Image with src "/assets/images/logo/logo.webp" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[01:26:56.657] Browser WARN    Image with src "/assets/images/logo/logo.webp" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.

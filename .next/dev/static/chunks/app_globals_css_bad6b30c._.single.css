@@ -68,7 +68,6 @@
     --container-sm: 24rem;
     --container-md: 28rem;
     --container-3xl: 48rem;
-    --container-7xl: 80rem;
     --text-xs: .75rem;
     --text-xs--line-height: calc(1 / .75);
     --text-sm: .875rem;
@@ -409,18 +408,6 @@
     inset: calc(var(--spacing) * 0);
   }
 
-  .inset-12 {
-    inset: calc(var(--spacing) * 12);
-  }
-
-  .inset-16 {
-    inset: calc(var(--spacing) * 16);
-  }
-
-  .inset-20 {
-    inset: calc(var(--spacing) * 20);
-  }
-
   .inset-x-24 {
     inset-inline: calc(var(--spacing) * 24);
   }
@@ -481,10 +468,6 @@
     bottom: calc(var(--spacing) * 0);
   }
 
-  .bottom-6 {
-    bottom: calc(var(--spacing) * 6);
-  }
-
   .bottom-8 {
     bottom: calc(var(--spacing) * 8);
   }
@@ -501,16 +484,8 @@
     left: 50%;
   }
 
-  .left-2 {
-    left: calc(var(--spacing) * 2);
-  }
-
   .left-4 {
     left: calc(var(--spacing) * 4);
-  }
-
-  .left-6 {
-    left: calc(var(--spacing) * 6);
   }
 
   .left-8 {
@@ -553,14 +528,6 @@
     z-index: 200;
   }
 
-  .z-\[190\] {
-    z-index: 190;
-  }
-
-  .z-\[200\] {
-    z-index: 200;
-  }
-
   .z-\[99999\] {
     z-index: 99999;
   }
@@ -571,10 +538,6 @@
 
   .mt-0\.5 {
     margin-top: calc(var(--spacing) * .5);
-  }
-
-  .mb-1 {
-    margin-bottom: calc(var(--spacing) * 1);
   }
 
   .mb-3 {
@@ -633,16 +596,8 @@
     height: calc(var(--spacing) * 10);
   }
 
-  .h-\[1\.5px\] {
-    height: 1.5px;
-  }
-
   .h-\[2px\] {
     height: 2px;
-  }
-
-  .h-\[20px\] {
-    height: 20px;
   }
 
   .h-\[40px\] {
@@ -659,14 +614,6 @@
 
   .h-\[60px\] {
     height: 60px;
-  }
-
-  .h-\[70vh\] {
-    height: 70vh;
-  }
-
-  .h-\[80px\] {
-    height: 80px;
   }
 
   .h-\[80vh\] {
@@ -713,24 +660,12 @@
     width: calc(var(--spacing) * 4);
   }
 
-  .w-5 {
-    width: calc(var(--spacing) * 5);
-  }
-
   .w-8 {
     width: calc(var(--spacing) * 8);
   }
 
   .w-10 {
     width: calc(var(--spacing) * 10);
-  }
-
-  .w-\[10px\] {
-    width: 10px;
-  }
-
-  .w-\[60px\] {
-    width: 60px;
   }
 
   .w-\[80vw\] {
@@ -753,20 +688,8 @@
     width: 120px;
   }
 
-  .w-\[140px\] {
-    width: 140px;
-  }
-
-  .w-\[160px\] {
-    width: 160px;
-  }
-
   .w-\[180px\] {
     width: 180px;
-  }
-
-  .w-\[200px\] {
-    width: 200px;
   }
 
   .w-\[300px\] {
@@ -783,18 +706,6 @@
 
   .w-screen {
     width: 100vw;
-  }
-
-  .max-w-7xl {
-    max-width: var(--container-7xl);
-  }
-
-  .max-w-\[75vw\] {
-    max-width: 75vw;
-  }
-
-  .max-w-\[85vw\] {
-    max-width: 85vw;
   }
 
   .max-w-\[90vw\] {
@@ -1010,10 +921,6 @@
     gap: calc(var(--spacing) * 12);
   }
 
-  .gap-20 {
-    gap: calc(var(--spacing) * 20);
-  }
-
   .overflow-hidden {
     overflow: hidden;
   }
@@ -1226,14 +1133,6 @@
     padding: calc(var(--spacing) * 8);
   }
 
-  .p-12 {
-    padding: calc(var(--spacing) * 12);
-  }
-
-  .p-16 {
-    padding: calc(var(--spacing) * 16);
-  }
-
   .px-1 {
     padding-inline: calc(var(--spacing) * 1);
   }
@@ -1292,10 +1191,6 @@
 
   .pb-12 {
     padding-bottom: calc(var(--spacing) * 12);
-  }
-
-  .pb-20 {
-    padding-bottom: calc(var(--spacing) * 20);
   }
 
   .text-center {
@@ -1392,10 +1287,6 @@
     font-size: 10vw;
   }
 
-  .text-\[13vw\] {
-    font-size: 13vw;
-  }
-
   .text-\[15vw\] {
     font-size: 15vw;
   }
@@ -1410,11 +1301,6 @@
 
   .text-\[30vh\] {
     font-size: 30vh;
-  }
-
-  .leading-5 {
-    --tw-leading: calc(var(--spacing) * 5);
-    line-height: calc(var(--spacing) * 5);
   }
 
   .leading-6 {
@@ -1555,16 +1441,6 @@
     }
   }
 
-  .text-white\/40 {
-    color: #fff6;
-  }
-
-  @supports (color: color-mix(in lab, red, red)) {
-    .text-white\/40 {
-      color: color-mix(in oklab, var(--color-white) 40%, transparent);
-    }
-  }
-
   .text-white\/50 {
     color: #ffffff80;
   }
@@ -1624,10 +1500,6 @@
 
   .mix-blend-difference {
     mix-blend-mode: difference;
-  }
-
-  .mix-blend-lighten {
-    mix-blend-mode: lighten;
   }
 
   .shadow-2xl {
@@ -1758,12 +1630,6 @@
   }
 
   @media (hover: hover) {
-    .hover\:text-white:hover {
-      color: var(--color-white);
-    }
-  }
-
-  @media (hover: hover) {
     .hover\:line-through:hover {
       text-decoration-line: line-through;
     }
@@ -1832,18 +1698,6 @@
   @media (min-width: 48rem) {
     .md\:block {
       display: block;
-    }
-  }
-
-  @media (min-width: 48rem) {
-    .md\:flex {
-      display: flex;
-    }
-  }
-
-  @media (min-width: 48rem) {
-    .md\:hidden {
-      display: none;
     }
   }
 
@@ -2093,15 +1947,7 @@
 }
 
 :root {
-  --background: #fff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --background: #000;
 }
 
 body {
