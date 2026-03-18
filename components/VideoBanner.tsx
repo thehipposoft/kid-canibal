@@ -103,20 +103,20 @@ function Slide2() {
                 </div>
             </div>
             <div className="w-screen uppercase leading-[0.9] font-thunder font-bold px-5 md:px-0">
-                <div className="flex justify-between w-full flex-wrap lg:text-[8vw] text-[17vw]">
+                <div className="flex justify-between w-full flex-wrap lg:text-[8vw] text-[17vw] text-white">
                     <span>We</span>
                     <span>throw</span>
                     <span>ourselves</span>
                     <span>into</span>
                     <span>chaos</span>
                 </div>
-                <div className="flex justify-between w-full flex-wrap lg:text-[8vw] text-[17vw]">
+                <div className="flex justify-between w-full flex-wrap lg:text-[8vw] text-[17vw] text-white">
                     <span>and</span>
                     <span>turn</span>
                     <span>the</span>
                     <span>unpredictable</span>
                 </div>
-                <div className="flex justify-between w-full flex-wrap lg:text-[8vw] text-[17vw]">
+                <div className="flex justify-between w-full flex-wrap lg:text-[8vw] text-[17vw] text-white">
                     <span>into</span>
                     <span>unique</span>
                     <span>pieces</span>

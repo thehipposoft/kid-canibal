@@ -63,7 +63,7 @@ const ProjectCard = ({ project, index, total }: { project: Project; index: numbe
                     <div className="w-full h-px bg-white/30" />
                     <div className="flex justify-center items-center lg:gap-20 md:py-2">
                         <div className="flex flex-col">
-                            <span className="text-sm font-bold tracking-widest">DIRECCIÓN</span>
+                            <span className="text-sm font-bold tracking-widest text-white/70">DIRECCIÓN</span>
                             <span className="text-2xl font-inter font-light text-white/70">{project.director}</span>
                             <span className="text-white/50">EST. {project.year}</span>
                         </div>
@@ -116,7 +116,7 @@ const ProjectCardMobile = ({ project, index, total }: { project: Project; index:
                     <div className="w-full h-px bg-white/30" />
                     <div className="flex justify-between items-center md:py-2">
                         <div className="flex flex-col">
-                            <span className="text-sm font-bold tracking-widest">DIRECCIÓN</span>
+                            <span className="text-sm font-bold tracking-widest text-white">DIRECCIÓN</span>
                             <span className="text-xl leading-6 font-inter font-light text-white/70">{project.director}</span>
                             <span className="text-white/50">EST. {project.year}</span>
                         </div>
