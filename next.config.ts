@@ -8,6 +8,10 @@ const nextConfig: NextConfig = {
         protocol: "https",
         hostname: "images.unsplash.com",
       },
+      {
+        protocol: "https",
+        hostname: "darkgrey-vulture-169630.hostingersite.com",
+      },
     ]
   },
 };

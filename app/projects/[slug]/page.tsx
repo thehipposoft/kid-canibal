@@ -2,14 +2,13 @@
 
 import { notFound } from "next/navigation";
 import { projects } from "@/components/Projects/constants";
-import Link from "next/link";
-import { ArrowLeft } from "lucide-react";
 import { use } from "react";
 import CornersMenu from "@/components/Menu/CornersMenu";
 
 interface ProjectPageProps {
     params: Promise<{ slug: string }>;
 }
+ 
 
 export default function ProjectPage({ params }: ProjectPageProps) {
     const { slug } = use(params);
@@ -24,7 +23,7 @@ export default function ProjectPage({ params }: ProjectPageProps) {
             <CornersMenu />
             <div className="relative w-full flex flex-col min-h-screen lg:gap-20 bg-black pb-12 pt-[10vh] lg:pt-0">
                 {/* Media Background */}
-                <div className="relative lg:w-full h-[80vh] lg:inset-20 z-0 rounded-2xl max-w-[90vw] mx-auto lg:mx-0 ">
+                <div className="relative lg:w-full h-[80vh] lg:inset-20 z-0 rounded-2xl max-w-[90vw] mx-auto lg:mx-0">
                     {project.mediaType === "video" ? (
                         <video
                             className="w-full h-full object-cover rounded-2xl "

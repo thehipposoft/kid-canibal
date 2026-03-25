@@ -161,6 +161,7 @@ export default function BannerVideo() {
                 loop
                 muted
                 playsInline
+                preload="auto"
                 className="absolute inset-0 w-full h-full object-cover"
             >
                 Your browser does not support the video tag.

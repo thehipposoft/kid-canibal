@@ -24,7 +24,7 @@ const ProjectCard = ({ project, index, total }: { project: Project; index: numbe
     return (
         <AnimatedLink
             href={project.link}
-            className="sticky pointer-events-none lg:pointer-events-auto top-0 w-full h-screen flex items-center justify-center overflow-hidden video-container"
+            className="sticky snap-start snap-always pointer-events-none lg:pointer-events-auto top-0 w-full h-screen flex items-center justify-center overflow-hidden video-container"
         >
             <div className="relative w-full h-full">
                 {/* Media Background */}
@@ -121,7 +121,7 @@ const ProjectCardMobile = ({ project, index, total }: { project: Project; index:
                             <span className="text-white/50">EST. {project.year}</span>
                         </div>
                         <div className="flex gap-4">
-                           <Link
+                            <Link
                                 href={project.link}
                                 className="group lg:hidden flex items-center gap-2 text-white font-inter text-xs md:text-sm tracking-widest uppercase opacity-80 hover:opacity-100 hover:underline transition-opacity "
                             >
@@ -141,7 +141,7 @@ const ProjectCardMobile = ({ project, index, total }: { project: Project; index:
 
 export default function Projects({ projects }: ProjectsProps) {
     return (
-        <section className="relative w-full bg-black">
+        <section className="relative w-full bg-black h-screen snap-y snap-mandatory">
             <div className="lg:hidden">
                 {projects.map((project, index) => (
                     <ProjectCardMobile
@@ -152,7 +152,7 @@ export default function Projects({ projects }: ProjectsProps) {
                     />
                 ))}
             </div>
-            <div className="lg:block hidden">
+            <div className="lg:block hidden ">
                 {projects.map((project, index) => (
                     <ProjectCard
                         key={index}

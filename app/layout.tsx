@@ -44,6 +44,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link rel="preload" as="video" href="https://res.cloudinary.com/hipposoft/video/upload/f_auto,q_auto,w_1280/v1771611156/reel_v1_2160p_np35yn.mp4" />
+      </head>
       <body
         className={`${inter.variable} ${schaboFont.variable} ${thunderFont.variable} ${providenceFont.variable} antialiased`}
       >

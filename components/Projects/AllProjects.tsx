@@ -97,13 +97,13 @@ export default function AllProjects() {
 
     return (
         <section className="w-full min-h-screen bg-black px-4 md:px-8 py-20">
-            <div className="mb-10 flex items-end justify-between">
-                <h1 className="text-white font-schabo text-[10vw] uppercase leading-none">
-                    Proyectos
+            <div className="flex pt-4 items-end justify-between">
+                <h1 className="text-white font-schabo lg:text-[13vw] text-[18vw] uppercase leading-none">
+                    videography projects
                 </h1>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mb-3">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mb-3 pt-2 md:pt-0">
                 {firstRow.map((project) => (
                     <ProjectGridItem key={project.slug} project={project} />
                 ))}
