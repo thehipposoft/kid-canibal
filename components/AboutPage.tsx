@@ -19,27 +19,27 @@ const AboutPageContent = () => {
             <div className="flex-1 flex items-center mb-12 md:mb-24">
                 <div className="w-screen uppercase leading-[0.9] font-thunder font-bold">
                     <div className="flex justify-between w-full text-[7vw]">
-                        <span>KIDCANIBAL</span>
-                        <span>PROPONE</span>
-                        <span>UNA</span>
-                        <span>ESTÉTICA,</span>
-                        <span>UNA</span>
+                        <span className='hover:text-brand-red'>KIDCANIBAL</span>
+                        <span className='hover:text-brand-red'>PROPONE</span>
+                        <span className='hover:text-brand-red'>UNA</span>
+                        <span className='hover:text-brand-red'>ESTÉTICA,</span>
+                        <span className='hover:text-brand-red'>UNA</span>
                     </div>
                     <div className="flex justify-between w-full text-[7vw]">
-                        <span>FORMA</span>
-                        <span>DE</span>
-                        <span>PRODUCIR,</span>
-                        <span>Y</span>
-                        <span>UN</span>
-                        <span>LENGUAJE</span>
-                        <span>VISUAL</span>
+                        <span className='hover:text-brand-yellow'>FORMA</span>
+                        <span className='hover:text-brand-yellow'>DE</span>
+                        <span className='hover:text-brand-yellow'>PRODUCIR,</span>
+                        <span className='hover:text-brand-yellow'>Y</span>
+                        <span className='hover:text-brand-yellow'>UN</span>
+                        <span className='hover:text-brand-yellow'>LENGUAJE</span>
+                        <span className='hover:text-brand-yellow'>VISUAL</span>
                     </div>
                     <div className="flex justify-between w-full text-[7vw]">
-                        <span>QUE</span>
-                        <span>NO</span>
-                        <span>RESPONDE</span>
-                        <span>A</span>
-                        <span>TENDENCIAS</span>
+                        <span className='hover:text-brand-blue'>QUE</span>
+                        <span className='hover:text-brand-blue'>NO</span>
+                        <span className='hover:text-brand-blue'>RESPONDE</span>
+                        <span className='hover:text-brand-blue'>A</span>
+                        <span className='hover:text-brand-blue'>TENDENCIAS</span>
                     </div>
                 </div>
             </div>

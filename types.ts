@@ -3,7 +3,7 @@ export interface WPProject {
   id: number;
   slug: string;
   title: { rendered: string };
-  featured_media: number;  // ID de la imagen destacada (0 si no tiene)
+  portada_url: string;
   galeria: WPImage[];
 }
 

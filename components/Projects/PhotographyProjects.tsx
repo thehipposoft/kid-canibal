@@ -19,16 +19,14 @@ const PhotographyProjects = async () => {
                             href={`/photography/${project.slug}`}
                             className="relative group overflow-hidden rounded-xl bg-neutral-900 block min-h-[250px] lg:min-h-[500px]"
                         >
-                            {/* Video / Image */}
                             <div className="relative w-full h-full aspect-video">
                                 <Image
                                     width={500}
                                     height={500}
                                     alt={project.title.rendered}
-                                    src={project.galeria[0].url}
+                                    src={project.portada_url}
                                     className={`absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105`}
                                 />
-                                {/* Gradient overlay — always visible at bottom */}
                                 <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/20 to-transparent z-10" />
 
                                 {/* Subtle vignette on hover */}

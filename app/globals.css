@@ -50,17 +50,6 @@ body {
 * {
   cursor: none !important;
 }
-/* 
-html {
-  scroll-snap-type: y mandatory;
-  scroll-behavior: smooth;
-} */
-
-.snap-start {
-  scroll-snap-align: start;
-  scroll-snap-stop: always;
-}
-
 
 .cursor-transition {
   transition:
