@@ -7,7 +7,8 @@ type AnimatedLinkProps = {
   href: string;
   className?: string;
   children?: ReactNode;
-  linkKey?: string | number; 
+  ref?: React.ForwardedRef<HTMLAnchorElement>;
+  linkKey?: string | number;
   onMouseEnter?: () => void;
   onMouseLeave?: () => void;
 };

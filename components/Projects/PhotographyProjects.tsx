@@ -4,7 +4,6 @@ import AnimatedLink from "../AnimatedLink";
 
 const PhotographyProjects = async () => {
     const projects = await getProjects();
-    console.log(projects);
   return (
        <section className="w-full min-h-screen bg-black px-4 md:px-8 py-20">
             <div className="flex pt-4 items-end justify-between">

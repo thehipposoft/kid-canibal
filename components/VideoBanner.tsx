@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 
 const SLIDE_DURATION = 3500; // ms a slide is fully visible
-const TRANSITION_MS = 500;  // ms for blur-in / blur-out
+const TRANSITION_MS = 1000;  // ms for blur-in / blur-out
 const TOTAL_SLIDES = 3;
 
 // Each mounted slide manages its own in/out opacity so both can co-exist
