@@ -90,9 +90,9 @@ const ProjectCard = ({
         <div ref={wrapperRef} className=" top-0 w-full h-screen">
             <AnimatedLink
                 href={project.link}
-                className="pointer-events-none lg:pointer-events-auto w-full h-full flex items-center justify-center overflow-hidden video-container block"
+                className="pointer-events-none lg:pointer-events-auto w-full h-full flex items-center justify-center overflow-hidden block"
             >
-                <div className="relative w-full h-full">
+                <div className="relative w-full h-full video-container" data-cursor={index % 2 === 1 ? "video-red" : "video"}>
                     {/* ── Media Background ── */}
                     <div className="absolute inset-0 z-0">
                         {project.mediaType === "video" ? (
@@ -168,6 +168,7 @@ const ProjectCardMobile = ({
         <div
             className="sticky pointer-events-none top-0 w-full h-screen flex items-center justify-center overflow-hidden video-container"
             style={{ zIndex: index + 1 }}
+            data-cursor={index % 2 === 1 ? "video-red" : "video"}
         >
             <div className="relative w-full h-full">
                 {/* ── Media Background ── */}

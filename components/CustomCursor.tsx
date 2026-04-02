@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 
-type CursorState = "default" | "hover" | "video";
+type CursorState = "default" | "hover" | "video" | "video-red";
 
 // Offset classes center the cursor on the pointer per state.
 // default/hover: half of 12px circle → -6px
@@ -11,6 +11,7 @@ const offsetClasses: Record<CursorState, string> = {
   default: "-translate-x-[6px] -translate-y-[6px] ",
   hover:   "-translate-x-[6px] -translate-y-[6px] scale-105 ",
   video:   "-translate-x-[44px] -translate-y-[18px] ",
+  "video-red": "-translate-x-[44px] -translate-y-[18px] ",
 };
 
 // Shape + color of the inner element per state
@@ -18,23 +19,32 @@ const innerClasses: Record<CursorState, string> = {
   default: "w-4 h-4 bg-[#FDF9F4] rounded-full ",
   hover:   "w-4 h-4 bg-[#EA0303] rounded-full",
   video:   "w-[88px] h-9 bg-[#FFC002] rounded-[8px]",
+  "video-red": "w-[88px] h-9 bg-[#EA0303] rounded-[8px]",
 };
 
 export default function CustomCursor() {
   const cursorRef = useRef<HTMLDivElement>(null);
-  const posRef    = useRef({ x: -100, y: -100 });
+  const targetPosRef  = useRef({ x: -100, y: -100 }); // Mouse position (target)
+  const currentPosRef = useRef({ x: -100, y: -100 }); // Cursor position (lerped)
   const rafRef    = useRef<number | null>(null);
   const [cursorState, setCursorState] = useState<CursorState>("default");
 
   useEffect(() => {
     const moveCursor = (e: MouseEvent) => {
-      posRef.current = { x: e.clientX, y: e.clientY };
+      targetPosRef.current = { x: e.clientX, y: e.clientY };
     };
 
-    // rAF loop — keeps pointer tracking smooth
+    // Lerp factor: lower = more delay/smoother (0.1-0.15), higher = snappier (0.2-0.3)
+    const lerpFactor = 0.2;
+
+    // rAF loop — smoothly interpolates cursor toward mouse position
     const updatePosition = () => {
+      // Lerp: move cursor a fraction of the distance toward target each frame
+      currentPosRef.current.x += (targetPosRef.current.x - currentPosRef.current.x) * lerpFactor;
+      currentPosRef.current.y += (targetPosRef.current.y - currentPosRef.current.y) * lerpFactor;
+
       if (cursorRef.current) {
-        cursorRef.current.style.transform = `translate(${posRef.current.x}px, ${posRef.current.y}px)`;
+        cursorRef.current.style.transform = `translate(${currentPosRef.current.x}px, ${currentPosRef.current.y}px)`;
       }
       rafRef.current = requestAnimationFrame(updatePosition);
     };
@@ -42,9 +52,10 @@ export default function CustomCursor() {
 
     const handleMouseOver = (e: MouseEvent) => {
       const target = e.target as HTMLElement;
+      const videoContainer = target.closest(".video-container") as HTMLElement;
 
-      if (target.closest(".video-container")) {
-        setCursorState("video");
+      if (videoContainer) {
+        setCursorState(videoContainer.dataset.cursor === "video-red" ? "video-red" : "video");
       } else if (
         target.closest("a")                      ||
         target.closest("button")                 ||
@@ -62,7 +73,7 @@ export default function CustomCursor() {
 
     // Park cursor off-screen when the mouse leaves the window
     const handleMouseLeave = () => {
-      posRef.current = { x: -200, y: -200 };
+      targetPosRef.current = { x: -200, y: -200 };
     };
 
     window.addEventListener("mousemove",  moveCursor,      { passive: true });
@@ -109,8 +120,8 @@ export default function CustomCursor() {
             className={`
               absolute font-semibold text-2xl
               uppercase  text-black select-none font-thunder
-              transition-opacity duration-500
-              ${cursorState === "video" ? "opacity-100" : "opacity-0"}
+              transition-opacity duration-1000
+              ${(cursorState === "video" || cursorState === "video-red") ? "opacity-100" : "opacity-0"}
             `}
           >
             WATCH
