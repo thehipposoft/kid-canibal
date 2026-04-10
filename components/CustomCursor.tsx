@@ -35,7 +35,7 @@ export default function CustomCursor() {
     };
 
     // Lerp factor: lower = more delay/smoother (0.1-0.15), higher = snappier (0.2-0.3)
-    const lerpFactor = 0.2;
+    const lerpFactor = 0.3;
 
     // rAF loop — smoothly interpolates cursor toward mouse position
     const updatePosition = () => {
