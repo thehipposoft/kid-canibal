@@ -6,6 +6,7 @@ import SmoothScroll from "@/components/SmoothScroll";
 import CustomCursor from "@/components/CustomCursor";
 import { ViewTransitions } from "next-view-transitions";
 import MobileMenu from "@/components/MobileMenu";
+import GoogleAnalytics from "./GoogleAnalytics";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -51,6 +52,7 @@ export default function RootLayout({
         className={`${inter.variable} ${schaboFont.variable} ${thunderFont.variable} ${providenceFont.variable} antialiased`}
       >
         <ViewTransitions>
+          <GoogleAnalytics />
           <CustomCursor />
           <MobileMenu />
           <SmoothScroll>
