@@ -30,10 +30,10 @@ const providenceFont = localFont({
 
 export const metadata: Metadata = {
   title: "KIDCANIBAL",
-  description: "- BRUTAL. BEAUTIFUL.",
+  description: "KID CANIBAL is a boutique film studio built on instinct and controlled chaos. We throw ourselves into the unpredictable — capturing moments that feel alive, raw and real. Spontaneity is not randomness. It's awareness, timing, and intention. We move fast, adapt, and shape what unfolds into images that stay. We don't follow formulas. We respond to what's in front of us — with sensitivity and purpose. Perfection is forgettable. Feeling is not.",
   openGraph: {
     title: "KIDCANIBAL",
-    description: "- BRUTAL. BEAUTIFUL.",
+    description: "KID CANIBAL is a boutique film studio built on instinct and controlled chaos. We throw ourselves into the unpredictable — capturing moments that feel alive, raw and real. Spontaneity is not randomness. It's awareness, timing, and intention. We move fast, adapt, and shape what unfolds into images that stay. We don't follow formulas. We respond to what's in front of us — with sensitivity and purpose. Perfection is forgettable. Feeling is not.",
     images: ['/kid.png'],
   },
 };
