@@ -4,7 +4,7 @@ import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import AnimatedLink from "../AnimatedLink";
-import { useRef } from "react";
+import { useRef, useEffect } from "react";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import gsap from "gsap";
@@ -166,7 +166,7 @@ const ProjectCardMobile = ({
 }) => {
     return (
         <div
-            className="sticky pointer-events-none top-0 w-full h-screen flex items-center justify-center overflow-hidden video-container"
+            className="sticky top-0 w-full h-screen flex items-center justify-center overflow-hidden video-container"
             style={{ zIndex: index + 1 }}
             data-cursor={index % 2 === 1 ? "video-red" : "video"}
         >
@@ -234,8 +234,62 @@ const ProjectCardMobile = ({
 
 // ─── Section ─────────────────────────────────────────────────────────────────
 export default function Projects({ projects }: ProjectsProps) {
+    const sectionRef = useRef<HTMLElement>(null)
+
+    useEffect(() => {
+        const mq = window.matchMedia('(min-width: 1024px)')
+        if (!mq.matches) return
+
+        const section = sectionRef.current
+        if (!section) return
+
+        type LenisWindow = Window & { __lenis?: import('lenis').default }
+        const getLenis = () => (window as LenisWindow).__lenis
+
+        let isAnimating = false
+
+        const getSectionTop = () => section.getBoundingClientRect().top + window.scrollY
+
+        const goTo = (index: number) => {
+            const lenis = getLenis()
+            if (!lenis) return
+            const clamped = Math.max(0, Math.min(projects.length - 1, index))
+            isAnimating = true
+            lenis.scrollTo(getSectionTop() + clamped * window.innerHeight, {
+                duration: 1.5,
+                easing: (t: number) => 1 - Math.pow(1 - t, 4),
+            })
+            setTimeout(() => { isAnimating = false }, 1300)
+        }
+
+        const handleWheel = (e: WheelEvent) => {
+            const sectionTop = getSectionTop()
+            const scrollY = window.scrollY
+            const vh = window.innerHeight
+            const currentIndex = Math.round((scrollY - sectionTop) / vh)
+            const inSection = scrollY >= sectionTop - vh * 0.3 && scrollY <= sectionTop + (projects.length - 0.5) * vh
+
+            if (!inSection) return
+
+            // Let the wheel escape at the edges so the user can reach other sections
+            if (currentIndex <= 0 && e.deltaY < 0) return
+            if (currentIndex >= projects.length - 1 && e.deltaY > 0) return
+
+            // Capture phase: stop Lenis from also processing this event
+            e.preventDefault()
+            e.stopPropagation()
+            if (isAnimating) return
+
+            goTo(currentIndex + (e.deltaY > 0 ? 1 : -1))
+        }
+
+        // capture: true fires before Lenis's bubble-phase listener
+        window.addEventListener('wheel', handleWheel, { passive: false, capture: true })
+        return () => window.removeEventListener('wheel', handleWheel, { capture: true })
+    }, [projects.length])
+
     return (
-        <section className="relative w-full bg-black h-screen">
+        <section ref={sectionRef} className="relative w-full bg-black h-screen">
             {/* Mobile */}
             <div className="lg:hidden">
                 {projects.map((project, index) => (

@@ -1,5 +1,4 @@
 import CornersMenu from '@/components/Menu/CornersMenu'
-// import PhotographyProjects from '@/components/Projects/PhotographyProjects'
 import FotografosList from '@/components/FotografosList'
 import type { Metadata } from 'next'
 
@@ -13,7 +12,6 @@ export default function PhotographyPage() {
         <main>
             <CornersMenu />
             <FotografosList />
-            {/* <PhotographyProjects /> */}
         </main>
     )
 }

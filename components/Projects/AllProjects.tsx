@@ -25,7 +25,7 @@ function ProjectGridItem({ project }: { project: Project }) {
     return (
         <AnimatedLink
             href={project.link}
-            className="relative group overflow-hidden rounded-xl bg-neutral-900 block"
+            className="relative group overflow-hidden bg-neutral-900 block"
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
         >
@@ -99,7 +99,7 @@ export default function AllProjects() {
         <section className="w-full min-h-screen bg-black px-4 md:px-8 py-20">
             <div className="flex pt-4 items-end justify-between">
                 <h1 className="text-white font-schabo lg:text-[13vw] text-[18vw] uppercase leading-none">
-                    videography projects
+                    film projects
                 </h1>
             </div>
 

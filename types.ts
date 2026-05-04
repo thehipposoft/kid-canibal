@@ -1,3 +1,11 @@
+export interface WPFotografoRef {
+  id: number;
+  slug: string;
+  title: string;
+  descripcion: string;
+  portada_url: string | null;
+}
+
 export interface WPProject {
   link: string;
   id: number;
@@ -5,6 +13,14 @@ export interface WPProject {
   title: { rendered: string };
   portada_url: string;
   galeria: WPImage[];
+  fotografos_data?: WPFotografoRef[];
+}
+
+export interface WPFotografo {
+  slug: string;
+  title: { rendered: string };
+  descripcion: string;
+  portada_url: string | null; 
 }
 
 export interface WPImage {

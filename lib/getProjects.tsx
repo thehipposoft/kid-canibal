@@ -22,7 +22,7 @@ function decodeProjectTitle(project: WPProject): WPProject {
 }
 
 export async function getProjects(): Promise<WPProject[]> {
-  const res = await fetch(`${WP_BASE_URL}/proyecto?per_page=100&_fields=id,slug,title,portada_url,galeria`, {
+  const res = await fetch(`${WP_BASE_URL}/proyecto?per_page=100&_fields=id,slug,title,portada_url,galeria,fotografos_data`, {
     next: { revalidate: 3600 },
   });
   if (!res.ok) throw new Error('Error al obtener proyectos');

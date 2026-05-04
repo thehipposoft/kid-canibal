@@ -1,7 +1,7 @@
 import CornersMenu from '@/components/Menu/CornersMenu'
 // import PhotographyProjects from '@/components/Projects/PhotographyProjects'
-import FotografosList from '@/components/FotografosList'
 import type { Metadata } from 'next'
+import PhotographyProjects from '@/components/Projects/PhotographyProjects'
 
 export const metadata: Metadata = {
     title: 'KID CANIBAL - photography',
@@ -12,8 +12,7 @@ export default function PhotographyPage() {
     return (
         <main>
             <CornersMenu />
-            <FotografosList />
-            {/* <PhotographyProjects /> */}
+            <PhotographyProjects />
         </main>
     )
 }

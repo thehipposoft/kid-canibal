@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
-const SLIDE_DURATION = 3500; // ms a slide is fully visible
+const SLIDE_DURATION = 3000; // ms a slide is fully visible
 const TRANSITION_MS = 1000;  // ms for blur-in / blur-out
 const TOTAL_SLIDES = 3;
 
@@ -42,28 +42,10 @@ function SlideWrapper({
 
 // ─── Slide content components ──────────────────────────────────────────────
 
-const SmallLogo = () => (
-    <div className="absolute top-6 left-1/2 -translate-x-1/2 w-[120px] h-[40px] lg:w-[180px] lg:h-[55px]">
-        <Image
-            src="/assets/images/logo/logo.webp"
-            alt="Kid Canibal logo"
-            fill
-            className="object-contain"
-        />
-    </div>
-);
-
 function Slide0() {
     return (
         <div className="absolute inset-0 flex items-center justify-center">
-            <div className="relative w-[85vw] h-[85vh]">
-                <Image
-                    src="/assets/images/logo/logo.webp"
-                    alt="Kid Canibal logo"
-                    fill
-                    className="object-contain"
-                />
-            </div>
+            <h1 className="text-white text-[42vw] max-h-[65vh] leading-none uppercase font-schabo">kidcanibal</h1>
         </div>
     );
 }
@@ -71,7 +53,6 @@ function Slide0() {
 function Slide1() {
     return (
         <div className="absolute inset-0 flex items-center justify-center">
-            <SmallLogo />
             <p
                 className="font-thunder font-bold text-white text-center leading-none uppercase text-[16vw]"
             >
@@ -81,17 +62,12 @@ function Slide1() {
     );
 }
 
+// Slide2 only renders logos — text lives outside SlideWrapper so
+// mix-blend-difference can reach the video/overlay without being trapped
+// inside the stacking context created by SlideWrapper's transform/filter.
 function Slide2() {
     return (
-        <div className="absolute inset-0 flex items-end justify-start py-12 sm:p-10 lg:px-8 lg:py-32">
-            <div className="hidden md:block md:absolute top-6 left-1/2 -translate-x-1/2 w-[120px] h-[40px] lg:w-[180px] lg:h-[55px]">
-                <Image
-                    src="/assets/images/logo/logo.webp"
-                    alt="Kid Canibal logo"
-                    fill
-                    className="object-contain"
-                />
-            </div>
+        <div className="absolute inset-0">
             <div className="flex absolute top-6 left-4 lg:hidden justify-between">
                 <div className="w-[180px] h-[60px]">
                     <Image
@@ -102,21 +78,31 @@ function Slide2() {
                     />
                 </div>
             </div>
-            <div className="w-screen uppercase leading-[0.9] font-thunder font-bold px-5 md:px-0">
-                <div className="flex justify-between w-full flex-wrap lg:text-[8vw] text-[17vw] text-white">
+        </div>
+    );
+}
+
+function Slide2Text({ visible }: { visible: boolean }) {
+    return (
+        <div
+            className="absolute inset-0 flex items-end justify-start py-12 sm:p-10 lg:px-8 lg:py-20 pointer-events-none transition-opacity ease-in-out"
+            style={{ transitionDuration: `${TRANSITION_MS}ms`, opacity: visible ? 1 : 0 }}
+        >
+            <div className="w-screen uppercase leading-[0.9] font-thunder font-bold px-5 md:px-0 text-white mix-blend-difference">
+                <div className="flex justify-between w-full flex-wrap lg:text-[8vw] text-[17vw]">
                     <span>We</span>
                     <span>throw</span>
                     <span>ourselves</span>
                     <span>into</span>
                     <span>chaos</span>
                 </div>
-                <div className="flex justify-between w-full flex-wrap lg:text-[8vw] text-[17vw] text-white">
+                <div className="flex justify-between w-full flex-wrap lg:text-[8vw] text-[17vw]">
                     <span>and</span>
                     <span>turn</span>
                     <span>the</span>
                     <span>unpredictable</span>
                 </div>
-                <div className="flex justify-between w-full flex-wrap lg:text-[8vw] text-[17vw] text-white">
+                <div className="flex justify-between w-full flex-wrap lg:text-[8vw] text-[17vw]">
                     <span>into</span>
                     <span>unique</span>
                     <span>pieces</span>
@@ -138,16 +124,16 @@ export default function BannerVideo() {
     const [current, setCurrent] = useState(0);
     const [prev, setPrev] = useState<number | null>(null);
 
-    useEffect(() => {
-        if (current >= TOTAL_SLIDES - 1) return; // stop at last slide
-
-        const id = setTimeout(() => {
-            setPrev(current);
-            setCurrent((c) => c + 1);
-        }, SLIDE_DURATION);
-
-        return () => clearTimeout(id);
-    }, [current]);
+        useEffect(() => {
+            if (current >= TOTAL_SLIDES - 1) return; // stop at last slide
+    
+            const id = setTimeout(() => {
+                setPrev(current);
+                setCurrent((c) => c + 1);
+            }, SLIDE_DURATION);
+    
+            return () => clearTimeout(id);
+        }, [current]);
 
     const CurrentSlide = SLIDES[current];
     const PrevSlide = prev !== null ? SLIDES[prev] : null;
@@ -185,6 +171,10 @@ export default function BannerVideo() {
             <SlideWrapper key={`current-${current}`} isLeaving={false}>
                 <CurrentSlide />
             </SlideWrapper>
+
+            {/* Slide2 text — outside SlideWrapper so mix-blend-difference
+                blends with the video/overlay, not an isolated stacking context */}
+            <Slide2Text visible={current === 2} />
         </div>
     );
 }

@@ -17,14 +17,11 @@ export default function ProjectPage({ params }: ProjectPageProps) {
     if (!project) {
         notFound();
     }
-
     return (
         <main>
             <CornersMenu />
-            <div className="relative w-full flex flex-col min-h-screen lg:gap-20 bg-black pb-12 pt-[10vh] lg:pt-0">
-                {/* Media Background */}
+            <div className="relative w-full flex flex-col min-h-screen lg:gap-20 bg-black pb-12 pt-[10vh] lg:pt-4">
                 <div className="relative lg:w-full h-[80vh] lg:inset-20 z-0 rounded-2xl max-w-[90vw] mx-auto lg:mx-0">
-                    {project.mediaType === "video" ? (
                         <video
                             className="w-full h-full object-cover rounded-2xl "
                             src={project.fullVideoSrc}
@@ -34,18 +31,7 @@ export default function ProjectPage({ params }: ProjectPageProps) {
                             loop
                             playsInline
                         />
-                    ) : (
-                        // eslint-disable-next-line @next/next/no-img-element
-                        <img
-                            src={project.fullVideoSrc}
-                            alt={project.title}
-                            className="w-full h-full object-cover"
-                        />
-                    )}
-                    {/* Dark Overlay */}
-                    {/* <div className="absolute inset-0 bg-black/50 z-10" /> */}
                 </div>
-                {/* Content */}
                 <div className="relative mx-auto z-20 w-full max-w-[90vw] h-full flex flex-col justify-end py-6 lg:px-0 md:py-8 gap-4">
                     <div>
                         <h1 className="text-white font-schabo lg:text-[13vw] text-8xl leading-[0.85] uppercase">

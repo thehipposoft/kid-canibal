@@ -1,14 +1,14 @@
 import { getProjects } from "@/lib/getProjects"
 import Image from "next/image";
-import AnimatedLink from "../AnimatedLink";
+import AnimatedLink from "./AnimatedLink";
 
-const PhotographyProjects = async ({ title }: { title?: string }) => {
+const FotografosIndividual = async ({ title }: { title?: string }) => {
     const projects = await getProjects();
   return (
        <section className="w-full min-h-screen bg-black px-4 md:px-8 py-20">
             <div className="flex pt-4 items-end justify-between">
-                <h1 className="text-white font-schabo lg:text-[13vw] text-[18vw] uppercase leading-none">
-                    {title ?? "photography projects"}
+                <h1 className="text-white font-thunder lg:text-[13vw] text-[18vw] uppercase leading-none">
+                    {title}
                 </h1>
             </div>
             <div className="grid md:grid-cols-2 gap-4 pt-2 md:pt-0">
@@ -68,4 +68,4 @@ const PhotographyProjects = async ({ title }: { title?: string }) => {
   )
 }
 
-export default PhotographyProjects
+export default FotografosIndividual

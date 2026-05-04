@@ -5,21 +5,21 @@ import { useEffect, useRef, useState } from "react";
 type CursorState = "default" | "hover" | "video" | "video-red";
 
 // Offset classes center the cursor on the pointer per state.
-// default/hover: half of 12px circle → -6px
-// video: half of 88px wide, 36px tall pill → -44px / -18px
+// default/hover: half of 16px circle → -8px
+// video: half of 40px triangle → -20px
 const offsetClasses: Record<CursorState, string> = {
   default: "-translate-x-[6px] -translate-y-[6px] ",
   hover:   "-translate-x-[6px] -translate-y-[6px] scale-105 ",
-  video:   "-translate-x-[44px] -translate-y-[18px] ",
-  "video-red": "-translate-x-[44px] -translate-y-[18px] ",
+  video:   "-translate-x-[8px] -translate-y-[8px] ",
+  "video-red": "-translate-x-[8px] -translate-y-[8px] ",
 };
 
 // Shape + color of the inner element per state
 const innerClasses: Record<CursorState, string> = {
   default: "w-4 h-4 bg-[#FDF9F4] rounded-full ",
   hover:   "w-4 h-4 bg-[#EA0303] rounded-full",
-  video:   "w-[88px] h-9 bg-[#FFC002] rounded-[8px]",
-  "video-red": "w-[88px] h-9 bg-[#EA0303] rounded-[8px]",
+  video:   "w-4 h-4 bg-[#FFC002]",
+  "video-red": "w-4 h-4 bg-[#EA0303]",
 };
 
 export default function CustomCursor() {
@@ -102,31 +102,20 @@ export default function CustomCursor() {
     // 1 — tracker (JS-owned transform; no Tailwind translate here to avoid conflicts)
     <div
       ref={cursorRef}
-      className="fixed top-0 left-0 pointer-events-none z-[99999] will-change-transform"
+      className="fixed top-0 left-0 pointer-events-none z-[99999] will-change-transform mix-blend-difference"
     >
       {/* 2 — offset + blend mode */}
       <div className={`mix-blend-difference duration-500 ${offsetClasses[cursorState]}`}>
 
         {/* 3 — visible shape */}
         <div
-          className={`
-            relative flex items-center justify-center
-            cursor-transition
-            ${innerClasses[cursorState]}
-          `}
-        >
-          {/* WATCH label — only visible in video state */}
-          <span
-            className={`
-              absolute font-semibold text-2xl
-              uppercase  text-black select-none font-thunder
-              transition-opacity duration-1000
-              ${(cursorState === "video" || cursorState === "video-red") ? "opacity-100" : "opacity-0"}
-            `}
-          >
-            WATCH
-          </span>
-        </div>
+          className={`cursor-transition duration-500 ${innerClasses[cursorState]}`}
+          style={
+            cursorState === "video" || cursorState === "video-red"
+              ? { clipPath: "polygon(0 0, 0 100%, 100% 50%)" }
+              : undefined
+          }
+        />
 
       </div>
     </div>
