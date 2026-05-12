@@ -1,6 +1,7 @@
 import { getProjects } from "@/lib/getProjects"
 import Image from "next/image";
 import AnimatedLink from "../AnimatedLink";
+import BackButton from "../BackButton";
 
 const PhotographyProjects = async ({ title }: { title?: string }) => {
     const projects = await getProjects();

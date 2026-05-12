@@ -6,7 +6,8 @@ import { useEffect, useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 
-const COLORS = ["#FFC002", "#0494B5", "#EA0303", "#FC6D00"];
+// 6 zonas simétricas — centro amarillo, extremos azul
+const COLORS = ["#0494B5", "#EA0303", "#FFC002", "#FFC002", "#EA0303", "#0494B5"];
 
 const ContactPage = () => {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -30,6 +31,7 @@ const ContactPage = () => {
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
+      // COLORS.length ahora es 6 — sin más cambios
       const zone = Math.min(
         Math.floor((e.clientX / window.innerWidth) * COLORS.length),
         COLORS.length - 1
@@ -50,22 +52,22 @@ const ContactPage = () => {
     <div
       ref={containerRef}
       className="h-screen overflow-hidden"
-      style={{ backgroundColor: COLORS[0] }}
+      style={{ backgroundColor: COLORS[0] }} // arranca en azul
     >
-      <div className="flex flex-col w-full max-w-4xl h-full px-8 gap-2 pt-4">
-        <div className="relative flex h-80 min-h-0">
+      <div className="flex flex-col justify-center w-full max-w-full h-full px-8 gap-4 md:gap-0 pt-4">
+        <div data-item className="relative w-full lg:w-[96vw] h-40 lg:h-[45vh]">
           <Image
             src="/assets/images/logo/logo-varient.png"
             alt="Kid Canibal"
             fill
-            className="object-contain object-bottom"
+            className="object-contain md:object-cover object-bottom-left"
             priority
           />
         </div>
 
         <div
           data-item
-          className="max-w-2xl w-full font-inter font-semibold uppercase text-black leading-none lg:text-3xl text-[6vw] pb-8 lg:pb-10"
+          className="max-w-xl min-w-[40vw] w-full font-inter font-semibold uppercase text-black leading-none lg:text-2xl text-[6vw] pb-8 lg:pb-10 md:pl-4"
         >
           <div className="flex flex-wrap justify-between w-full">
             <span>DIRECTED</span>
@@ -77,10 +79,7 @@ const ContactPage = () => {
 
           <div className="flex justify-between w-full">
             <span>A.K.A</span>
-            <span
-            >
-              AMERICALATENTE
-            </span>
+            <span>AMERICALATENTE</span>
           </div>
 
           <div className="flex flex-col md:flex-row justify-between w-full pt-4 md:pt-0">
@@ -90,9 +89,10 @@ const ContactPage = () => {
             <span>+506 8616 8728</span>
           </div>
 
+          {/* key por índice — letras repetidas hacen inestable key por valor */}
           <div className="flex justify-between w-full pt-4 md:pt-0">
-            {["W","O","R","L","D","W","I","D","E"].map((l) => (
-              <span key={l + Math.random()}>{l}</span>
+            {["W","O","R","L","D","W","I","D","E"].map((l, i) => (
+              <span key={i}>{l}</span>
             ))}
           </div>
 

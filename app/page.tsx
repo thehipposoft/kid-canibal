@@ -1,4 +1,4 @@
-import Projects from "@/components/Projects";
+import ProjectsFixed from "@/components/Projects/ProjectsFixed";
 import CornersMenu from "@/components/Menu/CornersMenu";
 import VideoBanner from "@/components/VideoBanner";
 import { projects } from "@/components/Projects/constants";
@@ -14,7 +14,7 @@ export default function Home() {
     <main className="">
       <CornersMenu />
       <VideoBanner />
-      <Projects projects={projects} />
+      <ProjectsFixed projects={projects} />
     </main>
   );
 }

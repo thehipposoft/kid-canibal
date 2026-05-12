@@ -3,7 +3,8 @@
 import Image from "next/image";
 import { useState, useCallback, useEffect, useRef } from "react";
 import type { WPImage } from "@/types";
- 
+import BackButton from "../BackButton";
+
 interface Props {
   images: WPImage[];
   projectTitle: string;
@@ -138,8 +139,9 @@ export default function PhotoGallery({ images, projectTitle }: Props) {
   return (
     <>
       <section className="w-full px-8 mx-auto pt-16 pb-24">
-        <div className="flex items-center gap-6 mt-10">
+        <div className="flex justify-between items-center gap-6 mt-10">
           <h1 className="text-white uppercase font-schabo text-[17vw] lg:text-[13vw] leading-none">{projectTitle}</h1>
+          <BackButton />
         </div>
  
         {/* Masonry: columnas flex con aspect-ratio por imagen */}
