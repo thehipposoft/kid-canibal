@@ -16,9 +16,45 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const { fotografo } = await params
     const data = await getFotografo(fotografo)
-    if (!data) return {}
+    if (!data) {
+        return {
+            title: 'Photographer Not Found | Photography | KID CANIBAL',
+            description: 'Photographer not found',
+            robots: 'noindex, nofollow',
+        }
+    }
+    const title = `${data.title.rendered} | Photography | KID CANIBAL`
+    const description = 'Discover our photography collections by talented photographers.'
+    const url = `https://kidcanibal.com/photo/${fotografo}`
     return {
-        title: `KID CANIBAL - ${data.title.rendered}`,
+        title,
+        description,
+        openGraph: {
+            title,
+            description,
+            url,
+            siteName: 'KID CANIBAL',
+            images: [
+                {
+                    url: '/assets/images/logo/logo-varient.png',
+                    width: 1200,
+                    height: 630,
+                    alt: data.title.rendered,
+                },
+            ],
+            locale: 'es_CR',
+            type: 'website',
+        },
+        twitter: {
+            card: 'summary_large_image',
+            title,
+            description,
+            images: ['/assets/images/logo/logo-varient.png'],
+            creator: '@kidcanibal',
+        },
+        alternates: {
+            canonical: url,
+        },
     }
 }
 
