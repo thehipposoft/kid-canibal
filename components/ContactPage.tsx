@@ -27,10 +27,9 @@ const ContactPage = () => {
     () => {
       // Logo entrance
       const items = gsap.utils.toArray<HTMLElement>("[data-item]", containerRef.current);
-      gsap.set(items, { opacity: 0, filter: "blur(10px)", rotate: 2});
+      gsap.set(items, { opacity: 0, filter: "blur(10px)"});
       gsap.to(items, {
         opacity: 1,
-        rotate: 0,
         filter: "blur(0px)",
         duration: 1.5,
         delay: .5,
@@ -49,9 +48,9 @@ const ContactPage = () => {
             opacity: 1,
             y: 0,
             duration: index === 3 ? 4 : 3,
-            delay: 2,
+            delay: 1,
             ease: "power3.out",
-            stagger: { each: 0.04, from: "start" },
+            stagger: { each: 0.05, from: "start" },
           },
           0 // position 0 = all rows start simultaneously
         );
