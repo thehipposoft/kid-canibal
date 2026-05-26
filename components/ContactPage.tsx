@@ -36,7 +36,7 @@ const ContactPage = () => {
         ease: "sine.out",
       });
 
-      // All five text rows trigger at the same time, each staggering its own chars
+      // All five text rows trigger at the same time, each staggering its own chars .
       const rows = gsap.utils.toArray<HTMLElement>("[data-row]", containerRef.current);
       const tl = gsap.timeline({ delay: .5 });
       rows.forEach((row, index) => {
