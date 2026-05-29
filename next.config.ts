@@ -10,7 +10,7 @@ const nextConfig: NextConfig = {
       },
       {
         protocol: "https",
-        hostname: "darkgrey-vulture-169630.hostingersite.com",
+        hostname: "admin.kidcanibal.com",
       },
     ]
   },
