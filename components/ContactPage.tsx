@@ -60,6 +60,15 @@ const ContactPage = () => {
   );
 
   useEffect(() => {
+    const isMobile = window.innerWidth < 768;
+
+    if (isMobile) {
+      if (containerRef.current) {
+        containerRef.current.style.backgroundColor = "#FFC002";
+      }
+      return;
+    }
+
     const handleMouseMove = (e: MouseEvent) => {
       // COLORS.length ahora es 6 — sin más cambios
       const zone = Math.min(
@@ -102,7 +111,7 @@ const ContactPage = () => {
           />
         </div>
 
-        <div className="max-w-xl min-w-[40vw] w-full font-inter font-semibold uppercase text-black leading-none lg:text-2xl text-[6vw] pb-8 lg:pb-10">
+        <div className="max-w-xl min-w-[40vw] w-full font-inter font-semibold uppercase text-black leading-none lg:text-2xl text-[6vw] pb-8 lg:pb-10 pt-4 md:pt-0">
           <div data-row className="flex flex-wrap justify-between w-full">
             <span><CharSpan text="DIRECTED" /></span>
             <span><CharSpan text="BY" /></span>
@@ -116,14 +125,19 @@ const ContactPage = () => {
             <span><CharSpan text="AMERICALATENTE" /></span>
           </div>
 
-          <div data-row className="flex flex-col md:flex-row justify-between w-full pt-4 md:pt-0">
-            <Link href="mailto:juli@kidcanibal.films" className="underline hover:font-providence">
+          <div data-row className="flex flex-col md:flex-row justify-between w-full pt-0">
+            <Link href="mailto:juli@kidcanibal.films" className="md:underline no-underline hover:font-providence flex justify-between w-full md:block md:w-auto">
               <CharSpan text="JULI@KIDCANIBAL.COM" spanClassName="underline" />
             </Link>
-            <span><CharSpan text="+506 8616 8728" /></span>
+            <span className="flex justify-between w-full md:hidden">
+              <span><CharSpan text="+506" /></span>
+              <span><CharSpan text="8616" /></span>
+              <span><CharSpan text="8728" /></span>
+            </span>
+            <span className="hidden md:inline"><CharSpan text="+506 8616 8728" /></span>
           </div>
 
-          <div data-row className="flex justify-between w-full pt-4 md:pt-0">
+          <div data-row className="flex justify-between w-full pt-0">
             <CharSpan text="WORLDWIDE" />
           </div>
 

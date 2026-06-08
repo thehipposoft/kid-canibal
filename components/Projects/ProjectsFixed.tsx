@@ -111,12 +111,16 @@ const ProjectCard = ({ project, index }: { project: Project; index: number }) =>
                         <div className="flex justify-center items-center md:py-2">
                             <div className="flex flex-col info-container">
                                 <span className="text-sm font-bold tracking-widest text-white/70">
-                                    DIRECCIÓN
+                                    DIRECTED BY:
                                 </span>
                                 <span className="text-2xl leading-6 font-inter font-light text-white/70">
                                     {project.director}
                                 </span>
-                                <span className="text-white/50">EST. {project.year}</span>
+                                <div className="flex gap-2">
+                                    <span className="text-white/50">{project.location}</span>
+                                    <span className="text-white/50">- EST. {project.year}</span>
+
+                                </div>
                             </div>
                         </div>
                     </div>

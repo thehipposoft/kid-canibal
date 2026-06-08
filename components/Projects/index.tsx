@@ -16,6 +16,7 @@ export interface Project {
     title: string;
     director: string;
     year: string;
+    location: string;
     link: string;
     teaserSrc: string;
     fullVideoSrc: string;

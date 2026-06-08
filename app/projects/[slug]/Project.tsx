@@ -6,6 +6,7 @@ type ProjectPageProps = {
         title: string;
         director: string;
         year: string;
+        location: string;
         fullVideoSrc: string;
     };
 };
@@ -37,7 +38,10 @@ const ProjectPage = ({ project }: ProjectPageProps) => {
                         <div className="flex flex-col">
                             <span className="text-sm font-bold tracking-widest text-white">DIRECCIÓN</span>
                             <span className="text-2xl font-inter font-light text-white/70">{project.director}</span>
-                            <span className="text-white/50">EST. {project.year}</span>
+                            <div className="flex md:flex-row flex-col gap-2">
+                                <span className="text-white/50">{project.location}</span>
+                                <span className="text-white/50">- EST. {project.year}</span>
+                            </div>
                         </div>
                         <button
                             onClick={() => window.history.back()}
