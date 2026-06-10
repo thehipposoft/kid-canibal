@@ -99,19 +99,19 @@ const ContactPage = () => {
             src="/assets/images/logo/logo-varient.png"
             alt="Kid Canibal"
             fill
-            className="object-contain md:object-cover object-bottom-left hidden lg:block"
+            className="object-contain lg:object-cover object-bottom-left hidden md:block"
             priority
           />
           <Image
             src="/assets/images/kids/logovarient_vertical.png"
             alt="Kid Canibal"
             fill
-            className="object-contain lg:hidden"
+            className="object-contain md:hidden"
             priority
           />
         </div>
 
-        <div className="max-w-xl min-w-[40vw] w-full font-inter font-semibold uppercase text-black leading-none lg:text-2xl text-[6vw] pb-8 lg:pb-10 pt-4 md:pt-0">
+        <div className="lg:max-w-xl min-w-[40vw] w-full font-inter font-semibold uppercase text-black leading-none lg:text-2xl text-[6vw] pb-8 lg:pb-10 pt-4 md:pt-0">
           <div data-row className="flex flex-wrap justify-between w-full">
             <span><CharSpan text="DIRECTED" /></span>
             <span><CharSpan text="BY" /></span>

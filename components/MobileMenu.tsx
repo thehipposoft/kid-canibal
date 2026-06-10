@@ -10,7 +10,7 @@ gsap.registerPlugin(useGSAP);
 
 const NAV_ITEMS = [
     { label: "Home",        href: "/" },
-    { label: "Work",        href: "/projects" },
+    { label: "Video",        href: "/projects" },
     { label: "Photo",       href: "/photo" },
     { label: "About",       href: "/about" },
     { label: "Contact",     href: "/contact" },
@@ -120,12 +120,12 @@ export default function MobileMenu() {
                         <div
                             key={item.href}
                             ref={(el) => { if (el) navItemsRef.current[i] = el; }}
-                            className="border-b border-white/10 py-4"
+                            className="border-b border-white/10 py-6"
                             style={{ opacity: 0, transform: "translateX(40px)" }}
                         >
                             <AnimatedLink
                                 href={item.href}
-                                className={`font-thunder text-[15vw] uppercase leading-none text-white transition-colors duration-300 ${
+                                className={`text-[10vw] uppercase leading-none text-white transition-colors duration-300 ${
                                     pathname === item.href
                                         ? "font-providence line-through opacity-40"
                                         : "hover:opacity-60"
