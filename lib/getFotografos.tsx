@@ -4,7 +4,6 @@ import type { WPFotografo } from '../types';
 export async function getFotografos(): Promise<WPFotografo[]> {
   const res = await fetch(
     `${WP_BASE_URL}/fotografo?_fields=title,slug,descripcion,portada_url`,
-    { next: { revalidate: 3600 } }
   );
 
   if (!res.ok) {
@@ -19,7 +18,6 @@ export async function getFotografos(): Promise<WPFotografo[]> {
 export async function getFotografo(slug: string): Promise<WPFotografo | null> {
   const res = await fetch(
     `${WP_BASE_URL}/fotografo?slug=${slug}&_fields=title,slug,descripcion,portada_url`,
-    { next: { revalidate: 3600 } }
   );
 
   if (!res.ok) {

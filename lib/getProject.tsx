@@ -24,7 +24,6 @@ function decodeProjectTitle(project: WPProject): WPProject {
 export async function getProject(slug: string): Promise<WPProject | null> {
   const res = await fetch(
     `${WP_BASE_URL}/proyecto?slug=${slug}`,
-    { next: { revalidate: 3600 } }
   );
 
   if (!res.ok) {
@@ -49,7 +48,6 @@ export async function getProject(slug: string): Promise<WPProject | null> {
 export async function getProjects(): Promise<WPProject[]> {
   const res = await fetch(
     `${WP_BASE_URL}/proyecto?per_page=100&_fields=id,slug,title,portada_url,galeria`,
-    { next: { revalidate: 3600 } }
   );
 
   if (!res.ok) {
