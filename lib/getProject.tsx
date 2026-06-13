@@ -24,7 +24,7 @@ function decodeProjectTitle(project: WPProject): WPProject {
 export async function getProject(slug: string): Promise<WPProject | null> {
   const res = await fetch(
     `${WP_BASE_URL}/proyecto?slug=${slug}`,
-    { cache: 'no-store' },
+    { next: { revalidate: 60 } },
   );
 
   if (!res.ok) {
