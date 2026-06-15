@@ -126,7 +126,7 @@ const ContactPage = () => {
           </div>
 
           <div data-row className="flex flex-col md:flex-row justify-between w-full pt-0">
-            <Link href="mailto:juli@kidcanibal.films" className="md:underline no-underline hover:font-providence flex justify-between w-full md:block md:w-auto">
+            <Link href="mailto:juli@kidcanibal.com" className="md:underline no-underline hover:font-providence flex justify-between w-full md:block md:w-auto">
               <CharSpan text="JULI@KIDCANIBAL.COM" spanClassName="underline" />
             </Link>
             <span className="flex justify-between w-full md:hidden">

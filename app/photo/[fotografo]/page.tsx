@@ -67,7 +67,7 @@ export default async function FotografoPage({ params }: Props) {
     return (
         <main>
             <CornersMenu />
-            <FotografosIndividual fotografoSlug={fotografo} title={data.title.rendered} />
+            <FotografosIndividual fotografoSlug={fotografo} title={data.title.rendered} descripcion={data.descripcion} />
         </main>
     )
 }

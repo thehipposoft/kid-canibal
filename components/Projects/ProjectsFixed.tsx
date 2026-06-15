@@ -14,7 +14,7 @@ interface ProjectsProps {
     projects: Project[];
 }
 
-const ProjectCard = ({ project, index }: { project: Project; index: number }) => {
+const ProjectCard = ({ project, index, isLast }: { project: Project; index: number; isLast?: boolean }) => {
     const wrapperRef = useRef<HTMLDivElement>(null);
 
     useGSAP(
@@ -57,12 +57,12 @@ const ProjectCard = ({ project, index }: { project: Project; index: number }) =>
     return (
         <div
             ref={wrapperRef}
-            className="sticky top-0 w-full h-screen"
+            className={`sticky top-0 w-full ${isLast ? "h-screen" : "h-[150vh]"}`}
             style={{ zIndex: index + 1 }}
         >
             <AnimatedLink
                 href={project.link}
-                className="pointer-events-none lg:pointer-events-auto w-full h-full flex items-center justify-center overflow-hidden block"
+                className="pointer-events-none lg:pointer-events-auto w-full h-full overflow-hidden"
             >
                 <div
                     className="relative w-full h-full video-container"
@@ -90,7 +90,7 @@ const ProjectCard = ({ project, index }: { project: Project; index: number }) =>
                         <div className="absolute inset-0 bg-black/40 z-10" />
                     </div>
 
-                    <div className="relative z-20 w-full h-full flex flex-col justify-end p-6 md:px-12 md:py-4 gap-4">
+                    <div className={`${isLast ? "h-screen lg:h-auto" : "h-screen"} relative z-20 w-full  flex flex-col justify-end lg:justify-start lg:top-[67vh] p-6 md:px-12 md:py-4 gap-4`}>
                         <div className="flex flex-wrap">
                             {project.title.split(" ").map((word, wi) => (
                                 <span key={wi} className="flex mr-[0.35em]">
@@ -134,7 +134,7 @@ export default function ProjectsFixed({ projects }: ProjectsProps) {
     return (
         <section className="relative w-full bg-black">
             {projects.map((project, index) => (
-                <ProjectCard key={index} project={project} index={index} />
+                <ProjectCard key={index} project={project} index={index} isLast={index === projects.length - 1} />
             ))}
         </section>
     );
