@@ -20,7 +20,7 @@ const FotografosIndividual = async ({ fotografoSlug, title, descripcion }: Props
         <section className="w-full min-h-screen bg-black px-4 md:px-8 py-20">
             <div className="pt-4">
                 <p className="uppercase text-brand-white/70">photographer</p>
-                <h1 className="text-white font-thunder font-semibold lg:text-[13vw] text-[18vw] lg:leading-36 lg:pt-10 pt-4 uppercase leading-none">
+                <h1 className="text-white font-thunder font-semibold lg:text-[13vw] text-[17vw] lg:leading-36 lg:pt-10 pt-4 uppercase leading-none">
                     {title ?? fotografoSlug}
                 </h1>
                 {descripcion && (

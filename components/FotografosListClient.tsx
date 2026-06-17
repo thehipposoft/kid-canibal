@@ -12,25 +12,35 @@ interface Props {
 export default function FotografosListClient({ fotografos }: Props) {
     const [hoveredSlug, setHoveredSlug] = useState<string | null>(null)
     const [portadaSrc, setPortadaSrc] = useState<string | null>(null)
+    const [isMobile, setIsMobile] = useState(false)
     const imageRef = useRef<HTMLDivElement>(null)
 
     useEffect(() => {
+        const mq = window.matchMedia('(pointer: coarse)')
+        setIsMobile(mq.matches)
+        const handler = (e: MediaQueryListEvent) => setIsMobile(e.matches)
+        mq.addEventListener('change', handler)
+        return () => mq.removeEventListener('change', handler)
+    }, [])
+
+    useEffect(() => {
+        if (isMobile) return
         const handleMouseMove = (e: MouseEvent) => {
             if (!imageRef.current) return
             imageRef.current.style.transform = `translate(${e.clientX - 230}px, ${e.clientY - 130}px)`
         }
         window.addEventListener('mousemove', handleMouseMove, { passive: true })
         return () => window.removeEventListener('mousemove', handleMouseMove)
-    }, [])
+    }, [isMobile])
 
     return (
         <div className="h-screen bg-black flex flex-col items-center justify-center">
 
-            {/* Cursor-following image — behind text */}
+            {/* Cursor-following image — behind text, desktop only */}
             <div
                 ref={imageRef}
                 className="fixed top-0 left-0 pointer-events-none z-10 transition-opacity duration-500"
-                style={{ opacity: hoveredSlug && portadaSrc ? 1 : 0 }}
+                style={{ opacity: !isMobile && hoveredSlug && portadaSrc ? 1 : 0 }}
             >
                 <div className='w-full h-full absolute inset-0 bg-black/30'></div>
                 {portadaSrc && (
@@ -72,10 +82,12 @@ export default function FotografosListClient({ fotografos }: Props) {
                                             : 'text-brand-white/10'
                                     }`}
                                     onMouseEnter={() => {
+                                        if (isMobile) return
                                         setHoveredSlug(f.slug)
                                         if (f.portada_url) setPortadaSrc(f.portada_url)
                                     }}
                                     onMouseLeave={() => {
+                                        if (isMobile) return
                                         setHoveredSlug(null)
                                     }}
                                 >
