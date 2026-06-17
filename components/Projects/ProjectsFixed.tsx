@@ -57,7 +57,7 @@ const ProjectCard = ({ project, index, isLast }: { project: Project; index: numb
     return (
         <div
             ref={wrapperRef}
-            className={`sticky top-0 w-full ${isLast ? "h-screen" : "h-[150vh]"}`}
+            className={`sticky top-0 w-full ${isLast ? "h-screen" : "h-screen"}`}
             style={{ zIndex: index + 1 }}
         >
             <AnimatedLink
@@ -70,14 +70,26 @@ const ProjectCard = ({ project, index, isLast }: { project: Project; index: numb
                 >
                     <div className="absolute inset-0 z-0">
                         {project.mediaType === "video" ? (
-                            <video
-                                className="w-full h-full object-cover"
-                                src={project.teaserSrc}
-                                autoPlay
-                                muted
-                                loop
-                                playsInline
-                            />
+                            <>
+                                {/* Mobile: vertical */}
+                                <video
+                                    className="block lg:hidden w-full h-full object-cover"
+                                    src={project.teaserVerticalSrc ?? project.teaserSrc}
+                                    autoPlay
+                                    muted
+                                    loop
+                                    playsInline
+                                />
+                                {/* Desktop: horizontal */}
+                                <video
+                                    className="hidden lg:block w-full h-full object-cover"
+                                    src={project.teaserSrc}
+                                    autoPlay
+                                    muted
+                                    loop
+                                    playsInline
+                                />
+                            </>
                         ) : (
                             <Image
                                 src={project.teaserSrc}

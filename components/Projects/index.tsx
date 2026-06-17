@@ -19,6 +19,7 @@ export interface Project {
     location: string;
     link: string;
     teaserSrc: string;
+    teaserVerticalSrc: string;
     fullVideoSrc: string;
     mediaType: "image" | "video";
 }

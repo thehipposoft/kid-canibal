@@ -39,7 +39,8 @@ function Lightbox({
 }) {
   const img = images[index];
   const ratio = img.width / img.height;
- 
+  const touchStartX = useRef<number | null>(null);
+
   useEffect(() => {
     const handler = (e: KeyboardEvent) => {
       if (e.key === "Escape") onClose();
@@ -49,14 +50,24 @@ function Lightbox({
     window.addEventListener("keydown", handler);
     return () => window.removeEventListener("keydown", handler);
   }, [onClose, onPrev, onNext]);
- 
+
   return (
     <div
       className="fixed inset-0 z-50 bg-black/95 flex items-center justify-center"
       onClick={onClose}
+      onTouchStart={(e) => { touchStartX.current = e.touches[0].clientX; }}
+      onTouchEnd={(e) => {
+        if (touchStartX.current === null) return;
+        const delta = e.changedTouches[0].clientX - touchStartX.current;
+        if (delta > 50) onPrev();
+        else if (delta < -50) onNext();
+        touchStartX.current = null;
+      }}
     >
+      <style>{`@keyframes lbFade{from{opacity:0.1}to{opacity:1}}.lb-fade{animation:lbFade 1s ease forwards}`}</style>
       <div
-        className="relative "
+        key={index}
+        className="relative lb-fade"
         style={{
           aspectRatio: `${img.width} / ${img.height}`,
           width: ratio > 1 ? "min(90vw, calc(90vh * " + ratio + "))" : "auto",
@@ -70,12 +81,12 @@ function Lightbox({
           src={img.url}
           alt={img.alt || ""}
           fill
-          className="object-contain "
+          className="object-contain"
           quality={95}
           sizes="90vw"
         />
       </div>
- 
+
       <button
         className="absolute left-4 lg:left-8 top-1/2 -translate-y-1/2 w-20 h-20 flex items-center justify-center text-white/55 hover:text-white transition-colors text-6xl"
         onClick={(e) => { e.stopPropagation(); onPrev(); }}
@@ -84,12 +95,13 @@ function Lightbox({
         className="absolute right-4 lg:right-8 top-1/2 -translate-y-1/2 w-20 h-20 flex items-center justify-center text-white/55 hover:text-white transition-colors text-6xl"
         onClick={(e) => { e.stopPropagation(); onNext(); }}
       >›</button>
- 
+
+      {/* Mobile: top-left / Desktop: top-right */}
       <button
-        className="absolute top-6 right-6 text-white/50 hover:text-white tracking-[0.2em] transition-colors"
+        className="absolute top-6 left-6 lg:left-auto lg:right-6 text-white/80 hover:text-white tracking-[0.2em] transition-colors"
         onClick={onClose}
       >ESC</button>
- 
+
       <div className="absolute bottom-6 right-6">
         <span className="text-white/75 text-xs tracking-[0.4em]">
           {String(index + 1).padStart(2, "0")}

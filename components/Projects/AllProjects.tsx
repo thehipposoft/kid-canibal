@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import { projects } from "./constants";
 import { Project } from "./index";
 import AnimatedLink from "../AnimatedLink";
@@ -8,6 +8,13 @@ import AnimatedLink from "../AnimatedLink";
 function ProjectGridItem({ project }: { project: Project }) {
     const videoRef = useRef<HTMLVideoElement>(null);
     const [hovered, setHovered] = useState(false);
+
+    // On mobile there's no hover, so autoplay on mount
+    useEffect(() => {
+        if (window.matchMedia("(max-width: 1023px)").matches) {
+            videoRef.current?.play();
+        }
+    }, []);
 
     const handleMouseEnter = () => {
         setHovered(true);
