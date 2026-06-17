@@ -57,7 +57,7 @@ const ProjectCard = ({ project, index, isLast }: { project: Project; index: numb
     return (
         <div
             ref={wrapperRef}
-            className={`sticky top-0 w-full ${isLast ? "h-screen" : "h-screen"}`}
+            className={`lg:sticky top-0 w-full ${isLast ? "h-screen" : "h-screen"}`}
             style={{ zIndex: index + 1 }}
         >
             <AnimatedLink

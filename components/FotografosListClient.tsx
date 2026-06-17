@@ -74,7 +74,7 @@ export default function FotografosListClient({ fotografos }: Props) {
                             <div data-slide>
                                 <AnimatedLink
                                     href={`/photo/${f.slug}`}
-                                    className={`font-thunder font-bold uppercase leading-[0.85] text-center lg:text-[11vw] text-[18vw] block transition-colors duration-500 ${
+                                    className={`font-thunder font-bold uppercase leading-[0.85] text-center lg:text-[11vw] text-[17vw] block transition-colors duration-500 ${
                                         hoveredSlug === null
                                             ? 'text-brand-white/65'
                                             : hoveredSlug === f.slug
