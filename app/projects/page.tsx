@@ -1,6 +1,7 @@
 import AllProjects from "@/components/Projects/AllProjects";
 import CornersMenu from "@/components/Menu/CornersMenu";
-import type { Metadata } from 'next'
+import type { Metadata } from 'next';
+import { getVideoProjects } from "@/lib/getVideoProjects";
 
 export const metadata: Metadata = {
     title: 'Projects | KID CANIBAL',
@@ -33,11 +34,13 @@ export const metadata: Metadata = {
     },
 }
 
-export default function ProjectsPage() {
+export default async function ProjectsPage() {
+    const projects = await getVideoProjects();
+
     return (
         <main>
             <CornersMenu />
-            <AllProjects />
+            <AllProjects projects={projects} />
         </main>
     );
 }

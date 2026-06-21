@@ -1,17 +1,8 @@
 'use client';
 import CornersMenu from "@/components/Menu/CornersMenu";
+import { VideoProject } from "@/types";
 
-type ProjectPageProps = {
-    project: {
-        title: string;
-        director: string;
-        year: string;
-        location: string;
-        fullVideoSrc: string;
-    };
-};
-
-const ProjectPage = ({ project }: ProjectPageProps) => {
+const ProjectPage = ({ project }: { project: VideoProject }) => {
     return (
         <main>
             <CornersMenu />

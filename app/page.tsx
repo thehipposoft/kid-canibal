@@ -1,8 +1,8 @@
 import ProjectsFixed from "@/components/Projects/ProjectsFixed";
 import CornersMenu from "@/components/Menu/CornersMenu";
 import VideoBanner from "@/components/VideoBanner";
-import { projects } from "@/components/Projects/constants";
-import type { Metadata } from 'next'
+import type { Metadata } from 'next';
+import { getVideoProjects } from "@/lib/getVideoProjects";
 
 export const metadata: Metadata = {
   title: 'Home | KID CANIBAL',
@@ -35,7 +35,11 @@ export const metadata: Metadata = {
   },
 }
 
-export default function Home() {
+export default async function Home() {
+  const projects = await getVideoProjects({
+    extraParameters: { display_in_home_page: "true" },
+  });
+
   return (
     <main>
       <CornersMenu />

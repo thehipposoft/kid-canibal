@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
-import { projects } from "@/components/Projects/constants";
 import type { Metadata } from 'next';
 import ProjectPageComp from "./Project";
+import { getVideoProject } from "@/lib/getVideoProject";
 
 interface ProjectPageProps {
     params: { slug: string };
@@ -9,7 +9,8 @@ interface ProjectPageProps {
 
 export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
     const resolvedParams = await params;
-    const project = projects.find((p) => p.slug === resolvedParams.slug);
+    const project = await getVideoProject({ slug: resolvedParams.slug });
+
     if (!project) {
         return {
             title: 'Project Not Found | Project | KID CANIBAL',
@@ -52,7 +53,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
 
 export default async function ProjectPage({ params }: ProjectPageProps) {
     const resolvedParams = await params;
-    const project = projects.find((p) => p.slug === resolvedParams.slug);
+    const project = await getVideoProject({ slug: resolvedParams.slug });
 
     if (!project) {
         notFound();

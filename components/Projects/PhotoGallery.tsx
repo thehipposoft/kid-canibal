@@ -173,9 +173,9 @@ export default function PhotoGallery({ images, projectTitle }: Props) {
                     <Image
                       src={img.thumb ?? img.url}
                       alt={img.alt || `${projectTitle} ${globalIndex + 1}`}
-                      fill
+                      width={450}
+                      height={675}
                       className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.04]"
-                      quality={85}
                       loading={globalIndex < 6 ? "eager" : "lazy"}
                       sizes={`${Math.round(90 / columnCount)}vw`}
                     />

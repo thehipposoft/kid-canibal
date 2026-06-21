@@ -6,15 +6,15 @@ import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import gsap from "gsap";
-import type { Project } from "./index";
+import { VideoProject } from "@/types";
 
 gsap.registerPlugin(ScrollTrigger, useGSAP);
 
 interface ProjectsProps {
-    projects: Project[];
+    projects: VideoProject[];
 }
 
-const ProjectCard = ({ project, index, isLast }: { project: Project; index: number; isLast?: boolean }) => {
+const ProjectCard = ({ project, index, isLast }: { project: VideoProject; index: number; isLast?: boolean }) => {
     const wrapperRef = useRef<HTMLDivElement>(null);
 
     useGSAP(
@@ -61,7 +61,7 @@ const ProjectCard = ({ project, index, isLast }: { project: Project; index: numb
             style={{ zIndex: index + 1 }}
         >
             <AnimatedLink
-                href={project.link}
+                href={`/projects/${project.slug}`}
                 className="pointer-events-none lg:pointer-events-auto w-full h-full overflow-hidden"
             >
                 <div

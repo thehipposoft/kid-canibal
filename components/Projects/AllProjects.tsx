@@ -1,11 +1,10 @@
 "use client";
 
 import { useRef, useState, useEffect } from "react";
-import { projects } from "./constants";
-import { Project } from "./index";
 import AnimatedLink from "../AnimatedLink";
+import { VideoProject } from "@/types";
 
-function ProjectGridItem({ project }: { project: Project }) {
+function ProjectGridItem({ project }: { project: VideoProject }) {
     const videoRef = useRef<HTMLVideoElement>(null);
     const [hovered, setHovered] = useState(false);
 
@@ -31,7 +30,7 @@ function ProjectGridItem({ project }: { project: Project }) {
 
     return (
         <AnimatedLink
-            href={project.link}
+            href={`/projects/${project.slug}`}
             className="relative group overflow-hidden bg-neutral-900 block"
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
@@ -98,7 +97,7 @@ function ProjectGridItem({ project }: { project: Project }) {
     );
 }
 
-export default function AllProjects() {
+export default function AllProjects({ projects }: { projects: VideoProject[] }) {
     const firstRow = projects.slice(0, 2);
     const secondRow = projects.slice(2);
 
