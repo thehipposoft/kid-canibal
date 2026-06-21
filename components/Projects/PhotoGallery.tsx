@@ -1,5 +1,5 @@
 "use client";
- 
+
 import Image from "next/image";
 import { useState, useCallback, useEffect, useRef } from "react";
 import type { WPImage } from "@/types";
@@ -9,21 +9,21 @@ interface Props {
   images: WPImage[];
   projectTitle: string;
 }
- 
+
 // Distribuye imágenes en N columnas balanceando alturas (masonry real)
 function buildColumns(images: WPImage[], count: number): WPImage[][] {
   const columns: WPImage[][] = Array.from({ length: count }, () => []);
   const heights = new Array(count).fill(0);
- 
+
   for (const img of images) {
     const shortest = heights.indexOf(Math.min(...heights));
     columns[shortest].push(img);
     heights[shortest] += img.height / img.width;
   }
- 
+
   return columns;
 }
- 
+
 function Lightbox({
   images,
   index,
@@ -80,7 +80,8 @@ function Lightbox({
         <Image
           src={img.url}
           alt={img.alt || ""}
-          fill
+          width={img.width}
+          height={img.height}
           className="object-contain"
           quality={95}
           sizes="90vw"
@@ -112,12 +113,12 @@ function Lightbox({
     </div>
   );
 }
- 
+
 export default function PhotoGallery({ images, projectTitle }: Props) {
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
   const [columnCount, setColumnCount] = useState(3);
   const containerRef = useRef<HTMLDivElement>(null);
- 
+
   useEffect(() => {
     const observer = new ResizeObserver(([entry]) => {
       const width = entry.contentRect.width;
@@ -126,9 +127,9 @@ export default function PhotoGallery({ images, projectTitle }: Props) {
     if (containerRef.current) observer.observe(containerRef.current);
     return () => observer.disconnect();
   }, []);
- 
+
   const columns = buildColumns(images, columnCount);
- 
+
   const getGlobalIndex = useCallback(
     (colIdx: number, rowIdx: number, cols: WPImage[][]) => {
       const img = cols[colIdx][rowIdx];
@@ -136,7 +137,7 @@ export default function PhotoGallery({ images, projectTitle }: Props) {
     },
     [images]
   );
- 
+
   const openLightbox = useCallback((i: number) => setLightboxIndex(i), []);
   const closeLightbox = useCallback(() => setLightboxIndex(null), []);
   const prevImage = useCallback(
@@ -147,7 +148,7 @@ export default function PhotoGallery({ images, projectTitle }: Props) {
     () => setLightboxIndex((i) => (i === null ? null : (i + 1) % images.length)),
     [images.length]
   );
- 
+
   return (
     <>
       <section className="w-full px-8 mx-auto pt-16 pb-24">
@@ -155,7 +156,7 @@ export default function PhotoGallery({ images, projectTitle }: Props) {
           <h1 className="text-white uppercase font-schabo text-[17vw] lg:text-[13vw] leading-none">{projectTitle}</h1>
           <BackButton />
         </div>
- 
+
         {/* Masonry: columnas flex con aspect-ratio por imagen */}
         <div ref={containerRef} className="flex gap-2 lg:gap-3 items-start">
           {columns.map((col, colIdx) => (
@@ -189,7 +190,7 @@ export default function PhotoGallery({ images, projectTitle }: Props) {
           ))}
         </div>
       </section>
- 
+
       {lightboxIndex !== null && (
         <Lightbox
           images={images}
@@ -202,4 +203,3 @@ export default function PhotoGallery({ images, projectTitle }: Props) {
     </>
   );
 }
- 

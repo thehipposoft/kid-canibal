@@ -26,6 +26,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const title = `${data.title.rendered} | Photography | KID CANIBAL`
     const description = 'Discover our photography collections by talented photographers.'
     const url = `https://kidcanibal.com/photo/${fotografo}`
+
     return {
         title,
         description,

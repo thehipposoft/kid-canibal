@@ -1,7 +1,6 @@
 import { getProjects } from "@/lib/getProjects"
 import Image from "next/image"
 import AnimatedLink from "../AnimatedLink"
-import BackButton from "../BackButton"
 
 interface Props {
     fotografoSlug: string
