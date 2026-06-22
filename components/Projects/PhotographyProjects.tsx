@@ -1,11 +1,11 @@
 import { getProjects } from "@/lib/getProjects"
 import Image from "next/image";
 import AnimatedLink from "../AnimatedLink";
-import BackButton from "../BackButton";
 
 const PhotographyProjects = async ({ title }: { title?: string }) => {
     const projects = await getProjects();
-  return (
+
+    return (
        <section className="w-full min-h-screen bg-black px-4 md:px-8 py-20">
             <div className="flex pt-4 items-end justify-between">
                 <h1 className="text-white font-schabo lg:text-[13vw] text-[18vw] uppercase leading-none">

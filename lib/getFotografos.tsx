@@ -2,8 +2,12 @@ import { WP_BASE_URL } from './client';
 import type { WPFotografo } from '../types';
 
 export async function getFotografos(): Promise<WPFotografo[]> {
+  const queryParams = new URLSearchParams({
+    _fields: "title,slug,descripcion,portada_url,modified",
+  });
+
   const res = await fetch(
-    `${WP_BASE_URL}/fotografo?_fields=title,slug,descripcion,portada_url,modified`,
+    `${WP_BASE_URL}/fotografo?${queryParams.toString()}`,
   );
 
   if (!res.ok) {
