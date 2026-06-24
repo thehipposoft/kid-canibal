@@ -27,6 +27,7 @@ export type VideoProject = {
   teaserSrc: string;
   teaserVerticalSrc: string;
   fullVideoSrc: string;
+  extra_data?: string;
   mediaType: "image" | "video";
 }
 

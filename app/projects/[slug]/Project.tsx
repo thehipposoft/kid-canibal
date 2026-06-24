@@ -1,7 +1,15 @@
 'use client';
 import CornersMenu from "@/components/Menu/CornersMenu";
 import { VideoProject } from "@/types";
-import { useRef, useState, useCallback, useEffect } from "react";
+import { useRef, useState, useCallback, useEffect, memo } from "react";
+
+const ExtraData = memo(({ html }: { html: string }) => (
+    <div
+        dangerouslySetInnerHTML={{ __html: html.replace(/>\s+</g, '><').trim() }}
+        className="extra-data-content"
+    />
+));
+ExtraData.displayName = 'ExtraData';
 
 const ProjectPage = ({ project }: { project: VideoProject }) => {
     const containerRef = useRef<HTMLDivElement>(null);
@@ -55,17 +63,17 @@ const ProjectPage = ({ project }: { project: VideoProject }) => {
     }, []);
 
    const toggleFullscreen = useCallback(() => {
-    if (!isFullscreen) {
-        containerRef.current?.requestFullscreen();
-        // Desmutear al entrar en fullscreen
-        if (videoRef.current) {
-            videoRef.current.muted = false;
-            setIsMuted(false);
+        if (!isFullscreen) {
+            containerRef.current?.requestFullscreen();
+            // Desmutear al entrar en fullscreen
+            if (videoRef.current) {
+                videoRef.current.muted = false;
+                setIsMuted(false);
+            }
+        } else {
+            document.exitFullscreen();
         }
-    } else {
-        document.exitFullscreen();
-    }
-}, [isFullscreen]);
+    }, [isFullscreen]);
 
     const formatTime = (s: number) => {
         const m = Math.floor(s / 60);
@@ -200,6 +208,13 @@ const ProjectPage = ({ project }: { project: VideoProject }) => {
                                 <span className="text-white/50">- EST. {project.year}</span>
                             </div>
                         </div>
+
+                        <div>
+                            {project.extra_data && (
+                                <ExtraData html={project.extra_data} />
+                            )}
+                        </div>
+
                         <button
                             onClick={() => window.history.back()}
                             className="text-white/60 hover:text-white w-fit hover:underline font-inter text-sm tracking-widest uppercase transition-colors duration-300 pb-2"
@@ -238,4 +253,3 @@ export default ProjectPage;
 
 
 
-            

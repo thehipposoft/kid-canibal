@@ -74,3 +74,19 @@ body {
   background-color: #000; /* or your page's background color */
   mix-blend-mode: normal; /* prevents weird color blending */
 }
+
+/* Extra data content styling */
+.extra-data-content {
+  @apply text-white/50 whitespace-pre-wrap;
+  line-height: 1;
+}
+
+.extra-data-content h1 {
+  @apply text-sm font-bold tracking-widest text-white mb-1;
+  line-height: 1;
+}
+
+.extra-data-content h2 {
+  @apply text-2xl font-inter font-light text-white/70 -mb-2;
+  line-height: 1;
+}

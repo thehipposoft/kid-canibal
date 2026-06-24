@@ -12,6 +12,7 @@ type WPProjectResponse = {
         teaser_vertical_src: string;
         full_video_source: string;
         media_type: "image" | "video";
+        extra_data?: string;
     };
     status: string; // 'publish', 'draft', etc.
 };
@@ -34,6 +35,7 @@ export async function getVideoProject({slug}: {slug: string}): Promise<VideoProj
         teaserVerticalSrc: item.acf.teaser_vertical_src || '',
         fullVideoSrc: item.acf.full_video_source || '',
         mediaType: item.acf.media_type || 'image',
+        extra_data: item.acf.extra_data || '',
     }))[0];
 
     if (!project) throw new Error('No se encontró ningún proyecto');

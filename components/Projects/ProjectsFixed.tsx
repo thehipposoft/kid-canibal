@@ -1,13 +1,13 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
 import AnimatedLink from "../AnimatedLink";
 import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import gsap from "gsap";
 import { VideoProject } from "@/types";
+import { useTransitionRouter } from "next-view-transitions";
 
 gsap.registerPlugin(ScrollTrigger, useGSAP);
 
@@ -17,6 +17,7 @@ interface ProjectsProps {
 
 const ProjectCard = ({ project, index, isLast }: { project: VideoProject; index: number; isLast?: boolean }) => {
     const wrapperRef = useRef<HTMLDivElement>(null);
+    const router = useTransitionRouter();
 
     useGSAP(
         () => {
@@ -134,12 +135,15 @@ const ProjectCard = ({ project, index, isLast }: { project: VideoProject; index:
 
                                 </div>
                             </div>
-                            <Link
-                                href={`/projects/${project.slug}`}
+                            <span
+                                onClick={(e) => {
+                                    e.preventDefault();
+                                    router.push(`/projects/${project.slug}`);
+                                }}
                                 className="pointer-events-auto lg:hidden border border-white/60 text-white/80 text-xs font-bold uppercase px-4 py-2 hover:bg-white hover:text-black transition-colors"
                             >
                                 watch
-                            </Link>
+                            </span>
                         </div>
                     </div>
                 </div>

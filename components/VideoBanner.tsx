@@ -123,20 +123,19 @@ export default function BannerVideo() {
     // `current` = the slide being shown, `prev` = the one fading out
     const [current, setCurrent] = useState(0);
     const [prev, setPrev] = useState<number | null>(null);
-
-        useEffect(() => {
-            if (current >= TOTAL_SLIDES - 1) return; // stop at last slide
-    
-            const id = setTimeout(() => {
-                setPrev(current);
-                setCurrent((c) => c + 1);
-            }, SLIDE_DURATION);
-    
-            return () => clearTimeout(id);
-        }, [current]);
-
     const CurrentSlide = SLIDES[current];
     const PrevSlide = prev !== null ? SLIDES[prev] : null;
+
+    useEffect(() => {
+        if (current >= TOTAL_SLIDES - 1) return; // stop at last slide
+
+        const id = setTimeout(() => {
+            setPrev(current);
+            setCurrent((c) => c + 1);
+        }, SLIDE_DURATION);
+
+        return () => clearTimeout(id);
+    }, [current]);
 
     return (
         <div className="relative h-screen w-full overflow-hidden rounded-xl aspect-video bg-black shadow-2xl">

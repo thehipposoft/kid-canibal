@@ -9,11 +9,11 @@ import AnimatedLink from "./AnimatedLink";
 gsap.registerPlugin(useGSAP);
 
 const NAV_ITEMS = [
-    { label: "Home",        href: "/" },
-    { label: "Video",        href: "/projects" },
-    { label: "Photo",       href: "/photo" },
-    { label: "About",       href: "/about" },
-    { label: "Contact",     href: "/contact" },
+    { label: "Home", href: "/" },
+    { label: "Video", href: "/projects" },
+    { label: "Photo", href: "/photo" },
+    { label: "About", href: "/about" },
+    { label: "Contact", href: "/contact" },
 ];
 
 export default function MobileMenu() {

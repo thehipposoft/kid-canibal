@@ -1,5 +1,4 @@
 import CornersMenu from '@/components/Menu/CornersMenu'
-// import PhotographyProjects from '@/components/Projects/PhotographyProjects'
 import type { Metadata } from 'next'
 import PhotographyProjects from '@/components/Projects/PhotographyProjects'
 
