@@ -46,6 +46,10 @@ body {
   --font-inter: Inter, sans-serif;
 }
 
+
+:-webkit-full-screen * { cursor: default !important; }
+:fullscreen * { cursor: default !important; }
+
 /*Custom Cursor*/
 * {
   cursor: none !important;

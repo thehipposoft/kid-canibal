@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import AnimatedLink from "../AnimatedLink";
 import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
@@ -30,8 +31,8 @@ const ProjectCard = ({ project, index, isLast }: { project: VideoProject; index:
                 stagger: { each: 0.04, from: "start" },
                 scrollTrigger: {
                     trigger: wrapperRef.current,
-                    start: "5% 40%",
-                    end: "35% 35%",
+                    start: "15% 40%",
+                    end: "40% 35%",
                     toggleActions: "play none none reverse",
                     scrub: 4,
                 },
@@ -99,17 +100,16 @@ const ProjectCard = ({ project, index, isLast }: { project: VideoProject; index:
                                 priority
                             />
                         )}
-                        <div className="absolute inset-0 bg-black/40 z-10" />
                     </div>
 
-                    <div className={`${isLast ? "h-screen lg:h-auto" : "h-screen"} relative z-20 w-full  flex flex-col justify-end lg:justify-start lg:top-[67vh] p-6 md:px-12 md:py-4 gap-4`}>
+                    <div className={`${isLast ? "h-screen lg:h-auto" : "h-screen"} relative z-20 w-full  flex flex-col justify-end lg:justify-start lg:top-[70vh] p-6 md:px-12 md:py-4 gap-2`}>
                         <div className="flex flex-wrap">
                             {project.title.split(" ").map((word, wi) => (
                                 <span key={wi} className="flex mr-[0.35em]">
                                     {word.split("").map((char, ci) => (
                                         <span
                                             key={ci}
-                                            className="reveal-char font-schabo lg:text-[13vw] text-9xl leading-28 lg:leading-[0.6] uppercase text-white"
+                                            className="reveal-char font-schabo lg:text-[12vw] text-9xl leading-28 lg:leading-[0.6] uppercase text-white"
                                         >
                                             {char}
                                         </span>
@@ -120,20 +120,26 @@ const ProjectCard = ({ project, index, isLast }: { project: VideoProject; index:
 
                         <div className="w-full h-px bg-white/30 line" />
 
-                        <div className="flex justify-center items-center md:py-2">
+                        <div className="flex justify-between lg:justify-center items-center md:py-1">
                             <div className="flex flex-col info-container">
-                                <span className="text-sm font-bold tracking-widest text-white/70">
+                                <span className="text-xs font-bold tracking-widest text-white/70">
                                     DIRECTED BY:
                                 </span>
-                                <span className="text-2xl leading-6 font-inter font-light text-white/70">
+                                <span className="text-lg leading-6 font-inter font-light text-white/70">
                                     {project.director}
                                 </span>
-                                <div className="flex gap-2">
+                                <div className="flex gap-2 text-xs ">
                                     <span className="text-white/50">{project.location}</span>
                                     <span className="text-white/50">- EST. {project.year}</span>
 
                                 </div>
                             </div>
+                            <Link
+                                href={`/projects/${project.slug}`}
+                                className="pointer-events-auto lg:hidden border border-white/60 text-white/80 text-xs font-bold uppercase px-4 py-2 hover:bg-white hover:text-black transition-colors"
+                            >
+                                watch
+                            </Link>
                         </div>
                     </div>
                 </div>
