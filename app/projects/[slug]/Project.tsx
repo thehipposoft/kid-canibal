@@ -25,9 +25,16 @@ const ProjectPage = ({ project }: { project: VideoProject }) => {
     const hideTimeout = useRef<ReturnType<typeof setTimeout>>(null);
 
     useEffect(() => {
-        const handler = () => setIsFullscreen(!!document.fullscreenElement);
+        const handler = () =>
+            setIsFullscreen(
+                !!(document.fullscreenElement || (document as any).webkitFullscreenElement)
+            );
         document.addEventListener('fullscreenchange', handler);
-        return () => document.removeEventListener('fullscreenchange', handler);
+        document.addEventListener('webkitfullscreenchange', handler);
+        return () => {
+            document.removeEventListener('fullscreenchange', handler);
+            document.removeEventListener('webkitfullscreenchange', handler);
+        };
     }, []);
 
     const togglePlay = useCallback(() => {
@@ -62,16 +69,25 @@ const ProjectPage = ({ project }: { project: VideoProject }) => {
         setProgress(parseFloat(e.target.value));
     }, []);
 
-   const toggleFullscreen = useCallback(() => {
+    const toggleFullscreen = useCallback(() => {
         if (!isFullscreen) {
-            containerRef.current?.requestFullscreen();
-            // Desmutear al entrar en fullscreen
-            if (videoRef.current) {
-                videoRef.current.muted = false;
+            const el = containerRef.current;
+            const vid = videoRef.current;
+            if (!el || !vid) return;
+
+            // iOS Safari solo soporta fullscreen en el elemento video
+            const enterFullscreen =
+                el.requestFullscreen?.bind(el) ||
+                (vid as any).webkitEnterFullscreen?.bind(vid);
+
+            enterFullscreen?.();
+
+            if (vid) {
+                vid.muted = false;
                 setIsMuted(false);
             }
         } else {
-            document.exitFullscreen();
+            document.exitFullscreen?.();
         }
     }, [isFullscreen]);
 
@@ -127,7 +143,7 @@ const ProjectPage = ({ project }: { project: VideoProject }) => {
 
                     {/* Overlay de controles */}
                     <div
-                        className={`absolute bottom-0 left-0 right-0 rounded-b-2xl px-4 pb-4 pt-16 flex flex-col gap-2 transition-opacity duration-300 ${showControls ? 'opacity-100' : 'opacity-0'}`}
+                        className={`absolute bottom-0 left-0 right-0 rounded-b-2xl px-4 pb-4 pt-16 flex flex-col gap-2 transition-opacity duration-300 z-50 ${showControls ? 'opacity-100' : 'opacity-0'}`}
                         style={{ background: 'linear-gradient(to top, rgba(0,0,0,0.75) 0%, transparent 100%)' }}
                     >
                         {/* Barra de progreso */}
