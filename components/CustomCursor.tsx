@@ -27,7 +27,6 @@ export default function CustomCursor() {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
-    // Disable completely on touch / coarse-pointer devices
     if (!window.matchMedia("(pointer: fine)").matches) return;
 
     setVisible(true);
@@ -35,54 +34,53 @@ export default function CustomCursor() {
     const lerpFactor = 0.3;
 
     const moveCursor = (e: MouseEvent) => {
-      targetPosRef.current = { x: e.clientX, y: e.clientY };
+        targetPosRef.current = { x: e.clientX, y: e.clientY };
+
+        const target = e.target as HTMLElement;
+        const videoContainer = target.closest(".video-container") as HTMLElement;
+
+        if (videoContainer) {
+            setCursorState(
+                videoContainer.dataset.cursor === "video-red" ? "video-red" : "video"
+            );
+        } else if (
+            target.closest("a")               ||
+            target.closest("button")          ||
+            target.closest("[role='button']") ||
+            target.closest("input")           ||
+            target.closest("textarea")        ||
+            target.closest("select")          ||
+            target.dataset.cursor === "hover"
+        ) {
+            setCursorState("hover");
+        } else {
+            setCursorState("default");
+        }
     };
 
     const updatePosition = () => {
-      currentPosRef.current.x += (targetPosRef.current.x - currentPosRef.current.x) * lerpFactor;
-      currentPosRef.current.y += (targetPosRef.current.y - currentPosRef.current.y) * lerpFactor;
-      if (cursorRef.current) {
-        cursorRef.current.style.transform = `translate(${currentPosRef.current.x}px, ${currentPosRef.current.y}px)`;
-      }
-      rafRef.current = requestAnimationFrame(updatePosition);
-    };
-
-    const handleMouseOver = (e: MouseEvent) => {
-      const target = e.target as HTMLElement;
-      const videoContainer = target.closest(".video-container") as HTMLElement;
-      if (videoContainer) {
-        setCursorState(videoContainer.dataset.cursor === "video-red" ? "video-red" : "video");
-      } else if (
-        target.closest("a")                      ||
-        target.closest("button")                 ||
-        target.closest("[role='button']")         ||
-        target.closest("input")                  ||
-        target.closest("textarea")               ||
-        target.closest("select")                 ||
-        (target as HTMLElement).dataset.cursor === "hover"
-      ) {
-        setCursorState("hover");
-      } else {
-        setCursorState("default");
-      }
+        currentPosRef.current.x += (targetPosRef.current.x - currentPosRef.current.x) * lerpFactor;
+        currentPosRef.current.y += (targetPosRef.current.y - currentPosRef.current.y) * lerpFactor;
+        if (cursorRef.current) {
+            cursorRef.current.style.transform = `translate(${currentPosRef.current.x}px, ${currentPosRef.current.y}px)`;
+        }
+        rafRef.current = requestAnimationFrame(updatePosition);
     };
 
     const handleMouseLeave = () => {
-      targetPosRef.current = { x: -200, y: -200 };
+        targetPosRef.current = { x: -200, y: -200 };
     };
 
-    window.addEventListener("mousemove",  moveCursor,      { passive: true });
-    window.addEventListener("mouseover",  handleMouseOver, { passive: true });
+    window.addEventListener("mousemove", moveCursor, { passive: true });
     document.documentElement.addEventListener("mouseleave", handleMouseLeave);
     rafRef.current = requestAnimationFrame(updatePosition);
 
     return () => {
-      window.removeEventListener("mousemove",  moveCursor);
-      window.removeEventListener("mouseover",  handleMouseOver);
-      document.documentElement.removeEventListener("mouseleave", handleMouseLeave);
-      if (rafRef.current !== null) cancelAnimationFrame(rafRef.current);
+        window.removeEventListener("mousemove", moveCursor);
+        document.documentElement.removeEventListener("mouseleave", handleMouseLeave);
+        if (rafRef.current !== null) cancelAnimationFrame(rafRef.current);
     };
-  }, []);
+}, []);
 
   if (!visible) return null;
 
