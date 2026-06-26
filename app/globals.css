@@ -50,9 +50,11 @@ body {
 :-webkit-full-screen * { cursor: default !important; }
 :fullscreen * { cursor: default !important; }
 
-/*Custom Cursor*/
-* {
-  cursor: none !important;
+/*Custom Cursor — only on devices with a fine pointer (mouse/trackpad); touch devices keep native cursor*/
+@media (pointer: fine) {
+  * {
+    cursor: none !important;
+  }
 }
 
 .cursor-transition {

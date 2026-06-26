@@ -28,6 +28,11 @@ export default function CustomCursor() {
   const currentPosRef = useRef({ x: -100, y: -100 }); // Cursor position (lerped)
   const rafRef    = useRef<number | null>(null);
   const [cursorState, setCursorState] = useState<CursorState>("default");
+  const [isTouch, setIsTouch] = useState(false);
+
+  useEffect(() => {
+    setIsTouch(window.matchMedia("(pointer: coarse)").matches);
+  }, []);
 
   useEffect(() => {
     const moveCursor = (e: MouseEvent) => {
@@ -88,6 +93,8 @@ export default function CustomCursor() {
       if (rafRef.current !== null) cancelAnimationFrame(rafRef.current);
     };
   }, []);
+
+  if (isTouch) return null;
 
   return (
     /*

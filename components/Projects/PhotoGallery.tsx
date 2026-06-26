@@ -158,9 +158,9 @@ export default function PhotoGallery({ images, projectTitle }: Props) {
         </div>
 
         {/* Masonry: columnas flex con aspect-ratio por imagen */}
-        <div ref={containerRef} className="flex gap-2 lg:gap-3 items-start">
+        <div ref={containerRef} className="flex gap-2 lg:gap-4 items-start">
           {columns.map((col, colIdx) => (
-            <div key={colIdx} className="flex-1 flex flex-col gap-2 lg:gap-3">
+            <div key={colIdx} className="flex-1 flex flex-col gap-2 lg:gap-4 ">
               {col.map((img, rowIdx) => {
                 const globalIndex = getGlobalIndex(colIdx, rowIdx, columns);
                 return (
@@ -175,7 +175,7 @@ export default function PhotoGallery({ images, projectTitle }: Props) {
                       alt={img.alt || `${projectTitle} ${globalIndex + 1}`}
                       width={450}
                       height={675}
-                      className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.04]"
+                      className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.04]"
                       loading={globalIndex < 6 ? "eager" : "lazy"}
                       sizes={`${Math.round(90 / columnCount)}vw`}
                     />

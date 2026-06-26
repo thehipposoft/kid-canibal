@@ -95,6 +95,7 @@ const ProjectPage = ({ project }: { project: VideoProject }) => {
                     ref={containerRef}
                     className="relative lg:w-full lg:h-[80vh] lg:inset-20 z-0 rounded-2xl max-w-[90vw] mx-auto lg:mx-0 bg-black group"
                     onMouseMove={handleMouseMove}
+                    onTouchStart={handleMouseMove}
                     onMouseLeave={() => setShowControls(false)}
                     style={{ cursor: 'default' }}
                 >

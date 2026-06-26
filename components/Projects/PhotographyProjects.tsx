@@ -37,9 +37,14 @@ const PhotographyProjects = async ({ title }: { title?: string }) => {
 
                             {/* Text content */}
                             <div className="absolute bottom-0 left-0 z-20 p-4 md:p-5">
-                                <p className="text-white font-bold text-xs md:text-lg tracking-widest uppercase font-inter leading-tight">
-                                   {project.title.rendered}
+                                <p className="text-white font-bold text-xs md:text-sm tracking-widest uppercase font-inter leading-tight">
+                                    {project.title.rendered}
                                 </p>
+                                {project.fotografos_data && project.fotografos_data.length > 0 && (
+                                    <p className="text-white/70 text-xs md:text-sm font-inter font-light mt-0.5 uppercase">
+                                        {project.fotografos_data.map(f => f.title).join(" / ")}
+                                    </p>
+                                )}
                             </div>
 
                             {/* Corner arrow */}
