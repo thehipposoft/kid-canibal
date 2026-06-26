@@ -64,7 +64,7 @@ const ProjectCard = ({ project, index, isLast }: { project: VideoProject; index:
         >
             <AnimatedLink
                 href={`/projects/${project.slug}`}
-                className="pointer-events-none lg:pointer-events-auto w-full h-full overflow-hidden"
+                className="pointer-events-auto w-full h-full overflow-hidden"
             >
                 <div
                     className="relative w-full h-full video-container"
