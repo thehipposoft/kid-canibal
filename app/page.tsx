@@ -1,6 +1,7 @@
 import ProjectsFixed from "@/components/Projects/ProjectsFixed";
 import CornersMenu from "@/components/Menu/CornersMenu";
 import VideoBanner from "@/components/VideoBanner";
+import PreLoader from "@/components/PreLoader";
 import type { Metadata } from 'next';
 import { getVideoProjects } from "@/lib/getVideoProjects";
 
@@ -42,6 +43,7 @@ export default async function Home() {
 
   return (
     <main>
+      <PreLoader />
       <CornersMenu />
       <VideoBanner />
       <ProjectsFixed projects={projects} />

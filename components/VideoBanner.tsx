@@ -153,7 +153,7 @@ export default function BannerVideo() {
             </video>
 
             {/* Dark overlay */}
-            <div className="absolute inset-0 bg-black/10" />
+            <div className="absolute inset-0 bg-black/5" />
 
             {/* Outgoing slide — fades/blurs OUT */}
             {PrevSlide && (

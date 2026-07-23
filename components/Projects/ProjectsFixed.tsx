@@ -2,12 +2,13 @@
 
 import Image from "next/image";
 import AnimatedLink from "../AnimatedLink";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import gsap from "gsap";
 import { VideoProject } from "@/types";
 import { useTransitionRouter } from "next-view-transitions";
+import { videoPreloadTracker } from "@/lib/videoPreloadTracker";
 
 gsap.registerPlugin(ScrollTrigger, useGSAP);
 
@@ -81,6 +82,7 @@ const ProjectCard = ({ project, index, isLast }: { project: VideoProject; index:
                                     muted
                                     loop
                                     playsInline
+                                    onLoadedData={() => videoPreloadTracker.markLoaded()}
                                 />
                                 {/* Desktop: horizontal */}
                                 <video
@@ -90,6 +92,7 @@ const ProjectCard = ({ project, index, isLast }: { project: VideoProject; index:
                                     muted
                                     loop
                                     playsInline
+                                    onLoadedData={() => videoPreloadTracker.markLoaded()}
                                 />
                             </>
                         ) : (
@@ -153,6 +156,12 @@ const ProjectCard = ({ project, index, isLast }: { project: VideoProject; index:
 };
 
 export default function ProjectsFixed({ projects }: ProjectsProps) {
+    useEffect(() => {
+        const videoTagsPerProject = 2; // mobile + desktop <video>
+        const videoCount = projects.filter((p) => p.mediaType === "video").length * videoTagsPerProject;
+        if (videoCount > 0) videoPreloadTracker.register(videoCount);
+    }, [projects]);
+
     return (
         <section className="relative w-full bg-black">
             {projects.map((project, index) => (
