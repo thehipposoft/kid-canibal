@@ -19,7 +19,7 @@ const KID_IMAGES = [
     "/assets/images/kids/kid2.webp",
     "/assets/images/kids/kid3.webp",
 ];
-const IMAGE_CYCLE_MS = 1000;
+const IMAGE_CYCLE_MS = 1500;
 
 export default function PreLoader() {
     const [mounted, setMounted] = useState(true);
@@ -126,7 +126,7 @@ export default function PreLoader() {
                     <div ref={lineRef} className="w-full h-full bg-white" />
                 </div>
 
-                <div className="relative w-28 h-28 lg:w-32 lg:h-32 shrink-0">
+                <div className="relative w-28 h-28 lg:w-36 lg:h-36 shrink-0">
                     {KID_IMAGES.map((src, i) => (
                         <Image
                             key={src}
