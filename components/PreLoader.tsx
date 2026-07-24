@@ -11,19 +11,39 @@ import { videoPreloadTracker } from "@/lib/videoPreloadTracker";
 const CAP_WHILE_LOADING = 92;
 const SAFETY_TIMEOUT_MS = 6000;
 
+const KID_IMAGES = [
+    "/assets/images/kids/kid1.webp",
+    "/assets/images/kids/kid2.webp",
+    "/assets/images/kids/kid3.webp",
+];
+const IMAGE_CYCLE_MS = 1000;
+
 export default function PreLoader() {
     const [mounted, setMounted] = useState(true);
     const [hidden, setHidden] = useState(false);
     const [display, setDisplay] = useState(0);
+    const [imageIndex, setImageIndex] = useState(0);
     const proxy = useRef({ value: 0 });
     const overlayRef = useRef<HTMLDivElement>(null);
     const lineRef = useRef<HTMLDivElement>(null);
     const finishedRef = useRef(false);
+    const imageIntervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
+
+    useEffect(() => {
+        imageIntervalRef.current = setInterval(() => {
+            setImageIndex((i) => (i + 1) % KID_IMAGES.length);
+        }, IMAGE_CYCLE_MS);
+
+        return () => {
+            if (imageIntervalRef.current) clearInterval(imageIntervalRef.current);
+        };
+    }, []);
 
     useEffect(() => {
         const finish = () => {
             if (finishedRef.current) return;
             finishedRef.current = true;
+            if (imageIntervalRef.current) clearInterval(imageIntervalRef.current);
 
             gsap.to(proxy.current, {
                 value: 100,
@@ -94,7 +114,7 @@ export default function PreLoader() {
         >
             <div className="flex items-end justify-between gap-8">
                 <div className="flex flex-col shrink-0">
-                    <span className="inline-block w-[4ch] text-left font-schabo text-white text-[11vw] lg:text-[20vw] leading-none uppercase tabular-nums">
+                    <span className="inline-block w-[4ch] text-left font-schabo text-white text-[30vw] lg:text-[20vw] leading-none uppercase tabular-nums">
                         {display}%
                     </span>
                 </div>
@@ -104,13 +124,16 @@ export default function PreLoader() {
                 </div>
 
                 <div className="relative w-28 h-28 lg:w-32 lg:h-32 shrink-0">
-                    <Image
-                        src="/kid.png"
-                        alt="Kid Canibal"
-                        fill
-                        priority
-                        className="object-contain"
-                    />
+                    {KID_IMAGES.map((src, i) => (
+                        <Image
+                            key={src}
+                            src={src}
+                            alt="Kid Canibal"
+                            fill
+                            priority={i === 0}
+                            className={`object-contain absolute inset-0 transition-opacity duration-700 ease-in-out ${i === imageIndex ? "opacity-100" : "opacity-0"}`}
+                        />
+                    ))}
                 </div>
             </div>
         </div>
