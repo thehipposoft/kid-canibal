@@ -9,7 +9,10 @@ import { videoPreloadTracker } from "@/lib/videoPreloadTracker";
 // gets capped below 100 until every video actually reports loaded, then
 // races to 100 and fades the overlay out.
 const CAP_WHILE_LOADING = 92;
-const SAFETY_TIMEOUT_MS = 6000;
+// Last-resort only: real completion should always come from the tracker
+// hitting isDone(). This just prevents the site being stuck behind the
+// overlay forever if a video never fires loadeddata/error.
+const SAFETY_TIMEOUT_MS = 15000;
 
 const KID_IMAGES = [
     "/assets/images/kids/kid1.webp",

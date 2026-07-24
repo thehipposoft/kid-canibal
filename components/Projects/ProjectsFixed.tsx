@@ -83,6 +83,7 @@ const ProjectCard = ({ project, index, isLast }: { project: VideoProject; index:
                                     loop
                                     playsInline
                                     onLoadedData={() => videoPreloadTracker.markLoaded()}
+                                    onError={() => videoPreloadTracker.markLoaded()}
                                 />
                                 {/* Desktop: horizontal */}
                                 <video
@@ -93,6 +94,7 @@ const ProjectCard = ({ project, index, isLast }: { project: VideoProject; index:
                                     loop
                                     playsInline
                                     onLoadedData={() => videoPreloadTracker.markLoaded()}
+                                    onError={() => videoPreloadTracker.markLoaded()}
                                 />
                             </>
                         ) : (
@@ -159,7 +161,12 @@ export default function ProjectsFixed({ projects }: ProjectsProps) {
     useEffect(() => {
         const videoTagsPerProject = 2; // mobile + desktop <video>
         const videoCount = projects.filter((p) => p.mediaType === "video").length * videoTagsPerProject;
-        if (videoCount > 0) videoPreloadTracker.register(videoCount);
+        if (videoCount === 0) return;
+
+        videoPreloadTracker.register(videoCount);
+        // Undo on cleanup so a StrictMode dev double-invoke (or a real
+        // remount) can't leave `total` double-counted forever.
+        return () => videoPreloadTracker.unregister(videoCount);
     }, [projects]);
 
     return (

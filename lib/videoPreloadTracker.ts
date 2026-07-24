@@ -15,6 +15,15 @@ class VideoPreloadTracker {
         this.emit();
     }
 
+    // Mirrors register() so effects that re-run (React StrictMode's
+    // mount->cleanup->mount in dev) can undo their own registration instead
+    // of double-counting total and making isDone() unreachable.
+    unregister(count: number) {
+        this.total = Math.max(0, this.total - count);
+        this.loaded = Math.min(this.loaded, this.total);
+        this.emit();
+    }
+
     markLoaded() {
         this.loaded = Math.min(this.total, this.loaded + 1);
         this.emit();
