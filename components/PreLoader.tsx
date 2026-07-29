@@ -27,6 +27,7 @@ export default function PreLoader() {
     const [display, setDisplay] = useState(0);
     const [imageIndex, setImageIndex] = useState(0);
     const proxy = useRef({ value: 0 });
+    const activeTweenRef = useRef<gsap.core.Tween | null>(null);
     const overlayRef = useRef<HTMLDivElement>(null);
     const lineRef = useRef<HTMLDivElement>(null);
     const finishedRef = useRef(false);
@@ -47,8 +48,9 @@ export default function PreLoader() {
             if (finishedRef.current) return;
             finishedRef.current = true;
             if (imageIntervalRef.current) clearInterval(imageIntervalRef.current);
+            activeTweenRef.current?.kill();
 
-            gsap.to(proxy.current, {
+            activeTweenRef.current = gsap.to(proxy.current, {
                 value: 100,
                 duration: 0.5,
                 ease: "power1.out",
@@ -80,7 +82,9 @@ export default function PreLoader() {
             );
 
             if (target > proxy.current.value) {
-                gsap.to(proxy.current, {
+                activeTweenRef.current?.kill(); 
+
+                activeTweenRef.current = gsap.to(proxy.current, {  
                     value: target,
                     duration: 0.8,
                     ease: "power1.out",
