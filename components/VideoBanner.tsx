@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import { preloaderStatus } from "@/lib/preloaderStatus";
 
 const SLIDE_DURATION = 3000; // ms a slide is fully visible
 const TRANSITION_MS = 1000;  // ms for blur-in / blur-out
@@ -126,7 +127,13 @@ export default function BannerVideo() {
     const CurrentSlide = SLIDES[current];
     const PrevSlide = prev !== null ? SLIDES[prev] : null;
 
+    // Slides sit behind the preloader while it's up, so don't burn through
+    // the sequence until it's actually finished and visible.
+    const [started, setStarted] = useState(false);
+    useEffect(() => preloaderStatus.subscribe(() => setStarted(true)), []);
+
     useEffect(() => {
+        if (!started) return;
         if (current >= TOTAL_SLIDES - 1) return; // stop at last slide
 
         const id = setTimeout(() => {
@@ -135,7 +142,7 @@ export default function BannerVideo() {
         }, SLIDE_DURATION);
 
         return () => clearTimeout(id);
-    }, [current]);
+    }, [current, started]);
 
     return (
         <div className="relative h-screen w-full overflow-hidden rounded-xl aspect-video bg-black shadow-2xl">

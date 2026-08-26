@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import gsap from "gsap";
 import { videoPreloadTracker } from "@/lib/videoPreloadTracker";
+import { preloaderStatus } from "@/lib/preloaderStatus";
 
 // Counter never jumps straight to the real progress: it eases toward it,
 // gets capped below 100 until every video actually reports loaded, then
@@ -61,7 +62,10 @@ export default function PreLoader() {
                         duration: 0.6,
                         delay: 0.15,
                         ease: "power2.inOut",
-                        onStart: () => setHidden(true),
+                        onStart: () => {
+                            setHidden(true);
+                            preloaderStatus.markDone();
+                        },
                         onComplete: () => setMounted(false),
                     });
                 },
