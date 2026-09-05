@@ -1,180 +1,268 @@
 "use client";
 
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { useRef } from "react";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import type Lenis from "lenis";
 
-const SLIDE_DURATION = 3000; // ms a slide is fully visible
-const TRANSITION_MS = 1000;  // ms for blur-in / blur-out
-const TOTAL_SLIDES = 3;
+const INTRO_DURATION = 1;
+const STEP_DURATION = 1.3;
+const HOLD_DURATION = 1.6;
+const EASE = "power3.inOut";
+const CHAR_STAGGER = 0.05;
+const CHAR_Y_OFFSET = 200;
 
-// Each mounted slide manages its own in/out opacity so both can co-exist
-// during the crossfade, giving us a clean blur-in AND blur-out.
-function SlideWrapper({
-    children,
-    onDone,
-    isLeaving,
+const VERTICAL_NUDGE_PX = -20;
+
+const MENU_LOGO_DELAY = 4;
+const MENU_LOGO_DURATION = 0.5;
+const MENU_LOGO_READY_AT = MENU_LOGO_DELAY + MENU_LOGO_DURATION;
+
+const TITLE_EXIT_DURATION = 0.6;
+
+const VIDEO_URL =
+  "https://res.cloudinary.com/hipposoft/video/upload/f_auto,q_auto,w_1280/v1771611156/reel_v1_2160p_np35yn.mp4";
+
+// ─── Sub-componentes de texto ──────────────────────────────────────────────
+
+const KidCanibalTitle = ({
+  titleRef,
 }: {
-    children: React.ReactNode;
-    onDone?: () => void;
-    isLeaving: boolean;
-}) {
-    const [mounted, setMounted] = useState(false);
+  titleRef: React.RefObject<HTMLHeadingElement | null>;
+}) => (
+  <h1
+    ref={titleRef}
+    className="absolute inset-0 top-32 flex items-center justify-center text-[43vw] leading-none font-schabo uppercase text-white overflow-hidden will-change-transform"
+  >
+    <span className="inline-block overflow-hidden">
+      {"kidcanibal".split("").map((char, i) => (
+        <span key={i} className="kid-char inline-block will-change-transform">
+          {char}
+        </span>
+      ))}
+    </span>
+  </h1>
+);
 
-    // Kick off blur-IN on the very next frame after mount
-    useEffect(() => {
-        const id = requestAnimationFrame(() => setMounted(true));
-        return () => cancelAnimationFrame(id);
-    }, []);
+const BrutalBeautifulText = ({
+  textRef,
+}: {
+  textRef: React.RefObject<HTMLParagraphElement | null>;
+}) => (
+  <p
+    ref={textRef}
+    className="absolute inset-0 flex items-center justify-center text-center text-[16vw] font-thunder font-bold uppercase leading-none text-white mix-blend-difference will-change-transform"
+  >
+    BRUTAL. BEAUTIFUL.
+  </p>
+);
 
-    const cls = `absolute inset-0 transition-all ease-in-out pointer-events-none
-    ${isLeaving ? "opacity-0 blur-md scale-105" : mounted ? "opacity-100 blur-0 scale-100" : "opacity-0 blur-md scale-95"}`;
+const LongStatement = ({
+  textRef,
+}: {
+  textRef: React.RefObject<HTMLDivElement | null>;
+}) => (
+  <div
+    ref={textRef}
+    className="absolute inset-0 flex items-end justify-start px-5 py-12 pointer-events-none sm:p-10 md:px-0 lg:px-8 lg:py-20 mix-blend-difference will-change-transform"
+  >
+    <div className="w-screen font-thunder font-bold uppercase leading-[0.9] text-white">
+      <div className="flex w-full flex-wrap justify-between text-[17vw] lg:text-[8vw]">
+        <span>We</span>
+        <span>throw</span>
+        <span>ourselves</span>
+        <span>into</span>
+        <span>chaos</span>
+      </div>
+      <div className="flex w-full flex-wrap justify-between text-[17vw] lg:text-[8vw]">
+        <span>and</span>
+        <span>turn</span>
+        <span>the</span>
+        <span>unpredictable</span>
+      </div>
+      <div className="flex w-full flex-wrap justify-between text-[17vw] lg:text-[8vw]">
+        <span>into</span>
+        <span>unique</span>
+        <span>pieces</span>
+      </div>
+    </div>
+  </div>
+);
 
-    return (
-        <div
-            className={cls}
-            style={{ transitionDuration: `${TRANSITION_MS}ms` }}
-            onTransitionEnd={isLeaving ? onDone : undefined}
-        >
-            {children}
-        </div>
-    );
-}
+const MobileLogo = ({
+  logoRef,
+}: {
+  logoRef: React.RefObject<HTMLDivElement | null>;
+}) => (
+  <div ref={logoRef} className="absolute left-4 top-6 flex justify-between lg:hidden">
+    <div className="relative h-[60px] w-[180px]">
+      <Image
+        src="/assets/images/logo/logo.webp"
+        alt="Kid Canibal logo"
+        fill
+        className="object-contain"
+      />
+    </div>
+  </div>
+);
 
-// ─── Slide content components ──────────────────────────────────────────────
+// ─── Componente principal ──────────────────────────────────────────────────
 
-function Slide0() {
-    return (
-        <div className="absolute inset-0 flex items-center justify-center">
-            <h1 className="text-white text-[42vw] max-h-[65vh] leading-none uppercase font-schabo">kidcanibal</h1>
-        </div>
-    );
-}
+export const BannerVideo = () => {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const kidRef = useRef<HTMLHeadingElement>(null);
+  const brutalRef = useRef<HTMLParagraphElement>(null);
+  const longTextRef = useRef<HTMLDivElement>(null);
+  const logoRef = useRef<HTMLDivElement>(null);
 
-function Slide1() {
-    return (
-        <div className="absolute inset-0 flex items-center justify-center">
-            <p
-                className="font-thunder font-bold text-white text-center leading-none uppercase text-[16vw]"
-            >
-                BRUTAL. BEAUTIFUL.
-            </p>
-        </div>
-    );
-}
+  useGSAP(
+    () => {
+      const titleEl = kidRef.current;
+      if (!titleEl) return;
 
-// Slide2 only renders logos — text lives outside SlideWrapper so
-// mix-blend-difference can reach the video/overlay without being trapped
-// inside the stacking context created by SlideWrapper's transform/filter.
-function Slide2() {
-    return (
-        <div className="absolute inset-0">
-            <div className="flex absolute top-6 left-4 lg:hidden justify-between">
-                <div className="w-[180px] h-[60px]">
-                    <Image
-                        src="/assets/images/logo/logo.webp"
-                        alt="Kid Canibal logo"
-                        fill
-                        className="object-contain"
-                    />
-                </div>
-            </div>
-        </div>
-    );
-}
+      // ─── Bloqueo de scroll, doble capa ──────────────────────────────
+      // 1) Nativo, sincrónico, sin depender de nada externo — cubre
+      //    rueda del mouse, touch Y teclado (flechas/Space/PageDown),
+      //    que Lenis no intercepta por si solo.
+      // 2) Lenis, enganchado con polling en rAF — useGSAP corre en un
+      //    useLayoutEffect, que en los HIJOS se dispara antes que el
+      //    de sus ancestros. Si SmoothScroll (donde se crea Lenis y se
+      //    setea window.__lenis) envuelve a este componente más arriba,
+      //    "lenis?.stop()" leído una sola vez acá puede correr ANTES de
+      //    que window.__lenis exista — por eso fallaba en silencio.
+      const html = document.documentElement;
+      const { body } = document;
+      const prevHtmlOverflow = html.style.overflow;
+      const prevBodyOverflow = body.style.overflow;
+      html.style.overflow = "hidden";
+      body.style.overflow = "hidden";
 
-function Slide2Text({ visible }: { visible: boolean }) {
-    return (
-        <div
-            className="absolute inset-0 flex items-end justify-start py-12 sm:p-10 lg:px-8 lg:py-20 pointer-events-none transition-opacity ease-in-out"
-            style={{ transitionDuration: `${TRANSITION_MS}ms`, opacity: visible ? 1 : 0 }}
-        >
-            <div className="w-screen uppercase leading-[0.9] font-thunder font-bold px-5 md:px-0 text-white mix-blend-difference">
-                <div className="flex justify-between w-full flex-wrap lg:text-[8vw] text-[17vw]">
-                    <span>We</span>
-                    <span>throw</span>
-                    <span>ourselves</span>
-                    <span>into</span>
-                    <span>chaos</span>
-                </div>
-                <div className="flex justify-between w-full flex-wrap lg:text-[8vw] text-[17vw]">
-                    <span>and</span>
-                    <span>turn</span>
-                    <span>the</span>
-                    <span>unpredictable</span>
-                </div>
-                <div className="flex justify-between w-full flex-wrap lg:text-[8vw] text-[17vw]">
-                    <span>into</span>
-                    <span>unique</span>
-                    <span>pieces</span>
-                </div>
-            </div>
-        </div>
-    );
-}
+      const getLenis = () => (window as Window & { __lenis?: Lenis }).__lenis;
 
-const SLIDES = [Slide0, Slide1, Slide2];
+      let cancelled = false;
+      let lenisInstance: Lenis | undefined;
 
-// ─── Main component ────────────────────────────────────────────────────────
+      const attachLenis = () => {
+        if (cancelled) return;
+        const found = getLenis();
+        if (found) {
+          lenisInstance = found;
+          found.stop();
+        } else {
+          requestAnimationFrame(attachLenis); // reintenta hasta que exista
+        }
+      };
+      attachLenis();
 
-export default function BannerVideo() {
-    const videoUrl =
-        "https://res.cloudinary.com/hipposoft/video/upload/f_auto,q_auto,w_1280/v1771611156/reel_v1_2160p_np35yn.mp4";
+      const releaseScroll = () => {
+        html.style.overflow = prevHtmlOverflow;
+        body.style.overflow = prevBodyOverflow;
+        lenisInstance?.start();
+      };
 
-    // `current` = the slide being shown, `prev` = the one fading out
-    const [current, setCurrent] = useState(0);
-    const [prev, setPrev] = useState<number | null>(null);
+      gsap.set(titleEl, {
+        scale: 1.1,
+        y: VERTICAL_NUDGE_PX,
+      });
 
-        useEffect(() => {
-            if (current >= TOTAL_SLIDES - 1) return; // stop at last slide
-    
-            const id = setTimeout(() => {
-                setPrev(current);
-                setCurrent((c) => c + 1);
-            }, SLIDE_DURATION);
-    
-            return () => clearTimeout(id);
-        }, [current]);
+      const chars = gsap.utils.toArray<HTMLElement>(".kid-char", titleEl);
+      gsap.set(chars, {
+        opacity: 0,
+        y: CHAR_Y_OFFSET,
+      });
 
-    const CurrentSlide = SLIDES[current];
-    const PrevSlide = prev !== null ? SLIDES[prev] : null;
+      gsap.set([brutalRef.current, longTextRef.current, logoRef.current], {
+        opacity: 0,
+        y: 24,
+      });
 
-    return (
-        <div className="relative h-screen w-full overflow-hidden rounded-xl aspect-video bg-black shadow-2xl">
-            {/* Background video */}
-            <video
-                src={videoUrl}
-                autoPlay
-                loop
-                muted
-                playsInline
-                preload="auto"
-                className="absolute inset-0 w-full h-full object-cover"
-            >
-                Your browser does not support the video tag.
-            </video>
+      const tl = gsap.timeline({ defaults: { ease: EASE } });
 
-            {/* Dark overlay */}
-            <div className="absolute inset-0 bg-black/40" />
+      tl.to(titleEl, { scale: 1, y: 0, duration: INTRO_DURATION }, 0)
+        .to(
+          chars,
+          {
+            opacity: 1,
+            y: 0,
+            duration: INTRO_DURATION,
+            stagger: { each: CHAR_STAGGER, from: "start" },
+          },
+          0
+        )
+        .to({}, { duration: HOLD_DURATION });
 
-            {/* Outgoing slide — fades/blurs OUT */}
-            {PrevSlide && (
-                <SlideWrapper
-                    key={`prev-${prev}`}
-                    isLeaving={true}
-                    onDone={() => setPrev(null)}
-                >
-                    <PrevSlide />
-                </SlideWrapper>
-            )}
+      const menuLogo = document.querySelector<HTMLElement>(".corners-menu-logo");
 
-            {/* Incoming slide — blurs IN */}
-            <SlideWrapper key={`current-${current}`} isLeaving={false}>
-                <CurrentSlide />
-            </SlideWrapper>
+      if (menuLogo) {
+        const titleBox = titleEl.getBoundingClientRect();
+        const logoBox = menuLogo.getBoundingClientRect();
 
-            {/* Slide2 text — outside SlideWrapper so mix-blend-difference
-                blends with the video/overlay, not an isolated stacking context */}
-            <Slide2Text visible={current === 2} />
-        </div>
-    );
-}
+        const dx = logoBox.left + logoBox.width / 2 - (titleBox.left + titleBox.width / 2);
+        const dy = logoBox.top + logoBox.height / 2 - (titleBox.top + titleBox.height / 2);
+        const targetScale = logoBox.width / titleBox.width;
+
+        tl.addLabel("toBrutal")
+          .to(
+            titleEl,
+            { x: dx, y: VERTICAL_NUDGE_PX + dy, scale: targetScale, duration: STEP_DURATION },
+            "toBrutal"
+          )
+          .to(brutalRef.current, { opacity: 1, y: 0, duration: STEP_DURATION }, "toBrutal+=0.2")
+          .to(logoRef.current, { opacity: 1, y: 0, duration: STEP_DURATION }, "toBrutal+=0.3")
+          .to({}, { duration: HOLD_DURATION });
+      } else {
+        tl.addLabel("toBrutal")
+          .to(brutalRef.current, { opacity: 1, y: 0, duration: STEP_DURATION }, "toBrutal")
+          .to({}, { duration: HOLD_DURATION });
+      }
+
+      tl.addLabel("toLong")
+        .to(brutalRef.current, { opacity: 0, y: -24, duration: STEP_DURATION }, "toLong")
+        .to(longTextRef.current, { opacity: 1, y: 0, duration: STEP_DURATION }, "toLong+=0.2");
+
+      tl.to(
+        titleEl,
+        { opacity: 0, duration: TITLE_EXIT_DURATION },
+        MENU_LOGO_READY_AT - TITLE_EXIT_DURATION
+      );
+
+      tl.eventCallback("onComplete", releaseScroll);
+
+      // Cleanup: si el componente se desmonta a mitad de animación,
+      // cancela el polling y restaura scroll igual — evita dejar la
+      // página trabada si el usuario navega antes de que termine.
+      return () => {
+        cancelled = true;
+        releaseScroll();
+      };
+    },
+    { scope: containerRef }
+  );
+
+  return (
+    <div
+      ref={containerRef}
+      className="relative aspect-video h-screen w-full overflow-hidden rounded-xl bg-black shadow-2xl"
+    >
+      <video
+        src={VIDEO_URL}
+        autoPlay
+        loop
+        muted
+        playsInline
+        preload="auto"
+        className="absolute inset-0 h-full w-full object-cover"
+      >
+        Tu navegador no soporta el tag de video.
+      </video>
+
+      <div className="absolute inset-0 bg-black/40" />
+
+      <KidCanibalTitle titleRef={kidRef} />
+      <BrutalBeautifulText textRef={brutalRef} />
+      <LongStatement textRef={longTextRef} />
+      <MobileLogo logoRef={logoRef} />
+    </div>
+  );
+};

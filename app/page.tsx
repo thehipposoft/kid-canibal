@@ -1,6 +1,6 @@
 import ProjectsFixed from "@/components/Projects/ProjectsFixed";
 import CornersMenu from "@/components/Menu/CornersMenu";
-import VideoBanner from "@/components/VideoBanner";
+import { BannerVideo } from "@/components/VideoBanner";
 import { projects } from "@/components/Projects/constants";
 import type { Metadata } from 'next'
 
@@ -39,7 +39,7 @@ export default function Home() {
   return (
     <main>
       <CornersMenu />
-      <VideoBanner />
+      <BannerVideo />
       <ProjectsFixed projects={projects} />
     </main>
   );
