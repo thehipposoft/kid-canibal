@@ -1,1 +1,1 @@
-export const WP_BASE_URL = "https://darkgrey-vulture-169630.hostingersite.com/wp-json/wp/v2"; 
+export const WP_BASE_URL = "https://admin.kidcanibal.com/wp-json/wp/v2"; 
