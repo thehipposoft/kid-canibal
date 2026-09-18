@@ -97,9 +97,45 @@ function ProjectGridItem({ project }: { project: VideoProject }) {
     );
 }
 
+// Filas alternadas: 2, 3, 2, 3... Las clases van completas para que Tailwind las detecte.
+const ROW_PATTERN = [
+    { size: 2, gridClass: "grid-cols-1 md:grid-cols-2" },
+    { size: 3, gridClass: "grid-cols-1 sm:grid-cols-2 md:grid-cols-3" },
+] as const;
+
+// Un proyecto con visibilidadGrid ocupa una fila completa por si solo y no
+// consume un lugar del patron 2/3: cierra la fila en curso y el patron sigue despues.
+function chunkIntoRows(projects: VideoProject[]) {
+    const rows: { projects: VideoProject[]; gridClass: string }[] = [];
+    let buffer: VideoProject[] = [];
+    let patternIndex = 0;
+
+    const currentPattern = () => ROW_PATTERN[patternIndex % ROW_PATTERN.length];
+
+    const flush = () => {
+        if (!buffer.length) return;
+        rows.push({ projects: buffer, gridClass: currentPattern().gridClass });
+        patternIndex++;
+        buffer = [];
+    };
+
+    for (const project of projects) {
+        if (project.visibilidadGrid) {
+            flush();
+            rows.push({ projects: [project], gridClass: "grid-cols-1" });
+            continue;
+        }
+
+        buffer.push(project);
+        if (buffer.length === currentPattern().size) flush();
+    }
+    flush();
+
+    return rows;
+}
+
 export default function AllProjects({ projects }: { projects: VideoProject[] }) {
-    const firstRow = projects.slice(0, 2);
-    const secondRow = projects.slice(2);
+    const rows = chunkIntoRows(projects);
 
     return (
         <section className="w-full min-h-screen bg-black px-4 md:px-8 py-20">
@@ -109,16 +145,13 @@ export default function AllProjects({ projects }: { projects: VideoProject[] }) 
                 </h1>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mb-3 pt-2 md:pt-0">
-                {firstRow.map((project) => (
-                    <ProjectGridItem key={project.slug} project={project} />
-                ))}
-            </div>
-
-            {/* Row 2 — remaining items (up to 3 per row) */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
-                {secondRow.map((project) => (
-                    <ProjectGridItem key={project.slug} project={project} />
+            <div className="flex flex-col gap-3 pt-2 md:pt-0">
+                {rows.map((row, rowIndex) => (
+                    <div key={rowIndex} className={`grid gap-5 ${row.gridClass}`}>
+                        {row.projects.map((project) => (
+                            <ProjectGridItem key={project.slug} project={project} />
+                        ))}
+                    </div>
                 ))}
             </div>
         </section>

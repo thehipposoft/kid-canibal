@@ -14,6 +14,7 @@ type WPProjectResponse = {
         full_video_src: string;
         media_type: "image" | "video";
         display_in_home_page: boolean;
+        visibilidad_grid?: boolean;
     };
     status: string; // 'publish', 'draft', etc.
 };
@@ -47,6 +48,7 @@ export async function getVideoProjects({ extraParameters }: Props = {}): Promise
         teaserVerticalSrc: item.acf.teaser_vertical_src || '',
         fullVideoSrc: item.acf.full_video_src || '',
         mediaType: item.acf.media_type || 'image',
+        visibilidadGrid: item.acf.visibilidad_grid === true,
         modified: item.modified,
     }));
 }
