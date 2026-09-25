@@ -6,11 +6,20 @@ import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import Image from 'next/image'
 
+// El delay largo (4s) es para sincronizar con la animacion de entrada del
+// sitio (VideoBanner, ver MENU_LOGO_DELAY) — pero CornersMenu se remonta
+// en cada navegacion (no vive en el layout raiz), asi que sin esto CADA
+// cambio de pagina esperaba 4s para mostrar el menu, no solo la primera vez.
+let hasAnimatedMenuOnce = false;
+
 const CornersMenu = () => {
   const pathname = usePathname()
   const container = useRef<HTMLDivElement>(null);
 
   useGSAP(() => {
+    const delay = hasAnimatedMenuOnce ? 1 : 4;
+    hasAnimatedMenuOnce = true;
+
     gsap.fromTo('.corners-menu', {
        opacity: 0,
        filter: "blur(18px)",
@@ -23,7 +32,7 @@ const CornersMenu = () => {
         filter: "blur(0px)",
         y: 0,
         ease: "power3.out",
-        delay: 4,
+        delay,
         });
       gsap.fromTo('.corners-menu-logo', {
        opacity: 0,
@@ -35,7 +44,7 @@ const CornersMenu = () => {
         opacity: 1,
         filter: "blur(0px)",
         ease: "power3.out",
-        delay: 4,
+        delay,
         });
   }, {scope: container});
 
