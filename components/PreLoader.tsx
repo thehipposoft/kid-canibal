@@ -1,11 +1,16 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import gsap from "gsap";
 import { videoPreloadTracker } from "@/lib/videoPreloadTracker";
 import { preloaderStatus } from "@/lib/preloaderStatus";
+import { useLayoutEffect, useEffect, useRef, useState } from "react";
+import { introStatus } from "@/lib/introStatus"; // + nuevo import
 
+// Clave de sessionStorage — dura mientras la pestaña esté abierta, se
+// resetea en pestaña nueva o refresh manual, pero NO al navegar entre
+// rutas con next/link (que es justo el caso que te molestaba)
+const INTRO_SESSION_KEY = "kc-intro-seen";
 // Counter never jumps straight to the real progress: it eases toward it,
 // gets capped below 100 until every video actually reports loaded, then
 // races to 100 and fades the overlay out.
@@ -13,7 +18,7 @@ const CAP_WHILE_LOADING = 92;
 // Last-resort only: real completion should always come from the tracker
 // hitting isDone(). This just prevents the site being stuck behind the
 // overlay forever if a video never fires loadeddata/error.
-const SAFETY_TIMEOUT_MS = 15000;
+const SAFETY_TIMEOUT_MS = 6000;
 
 const KID_IMAGES = [
     "/assets/images/kids/kid1.webp",
@@ -23,7 +28,10 @@ const KID_IMAGES = [
 const IMAGE_CYCLE_MS = 1500;
 
 export default function PreLoader() {
-    const [mounted, setMounted] = useState(true);
+    // - const [mounted, setMounted] = useState(true);
+    const [mounted, setMounted] = useState(
+        () => typeof window === "undefined" || sessionStorage.getItem(INTRO_SESSION_KEY) !== "1"
+    );
     const [hidden, setHidden] = useState(false);
     const [display, setDisplay] = useState(0);
     const [imageIndex, setImageIndex] = useState(0);
@@ -33,6 +41,15 @@ export default function PreLoader() {
     const lineRef = useRef<HTMLDivElement>(null);
     const finishedRef = useRef(false);
     const imageIntervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
+
+    // + nuevo effect, ANTES de los que ya tenías — corre en layout para
+    // resolver todo sincrónicamente antes del primer paint en visitas repetidas
+    useLayoutEffect(() => {
+        if (sessionStorage.getItem(INTRO_SESSION_KEY) === "1") {
+            preloaderStatus.markDone();
+            setMounted(false);
+        }
+    }, []);
 
     useEffect(() => {
         imageIntervalRef.current = setInterval(() => {
@@ -48,6 +65,7 @@ export default function PreLoader() {
         const finish = () => {
             if (finishedRef.current) return;
             finishedRef.current = true;
+            sessionStorage.setItem(INTRO_SESSION_KEY, "1");
             if (imageIntervalRef.current) clearInterval(imageIntervalRef.current);
             activeTweenRef.current?.kill();
 

@@ -1,10 +1,44 @@
 "use client";
 
 import { useRef, useState, useEffect } from "react";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 import AnimatedLink from "../AnimatedLink";
+import FitTitle from "./FitTitle";
 import { VideoProject } from "@/types";
 
-function ProjectGridItem({ project }: { project: VideoProject }) {
+// Copy de la seccion. Cada linea es un array de segmentos: los marcados
+// como "emphasis" salen grandes/bold, el resto chico — matching el print
+// del diseño. El texto va en case normal, el "uppercase" del contenedor
+// se encarga de mostrarlo todo en mayuscula.
+type CopySegment = { text: string; emphasis?: boolean };
+
+const HERO_COPY: CopySegment[][] = [
+    [
+        { text: "Embracing the " },
+        { text: "chaos of real-time creation, ", emphasis: true },
+        { text: "we craft visually " },
+        { text: "striking films", emphasis: true },
+    ],
+    [
+        { text: "That blend " },
+        { text: "unpolished grit ", emphasis: true },
+        { text: "with " },
+        { text: "high-end direction.", emphasis: true },
+    ],
+    [
+        { text: "Diving headfirst into " },
+        { text: "unpredictable environments, ", emphasis: true },
+        { text: "we translate " },
+        { text: "real moments", emphasis: true },
+    ],
+    [
+        { text: "Into " },
+        { text: "high-contrast cinematic pieces.", emphasis: true },
+    ],
+];
+
+function ProjectGridItem({ project, aspectClass }: { project: VideoProject; aspectClass: string }) {
     const videoRef = useRef<HTMLVideoElement>(null);
     const [hovered, setHovered] = useState(false);
 
@@ -36,7 +70,7 @@ function ProjectGridItem({ project }: { project: VideoProject }) {
             onMouseLeave={handleMouseLeave}
         >
             {/* Video / Image */}
-            <div className="relative w-full h-full aspect-video">
+            <div className={`relative w-full h-full ${aspectClass}`}>
                 <video
                     ref={videoRef}
                     src={project.teaserSrc}
@@ -98,15 +132,18 @@ function ProjectGridItem({ project }: { project: VideoProject }) {
 }
 
 // Filas alternadas: 2, 3, 2, 3... Las clases van completas para que Tailwind las detecte.
+// Cada tamaño de fila tiene su propio aspect-ratio: 2 columnas => 16:9,
+// 3 columnas => 4:3 (mas espacio vertical al achicarse el ancho por item).
 const ROW_PATTERN = [
-    { size: 2, gridClass: "grid-cols-1 md:grid-cols-2" },
-    { size: 3, gridClass: "grid-cols-1 sm:grid-cols-2 md:grid-cols-3" },
+    { size: 2, gridClass: "grid-cols-1 md:grid-cols-2", aspectClass: "aspect-video" },
+    { size: 3, gridClass: "grid-cols-1 sm:grid-cols-2 md:grid-cols-3", aspectClass: "aspect-[4/3]" },
 ] as const;
 
 // Un proyecto con visibilidadGrid ocupa una fila completa por si solo y no
 // consume un lugar del patron 2/3: cierra la fila en curso y el patron sigue despues.
+// Va en formato panoramico 2.39:1 (cinemascope), no el 16:9 de las demas filas.
 function chunkIntoRows(projects: VideoProject[]) {
-    const rows: { projects: VideoProject[]; gridClass: string }[] = [];
+    const rows: { projects: VideoProject[]; gridClass: string; aspectClass: string }[] = [];
     let buffer: VideoProject[] = [];
     let patternIndex = 0;
 
@@ -114,7 +151,8 @@ function chunkIntoRows(projects: VideoProject[]) {
 
     const flush = () => {
         if (!buffer.length) return;
-        rows.push({ projects: buffer, gridClass: currentPattern().gridClass });
+        const pattern = currentPattern();
+        rows.push({ projects: buffer, gridClass: pattern.gridClass, aspectClass: pattern.aspectClass });
         patternIndex++;
         buffer = [];
     };
@@ -122,7 +160,7 @@ function chunkIntoRows(projects: VideoProject[]) {
     for (const project of projects) {
         if (project.visibilidadGrid) {
             flush();
-            rows.push({ projects: [project], gridClass: "grid-cols-1" });
+            rows.push({ projects: [project], gridClass: "grid-cols-1", aspectClass: "aspect-[2.39/1]" });
             continue;
         }
 
@@ -136,20 +174,59 @@ function chunkIntoRows(projects: VideoProject[]) {
 
 export default function AllProjects({ projects }: { projects: VideoProject[] }) {
     const rows = chunkIntoRows(projects);
+    const copyRef = useRef<HTMLDivElement>(null);
+
+    useGSAP(
+        () => {
+            const segments = gsap.utils.toArray<HTMLElement>(".hero-copy-segment", copyRef.current);
+            if (!segments.length) return;
+
+            // Fade con stagger por segmento (no por char/palabra) — da el
+            // efecto de que el texto se va "escribiendo" de a bloques.
+            gsap.set(segments, { opacity: 0 });
+            gsap.to(segments, {
+                opacity: 1,
+                duration: 0.7,
+                ease: "power1.out",
+                delay: 0.5,
+                stagger: { each: 0.3, from: "start" },
+            });
+        },
+        { scope: copyRef }
+    );
 
     return (
-        <section className="w-full min-h-screen bg-black px-4 md:px-8 py-20">
+        <section className="w-full min-h-screen bg-black px-4 md:px-8 pt-40 md:pt-48 pb-20">
             <div className="flex pt-4 items-end justify-between">
-                <h1 className="text-white font-schabo lg:text-[13vw] text-[18vw] uppercase leading-none">
-                    film projects
-                </h1>
+                <FitTitle text="film projects" className="text-brand-yellow font-schabo uppercase" />
+            </div>
+
+            {/* Solo el tamaño diferencia lo grande de lo chico — mismo color
+            y peso siempre — y whitespace-nowrap fuerza las 4 lineas del
+            diseño en vez de que el ancho del contenedor las parta en mas */}
+            <div
+                ref={copyRef}
+                className="w-full text-center font-inter text-brand-yellow uppercase pt-6 md:pt-4 pb-8 md:pb-12"
+            >
+                {HERO_COPY.map((line, lineIndex) => (
+                    <p key={lineIndex} className="whitespace-nowrap leading-snug flex items-center justify-center gap-2">
+                        {line.map((segment, segmentIndex) => (
+                            <span
+                                key={segmentIndex}
+                                className={`hero-copy-segment ${segment.emphasis ? "text-2xl " : "text-xs md:text-sm"}`}
+                            >
+                                {segment.text}
+                            </span>
+                        ))}
+                    </p>
+                ))}
             </div>
 
             <div className="flex flex-col gap-3 pt-2 md:pt-0">
                 {rows.map((row, rowIndex) => (
-                    <div key={rowIndex} className={`grid gap-5 ${row.gridClass}`}>
+                    <div key={rowIndex} className={`grid gap-2 ${row.gridClass}`}>
                         {row.projects.map((project) => (
-                            <ProjectGridItem key={project.slug} project={project} />
+                            <ProjectGridItem key={project.slug} project={project} aspectClass={row.aspectClass} />
                         ))}
                     </div>
                 ))}

@@ -61,7 +61,7 @@ export default function FotografosListClient({ fotografos }: Props) {
                 <div className="overflow-hidden mb-8 mt-12">
                     <h1
                         data-slide
-                        className="font-thunder text-brand-white/70 tracking-widest uppercase leading-none text-center lg:text-[1.5vw] text-[5vw]"
+                        className="font-providence text-brand-white/90 tracking-widest uppercase leading-none text-center lg:text-[1.6vw] text-[5vw]"
                     >
                         photographers
                     </h1>
@@ -70,13 +70,13 @@ export default function FotografosListClient({ fotografos }: Props) {
                 {/* Names */}
                 <div className="flex flex-col justify-center gap-2 md:gap-0">
                     {fotografos.map((f) => (
-                        <div key={f.slug} className="overflow-hidden py-1">
+                        <div key={f.slug} className=" py-1">
                             <div data-slide>
                                 <AnimatedLink
                                     href={`/photo/${f.slug}`}
-                                    className={`font-thunder font-bold uppercase leading-[0.85] text-center lg:text-[11vw] text-[17vw] block transition-colors duration-500 ${
+                                    className={`font-thunder font-bold uppercase leading-[0.70] text-center lg:text-[14vw] text-[17vw] block transition-colors duration-500 ${
                                         hoveredSlug === null
-                                            ? 'text-brand-white/65'
+                                            ? 'text-brand-white/75'
                                             : hoveredSlug === f.slug
                                             ? 'text-brand-white/95'
                                             : 'text-brand-white/10'
@@ -99,11 +99,11 @@ export default function FotografosListClient({ fotografos }: Props) {
                 </div>
 
                 {/* "all projects" link */}
-                <div className="overflow-hidden mt-8">
+                <div className="overflow-hidden mt-6">
                     <div data-slide>
                         <AnimatedLink
                             href="/photo/projects"
-                            className={`font-thunder hover:text-brand-white hover:underline tracking-widest uppercase leading-none text-center lg:text-[1.5vw] text-[5vw] block transition-colors duration-300 ${
+                            className={` hover:text-brand-white hover:underline uppercase leading-none text-center lg:text-[1.6vw] text-[5vw] block transition-colors duration-300 ${
                                 hoveredSlug === null ? 'text-brand-white/70' : 'text-brand-white/40'
                             }`}
                         >

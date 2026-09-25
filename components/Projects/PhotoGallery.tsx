@@ -16,9 +16,23 @@ function buildColumns(images: WPImage[], count: number): WPImage[][] {
   const heights = new Array(count).fill(0);
 
   for (const img of images) {
-    const shortest = heights.indexOf(Math.min(...heights));
+    // WP a veces trae width/height en 0 o ausentes (imagen rota o campo
+    // vacío) — eso generaba NaN en heights, y Math.min(...heights) con
+    // un solo NaN adentro devuelve NaN, cuyo indexOf() es siempre -1
+    // (NaN !== NaN en JS), rompiendo columns[-1].push(). Fallback a
+    // cuadrado (1:1) para esa imagen puntual, sin descartarla.
+    const width = img.width > 0 ? img.width : 1;
+    const height = img.height > 0 ? img.height : width;
+
+    // Buscamos el índice más corto a mano en vez de indexOf(Math.min()) —
+    // robusto aunque algún height quede raro, nunca devuelve -1
+    let shortest = 0;
+    for (let i = 1; i < heights.length; i++) {
+      if (heights[i] < heights[shortest]) shortest = i;
+    }
+
     columns[shortest].push(img);
-    heights[shortest] += img.height / img.width;
+    heights[shortest] += height / width;
   }
 
   return columns;
@@ -38,7 +52,7 @@ function Lightbox({
   onNext: () => void;
 }) {
   const img = images[index];
-  const ratio = img.width / img.height;
+  const ratio = img.width > 0 && img.height > 0 ? img.width / img.height : 1;
   const touchStartX = useRef<number | null>(null);
 
   useEffect(() => {
