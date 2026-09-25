@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState, useEffect } from "react";
+import { useRef, useState, useEffect, useLayoutEffect, type ReactNode } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import AnimatedLink from "../AnimatedLink";
@@ -37,6 +37,66 @@ const HERO_COPY: CopySegment[][] = [
         { text: "high-contrast cinematic pieces.", emphasis: true },
     ],
 ];
+
+// Desktop: whitespace-nowrap fuerza las 4 lineas del diseño, y esto mide el
+// ancho natural de la linea y la escala con un transform para que siempre
+// entre en su contenedor — mismo espiritu que FitTitle, pero via scale (no
+// font-size) porque hay dos tamaños de texto mezclados en la misma linea y
+// scale los achica a los dos por igual sin romper la proporcion entre ellos.
+// Mobile: nada de esto — el texto envuelve normal y usa el espacio vertical
+// que necesite, en vez de forzar 4 lineas achicadas.
+const DESKTOP_QUERY = "(min-width: 768px)"; // md de Tailwind
+
+function FitLine({ children }: { children: ReactNode }) {
+    const containerRef = useRef<HTMLDivElement>(null);
+    const lineRef = useRef<HTMLParagraphElement>(null);
+    const [scale, setScale] = useState(1);
+
+    useLayoutEffect(() => {
+        const container = containerRef.current;
+        const line = lineRef.current;
+        if (!container || !line) return;
+
+        const fit = () => {
+            if (!window.matchMedia(DESKTOP_QUERY).matches) {
+                setScale(1); // mobile: sin forzar una sola linea, sin escalar
+                return;
+            }
+
+            const containerWidth = container.clientWidth;
+            const naturalWidth = line.scrollWidth;
+            if (!containerWidth || !naturalWidth) return;
+            // transform no afecta scrollWidth, asi que siempre medimos el
+            // ancho real sin escalar, sin necesitar un clon oculto aparte.
+            // *0.99 de margen para que un redondeo de 1px no vuelva a cortar.
+            setScale(Math.min(1, (containerWidth / naturalWidth) * 0.99));
+        };
+
+        fit();
+        // Observa el contenedor para reaccionar tambien si el resize cruza
+        // el breakpoint desktop/mobile, no solo cambios de ancho en desktop.
+        const observer = new ResizeObserver(fit);
+        observer.observe(container);
+        return () => observer.disconnect();
+    }, [children]);
+
+    return (
+        // text-center (no flex) a proposito: un flex container con
+        // justify-center no reporta el overflow "de arranque" (izquierda)
+        // en scrollWidth de forma confiable — el scale salia corto y
+        // seguia cortando ambos bordes. text-align:center con contenido
+        // inline mide el overflow completo sin ese problema.
+        <div ref={containerRef} className="w-full flex justify-center overflow-x-hidden pb-1 md:pb-0">
+            <p
+                ref={lineRef}
+                className="whitespace-normal md:whitespace-nowrap leading-normal md:leading-snug text-center origin-center"
+                style={{ transform: `scale(${scale})` }}
+            >
+                {children}
+            </p>
+        </div>
+    );
+}
 
 function ProjectGridItem({ project, aspectClass }: { project: VideoProject; aspectClass: string }) {
     const videoRef = useRef<HTMLVideoElement>(null);
@@ -209,16 +269,16 @@ export default function AllProjects({ projects }: { projects: VideoProject[] }) 
                 className="w-full text-center font-inter text-brand-yellow uppercase pt-6 md:pt-4 pb-8 md:pb-12"
             >
                 {HERO_COPY.map((line, lineIndex) => (
-                    <p key={lineIndex} className="whitespace-nowrap leading-snug flex items-center justify-center gap-2">
+                    <FitLine key={lineIndex}>
                         {line.map((segment, segmentIndex) => (
                             <span
                                 key={segmentIndex}
-                                className={`hero-copy-segment ${segment.emphasis ? "text-2xl " : "text-xs md:text-sm"}`}
+                                className={`hero-copy-segment ${segment.emphasis ? " text-xl md:text-2xl " : "text-sm"}`}
                             >
                                 {segment.text}
                             </span>
                         ))}
-                    </p>
+                    </FitLine>
                 ))}
             </div>
 

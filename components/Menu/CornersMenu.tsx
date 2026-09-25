@@ -12,6 +12,16 @@ import Image from 'next/image'
 // cambio de pagina esperaba 4s para mostrar el menu, no solo la primera vez.
 let hasAnimatedMenuOnce = false;
 
+// Paginas donde va el wordmark mobile arriba a la izquierda (home ya lo
+// tiene resuelto aparte via VideoBanner/MobileLogo, asi que no se repite
+// aca para no duplicarlo).
+const MOBILE_LOGO_ROUTES = ["/about"];
+
+const isMobileLogoRoute = (pathname: string) =>
+  MOBILE_LOGO_ROUTES.includes(pathname) ||
+  // /photo/[fotografo], pero no /photo/projects/[slug]
+  (pathname.startsWith("/photo/") && !pathname.startsWith("/photo/projects"));
+
 const CornersMenu = () => {
   const pathname = usePathname()
   const container = useRef<HTMLDivElement>(null);
@@ -54,6 +64,24 @@ const handleLogoClick = (e: React.MouseEvent<HTMLButtonElement>) => {
 }
 
   return (
+    <>
+    {isMobileLogoRoute(pathname) && (
+      // absolute (no fixed/normal flow): no empuja el contenido de la
+      // pagina hacia abajo (eso era lo que rompia el spacing) y tampoco
+      // genera su propio bloque en el flujo — un div normal ahi arriba,
+      // sin bg propio, dejaba ver el fondo negro global (--background)
+      // en vez del fondo real de la pagina (blanco en /about, por eso
+      // se veia "todo el contenedor negro" en vez de solo el logo).
+      <div className="lg:hidden absolute left-4 top-6 z-20 pointer-events-none">
+        <Image
+          src="/assets/images/logo/logo.webp"
+          alt="Kid Canibal logo"
+          width={130}
+          height={44}
+          className={`object-contain ${pathname === "/about" ? "invert" : ""}`}
+        />
+      </div>
+    )}
     <div ref={container} className={` ${pathname === "/contact" ? " text-black" : "text-white mix-blend-difference"} hidden fixed top-0 left-0 w-screen h-screen lg:flex flex-col p-8 justify-between z-30 pointer-events-none   `}>
           <AnimatedLink href={"/projects"} className={`${pathname === "/projects" ? "font-providence line-through" : ""} corners-menu text-2xl pointer-events-auto left-8 top-8 absolute uppercase font-inter font-medium tracking-tighter hover:font-providence hover:line-through duration-500`}>video</AnimatedLink>
           
@@ -111,6 +139,7 @@ const handleLogoClick = (e: React.MouseEvent<HTMLButtonElement>) => {
           <AnimatedLink href={"/about"} className={`${pathname === "/about" ? "font-providence line-through" : ""} corners-menu text-2xl pointer-events-auto left-8 bottom-8 absolute uppercase font-inter font-medium tracking-tighter hover:font-providence hover:line-through duration-500 `}>About</AnimatedLink>
           <AnimatedLink href={"/contact"} className={`${pathname === "/contact" ? "font-providence line-through" : ""} corners-menu text-2xl pointer-events-auto right-8 bottom-8 absolute uppercase font-inter font-medium tracking-tighter hover:font-providence hover:line-through duration-500 `}>contact</AnimatedLink>
     </div>
+    </>
   )
 }
 
