@@ -1,9 +1,11 @@
 import ProjectsFixed from "@/components/Projects/ProjectsFixed";
 import CornersMenu from "@/components/Menu/CornersMenu";
-import VideoBanner from "@/components/VideoBanner";
+import { BannerVideo } from "@/components/VideoBanner";
 import PreLoader from "@/components/PreLoader";
 import type { Metadata } from 'next';
 import { getVideoProjects } from "@/lib/getVideoProjects";
+import { IntroLottie } from "@/components/IntroLottie";
+
 
 export const metadata: Metadata = {
   title: 'Home | KID CANIBAL',
@@ -45,7 +47,8 @@ export default async function Home() {
     <main>
       <PreLoader />
       <CornersMenu />
-      <VideoBanner />
+      <IntroLottie />
+      <BannerVideo />
       <ProjectsFixed projects={projects} />
     </main>
   );

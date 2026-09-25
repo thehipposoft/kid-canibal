@@ -1,15 +1,6 @@
 import { WP_BASE_URL } from './client';
+import { decodeHtmlEntities } from './decodeHtmlEntities';
 import type { WPProject } from '../types';
-
-function decodeHtmlEntities(html: string): string {
-  return html
-    .replace(/&amp;/g, '&')
-    .replace(/&#038;/g, '&')
-    .replace(/&lt;/g, '<')
-    .replace(/&gt;/g, '>')
-    .replace(/&quot;/g, '"')
-    .replace(/&#039;/g, "'");
-}
 
 function decodeProjectTitle(project: WPProject): WPProject {
   return {

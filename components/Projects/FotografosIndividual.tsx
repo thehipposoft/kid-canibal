@@ -1,6 +1,7 @@
 import { getProjects } from "@/lib/getProjects"
 import Image from "next/image"
 import AnimatedLink from "../AnimatedLink"
+import FitTitle from "./FitTitle"
 
 interface Props {
     fotografoSlug: string
@@ -18,10 +19,18 @@ const FotografosIndividual = async ({ fotografoSlug, title, descripcion }: Props
     return (
         <section className="w-full min-h-screen bg-black px-4 md:px-8 py-20">
             <div className="pt-4">
-                <p className="uppercase text-brand-white/70">photographer</p>
-                <h1 className="text-white font-thunder font-semibold lg:text-[13vw] text-[17vw] lg:leading-36 lg:pt-10 pt-4 uppercase leading-none">
-                    {title ?? fotografoSlug}
-                </h1>
+                <AnimatedLink
+                    href="/photo"
+                    className="block font-providence uppercase text-xl text-brand-white/90 hover:line-through duration-500 w-fit"
+                >
+                    photographer
+                </AnimatedLink>
+                <div className="lg:pt-12 pt-4">
+                    <FitTitle
+                        text={title ?? fotografoSlug}
+                        className="text-white font-thunder font-bold uppercase"
+                    />
+                </div>
                 {descripcion && (
                     <div
                         className="w-full leading-none font-inter font-medium uppercase text-brand-white/80 lg:text-[1.5vw] text-lg text-justify [text-align-last:justify] [&_p]:m-0 pt-2 pb-4"

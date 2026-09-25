@@ -23,21 +23,19 @@ const CornersMenu = () => {
         filter: "blur(0px)",
         y: 0,
         ease: "power3.out",
-        delay: .5,
+        delay: 4,
         });
       gsap.fromTo('.corners-menu-logo', {
        opacity: 0,
        filter: "blur(18px)",
-       y: 40,
        duration: 1,
        ease: "power3.out",
        delay: 2,
       }, {
         opacity: 1,
         filter: "blur(0px)",
-        y: 0,
         ease: "power3.out",
-        delay: 2.5,
+        delay: 4,
         });
   }, {scope: container});
 
