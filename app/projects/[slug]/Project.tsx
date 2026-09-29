@@ -109,7 +109,7 @@ const ProjectPage = ({ project }: { project: VideoProject }) => {
             <div className="relative w-full flex flex-col min-h-screen lg:gap-20 bg-black pb-12 pt-[10vh] lg:pt-4">
                 <div
                     ref={containerRef}
-                    className="relative lg:w-full lg:h-[80vh] lg:inset-20 z-0 rounded-2xl max-w-[90vw] mx-auto lg:mx-0 bg-black group"
+                    className="relative lg:w-full lg:h-[80vh] lg:inset-20 z-0 max-w-[90vw] mx-auto lg:mx-0 bg-black group"
                     onMouseMove={handleMouseMove}
                     onTouchStart={handleMouseMove}
                     onMouseLeave={() => setShowControls(false)}
@@ -117,10 +117,10 @@ const ProjectPage = ({ project }: { project: VideoProject }) => {
                 >
                     <video
                         ref={videoRef}
-                        className={`w-full rounded-2xl transition-all duration-300
+                        className={`w-full transition-all duration-300
                                 ${isFullscreen
                                     ? 'h-full object-contain'
-                                    : 'h-[60vh] lg:h-full object-cover lg:object-contain'
+                                    : 'h-[60vh] lg:h-full object-cover'
                                 }`}
                         src={project.fullVideoSrc}
                         autoPlay
@@ -143,7 +143,7 @@ const ProjectPage = ({ project }: { project: VideoProject }) => {
 
                     {/* Overlay de controles */}
                     <div
-                        className={`absolute bottom-0 left-0 right-0 rounded-b-2xl px-4 pb-4 pt-16 flex flex-col gap-2 transition-opacity duration-300 z-50 ${showControls ? 'opacity-100' : 'opacity-0'}`}
+                        className={`absolute bottom-0 left-0 right-0 px-4 pb-4 pt-16 flex flex-col gap-2 transition-opacity duration-300 z-50 ${showControls ? 'opacity-100' : 'opacity-0'}`}
                         style={{ background: 'linear-gradient(to top, rgba(0,0,0,0.75) 0%, transparent 100%)' }}
                     >
                         {/* Barra de progreso */}

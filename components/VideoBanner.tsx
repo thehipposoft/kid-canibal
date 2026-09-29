@@ -147,7 +147,7 @@ export const BannerVideo = () => {
                 Tu navegador no soporta el tag de video.
             </video>
 
-            <div className="absolute inset-0 bg-black/40" />
+            <div className="absolute inset-0 bg-black/10" />
 
             <LongStatement textRef={longTextRef} />
             <MobileLogo logoRef={logoRef} />
