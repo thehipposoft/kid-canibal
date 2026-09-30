@@ -106,10 +106,10 @@ const ProjectPage = ({ project }: { project: VideoProject }) => {
     return (
         <main>
             <CornersMenu />
-            <div className="relative w-full flex flex-col min-h-screen lg:gap-20 bg-black pb-12 pt-[10vh] lg:pt-4">
+            <div className="relative w-full flex flex-col min-h-screen lg:gap-20 bg-black pb-12 pt-[10vh] lg:pt-[12vh] 2xl:pt-[9vh] lg:px-8">
                 <div
                     ref={containerRef}
-                    className="relative lg:w-full lg:h-[80vh] lg:inset-20 z-0 max-w-[90vw] mx-auto lg:mx-0 bg-black group"
+                    className="relative lg:w-full lg:h-[82vh] z-0 w-screen mx-auto lg:mx-0 bg-black group px-4 lg:px-0"
                     onMouseMove={handleMouseMove}
                     onTouchStart={handleMouseMove}
                     onMouseLeave={() => setShowControls(false)}
@@ -143,7 +143,7 @@ const ProjectPage = ({ project }: { project: VideoProject }) => {
 
                     {/* Overlay de controles */}
                     <div
-                        className={`absolute bottom-0 left-0 right-0 px-4 pb-4 pt-16 flex flex-col gap-2 transition-opacity duration-300 z-50 ${showControls ? 'opacity-100' : 'opacity-0'}`}
+                        className={`absolute bottom-0 left-0 right-0 px-6 lg:px-4 pb-4 pt-16 flex flex-col gap-2 transition-opacity duration-300 z-50 ${showControls ? 'opacity-100' : 'opacity-0'}`}
                         style={{ background: 'linear-gradient(to top, rgba(0,0,0,0.75) 0%, transparent 100%)' }}
                     >
                         {/* Barra de progreso */}
@@ -209,14 +209,14 @@ const ProjectPage = ({ project }: { project: VideoProject }) => {
                         </div>
                     </div>
                 </div>
-                    <div className="relative mx-auto z-20 w-full max-w-[90vw] h-full flex flex-col justify-end pt-12 lg:px-0 md:py-12 gap-4">
+                    <div className="relative mx-auto z-20 w-full h-full flex flex-col justify-end pt-12 px-4 lg:px-0 md:py-12 gap-4">
                     <div className="flex items-end justify-between">
                         <h1 className="text-white font-schabo lg:text-[13vw] text-8xl leading-[0.85] uppercase">
                             {project.title}
                         </h1>
                     </div>
                     <div className="w-full h-px bg-white/30" />
-                    <div className="flex lg:flex-row flex-col justify-between lg:items-center gap-12 md:py-2">
+                    <div className="flex lg:flex-row flex-col justify-between lg:items-center gap-6 lg:gap-12 md:py-2">
                         <div className="flex flex-col">
                             <span className="text-sm font-bold tracking-widest text-white">DIRECCIÓN</span>
                             <span className="text-2xl font-inter font-light text-white/70">{project.director}</span>

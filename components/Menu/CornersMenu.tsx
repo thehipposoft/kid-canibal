@@ -82,7 +82,7 @@ const handleLogoClick = (e: React.MouseEvent<HTMLButtonElement>) => {
         />
       </div>
     )}
-    <div ref={container} className={` ${pathname === "/contact" ? " text-black" : "text-white mix-blend-difference"} hidden fixed top-0 left-0 w-screen h-screen lg:flex flex-col p-8 justify-between z-30 pointer-events-none   `}>
+    <div ref={container} className={` ${pathname === "/contact" ? " text-black" : "text-white mix-blend-difference"} hidden fixed top-0 left-0 w-screen h-screen lg:flex flex-col px-8 py-6 justify-between z-30 pointer-events-none   `}>
           <AnimatedLink href={"/projects"} className={`${pathname === "/projects" ? "font-providence line-through" : ""} corners-menu text-2xl pointer-events-auto left-8 top-8 absolute uppercase font-inter font-medium tracking-tighter hover:font-providence hover:line-through duration-500`}>video</AnimatedLink>
           
           {/* Se añade la prop onClick al AnimatedLink */}
